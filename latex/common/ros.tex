@@ -9,8 +9,55 @@
 \usepackage{mdframed}
 \usepackage{lastpage}
 \usepackage{hyperref}
+\usepackage{eurosym}
 
+\input{common/config.tex}
 
 \definecolor{rosorange}{HTML}{FF950E}
+\definecolor{rosdarkorange}{HTML}{EB610A}
 \definecolor{rosgray}{HTML}{C0C0C0}
 
+\newcolumntype{L}[0]{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}[0]{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}[0]{>{\centering\arraybackslash}X}%
+
+\renewcommand*{\familydefault}{\sfdefault}
+\urlstyle{sf}
+
+\newcommand{\rosHeader}[0]{
+\begin{tabularx}{\textwidth}{ R  m{0.15\textwidth}  L }
+  \rosHeaderAddressBlock & \includegraphics[width=0.15\textwidth]{common/ros-logo-circle.png} & \rosHeaderInfoBlock \\
+\end{tabularx}
+}
+
+\newcommand{\rosHeaderAddressBlock}{
+  {\footnotesize
+  \begin{tabular}{r}
+    \textcolor{rosdarkorange}{\bf \configCompanyName} \\
+    \configCompanyStreet \\
+    \configCompanyPostal \\
+    \configCompanyCountry \\
+  \end{tabular}
+  }
+}
+
+\newcommand{\rosHeaderInfoBlock}{
+  {\footnotesize
+  \begin{tabular}{l}
+    \textcolor{rosdarkorange}{\bf \configCompanyUrl }\\
+    \configCompanyEmail \\
+    Chamber Of Commerce \configChamberOfCommerceRegistrationNumber{}\\
+    VAT Number \configVatNumber{}\\
+  \end{tabular}
+  }
+}
+
+\newcommand{\paymentInfoBlock}{
+  {\footnotesize
+  \begin{tabular}{l}
+    \configPaymentEntity\\
+    \configPaymentIBAN\\
+    \configPaymentReference\\
+  \end{tabular}
+  }
+}

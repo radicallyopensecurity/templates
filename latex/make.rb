@@ -27,9 +27,13 @@ def usage
   exit(1)
 end
 
-report = OpenStruct.new(mainfile: "report.tex", inputs: "common/ros-logo.png common/ros.tex report.tex")
+report = OpenStruct.new(mainfile: "report.tex", inputs: "common/ros-logo.png common/ros.tex report.tex common/config.tex")
+invoice = OpenStruct.new(mainfile: "invoice.tex", inputs: "common/ros-logo-circle.png common/ros.tex invoice.tex common/config.tex")
 
-$projects = {report: report}
+$projects = {
+  report: report, 
+  invoice: invoice,
+}
 $commands = {
   build: lambda{|proj| build(proj)},
   watch: lambda{|proj| watch(proj)},

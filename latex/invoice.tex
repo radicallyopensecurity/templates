@@ -1,0 +1,31 @@
+%License: CC by 4.0
+%Author: Cornelius Aschermann (coco@radicallyopensecurity.com)
+
+\documentclass[oneside,DIV=20]{scrartcl}
+
+\input{common/ros_invoice.tex}
+
+\newcommand{\invoicenumber}[0]{14.123}
+\newcommand{\clientName}[0]{Some Client Inc.}
+\newcommand{\clientAttn}[0]{Clark Client}
+\newcommand{\clientAddr}[0]{Barkerstreet 12}
+\newcommand{\clientPostal}[0]{51203 Nightvale}
+\newcommand{\clientEmail}[0]{clark.client@example.com}
+\newcommand{\invoiceDate}[0]{\today}
+
+\cfoot{\tiny \textcolor{rosdarkorange}{Please keep digital unless absolutely required. Read the (unique) terms and conditions of Radically Open Security at: \url{https://radicallyopensecurity.com/TermsandConditions.pdf}}}
+\pagestyle{fancy}
+
+\begin{document}%
+\rosHeader{}
+\invoiceHeader{}
+
+\begin{invoiceItemsTable}
+\invoiceItem{10 Hours Pentesting}{300 \euro}\\
+\invoiceItem{5 Hours Pentesting}{150 \euro}\\
+\invoiceTotal{300 \euro}\\
+\hline
+\end{invoiceItemsTable}\\
+\vspace{1cm}\\
+\invoiceFooter
+\end{document}

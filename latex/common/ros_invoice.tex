@@ -1,0 +1,60 @@
+\input{common/ros.tex}
+
+
+\newcommand{\invoicebox}[2]{
+\colorbox{#1}{%
+\begin{minipage}{\linewidth}%
+\center {\bf \LARGE #2} 
+\end{minipage}}%
+}
+
+
+\newenvironment{invoiceItemsTable}[0]{~\\
+\tabularx{\textwidth}{| X | p{2.5cm} |}%
+}{
+\endtabularx%
+}
+
+\newcommand{\invoiceItem}[2]{ \hline {\small #1} &  {\small #2} }
+\newcommand{\invoiceTotal}[1]{ \hline \hline \invoiceItem{\bf Total amount to be paid:}{\bf #1}}
+
+\newcommand{\invoiceHeader}{
+\vspace{1cm}\\
+\invoicebox{rosdarkorange}{\textcolor{white}{Invoice nr. \invoicenumber{}}}\\
+%
+\vspace{0.5cm}\\
+\clientName\\
+attn. \clientAttn\\
+\clientAddr\\
+\clientPostal\\
+\clientEmail\\
+{\phantom{g}\hspace{0.7\textwidth} \invoiceDate\\}
+\vspace{0.5cm}\\
+\invoicebox{rosgray}{\textcolor{white}{Services delivered}}
+}
+
+\newcommand{\invoiceFooter}{~\\
+Radically Open Security donates $> 90\%$ of its entire profits to charity.
+\vspace{1cm}\\
+Please be so kind to pay within 30 days by money transfer, to the following account:\\
+
+\paymentInfoBlock{}\\
+\vspace{1cm}\\
+%
+Kind regards,\\
+your dedicated team at\\
+{\emph \configCompanyName{}}\\
+}
+
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\pretocmd{\tableofcontents}{\begin{mdframed}[backgroundcolor=rosorange,hidealllines=true]}{}{}
+\apptocmd{\tableofcontents}{\end{mdframed}}{}{}
