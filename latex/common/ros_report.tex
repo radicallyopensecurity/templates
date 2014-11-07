@@ -1,0 +1,158 @@
+\setkomafont{section}{\ROSsection}
+\setkomafont{subsection}{\ROSsubsection}
+\setkomafont{subsubsection}{\ROSsubsection}
+
+\newcommand{\ROSsection}[1]{%
+    \Large\sf\bf%
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{rosorange}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{2pt}%Space before
+            #1
+            \vspace*{2pt}%Space after
+        \end{minipage}%
+    }}
+
+\newcommand{\ROSsubsection}[1]{%
+    \Large\sf\bf%
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{rosgray}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{2pt}%Space before
+            #1
+            \vspace*{2pt}%Space after
+        \end{minipage}%
+    }}
+
+\renewcommand*{\familydefault}{\sfdefault}
+
+
+\newcommand{\makeROSFrontPage}[0]{%
+\begin{figure}%
+\centering%
+\includegraphics[width=3.0in]{common/ros-logo.png}%
+\vspace{2cm}%
+\end{figure}~\\
+\colorbox{rosorange}{%
+\begin{minipage}{\linewidth}%
+\centering%
+{\huge \MakeUppercase{\reportTitle{}}}%
+\end{minipage}}
+\begin{minipage}{\linewidth}%
+\centering%
+\vspace{1cm}%
+{\Large for}%
+\vspace{1cm}%
+\end{minipage}
+\colorbox{rosgray}{%
+\begin{minipage}{\linewidth}%
+\centering
+{\huge \MakeUppercase{\customer{}}}
+\end{minipage}}
+\vspace{1cm}
+
+\begin{tabular}{ l  l }
+  \hspace{0.6\linewidth} &   \reportCurrentVersion{}\\
+   &   \reportPlace{},\\
+   &   \reportCurrentDate{} \\
+\end{tabular}
+
+\newpage%
+}
+\newcommand{\makeROSDocumentInfo}[0]{~\\
+{\bf \Large Document Properties}\\
+{ \large%
+\vspace{0.3cm}\\
+\begin{tabularx}{\textwidth}{| l | X |}
+\hline
+\cellcolor{rosorange}  Client &   \customer{} \hfill\\
+\hline
+\cellcolor{rosorange}  Title & \reportTitle \\
+\hline
+\cellcolor{rosorange}  Target & \target{} \\
+\hline
+\cellcolor{rosorange}  Version & \reportCurrentVersion{}\\
+\hline
+\cellcolor{rosorange}  Author & \reportCurrentAuthor{} \\
+\hline
+\cellcolor{rosorange}  Pen-testers & \reportPentesters{} \\
+\hline
+\cellcolor{rosorange}  Reviewd by & \reportReviewer{} \\
+\hline
+\cellcolor{rosorange}  Approved by & \reportApprover{} \\
+\hline
+\cellcolor{rosorange}  Classification & \reportClassification{} \\
+\hline
+\end{tabularx}
+}
+}
+
+\newenvironment{versionTable}[0]{~\\
+\vspace{1cm}\\
+{\bf \Large Version Info\\}
+\vspace{0.3cm}\\
+\tabularx{\textwidth}{| X | l | X | X |} \hline%
+\cellcolor{rosorange} {\large Version} & \cellcolor{rosorange} {\large Date} & \cellcolor{rosorange}{\large Author} & \cellcolor{rosorange}{\large Description}\\
+}{
+\endtabularx%
+}
+\newcommand{\makeROSversionLine}[4]{ \hline {\large #1} &  {\large #2}& {\large #3} & {\large #4}}
+
+\newcommand{\makeROSContactInfo}[0]{~\\
+\vspace{1cm}\\
+{\bf \Large Contact}\\
+\vspace{0.0cm}\\
+For more information about this Document and its contents please contact Radically Open Security BV.
+{ \large%
+\vspace{0.3cm}\\
+\begin{tabularx}{\textwidth}{| l | X | }
+\hline
+\cellcolor{rosorange}  Name \hspace{1cm} \phantom{g}& \contactName \\
+\hline
+\cellcolor{rosorange}  Address & \contactAddress \\
+\hline
+\cellcolor{rosorange}  Phone & \contactPhone \\
+\hline
+\cellcolor{rosorange}  Email & \contactEmail \\
+\hline
+\end{tabularx}
+}
+\newpage%
+}
+
+
+\newenvironment{findingsTable}[0]{~\\
+\tabularx{\textwidth}{| l | p{2.5cm} | X | l |} \hline%
+\cellcolor{rosorange} {\large ID} & \cellcolor{rosorange} {\large Type} & \cellcolor{rosorange}{\large Description} & \cellcolor{rosorange}{\large Thread Level}\\
+}{
+\endtabularx%
+}
+
+\newcommand{\makeROSfindingLine}[4]{ \hline {\small #1} &  {\small #2}& {\small #3} & {\small #4}}
+
+\newenvironment{recommendationTable}[0]{~\\
+\tabularx{\textwidth}{| l | p{2.5cm} | X |} \hline%
+\cellcolor{rosorange} {\large ID} & \cellcolor{rosorange} {\large Type} & \cellcolor{rosorange}{\large Reccomendation} \\
+}{
+\endtabularx%
+}
+
+\newcommand{\makeROSrecommendationLine}[3]{ \hline {\small #1} &  {\small #2}& {\small #3} }
+
+\newenvironment{shellCode}[0]%
+{\mdframed\verbatim}%
+{\endverbatim\endmdframed}
+
+\lhead{}
+\chead{}
+\rhead{\bfseries \reportClassification}
+\lfoot{\thepage/\pageref{LastPage}}
+\cfoot{}
+\rfoot{Chamber of Commerce \commerceRegistrationNumber}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\pretocmd{\tableofcontents}{\begin{mdframed}[backgroundcolor=rosorange,hidealllines=true]}{}{}
+\apptocmd{\tableofcontents}{\end{mdframed}}{}{}
+\pagestyle{fancy}
