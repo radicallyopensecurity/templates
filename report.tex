@@ -1,0 +1,98 @@
+%License: CC by 4.0
+%Author: Cornelius Aschermann (coco@radicallyopensecurity.com)
+
+\documentclass{scrartcl}
+
+\input{common/ros.tex}
+
+\newcommand{\commerceRegistrationNumber}[0]{123456}
+\newcommand{\reportClassification}[0]{Confidential}
+\newcommand{\customer}[0]{Illuminati Inc}
+\newcommand{\target}[0]{Illuminati NOC}
+\newcommand{\reportTitle}[0]{Penetration Testing Report}
+\newcommand{\reportPlace}[0]{Amsterdam}
+\newcommand{\reportPentesters}[0]{Fredik Nord; Fridolin Ord}
+\newcommand{\reportReviewer}[0]{}
+\newcommand{\reportApprover}[0]{Annabelle Approve}
+
+\newcommand{\contactName}[0]{Constantin contact}
+\newcommand{\contactAddress}[0]{
+Radically Open Security BV\newline
+Overdiemerweg 28, 1111 PP Diemen}
+\newcommand{\contactPhone}[0]{ +00 11 22 33 44}
+\newcommand{\contactEmail}[0]{contact@example.com}
+
+
+\newcommand{\reportCurrentVersion}[0]{V0.1}
+\newcommand{\reportCurrentDate}[0]{November 4th, 2014}
+\newcommand{\reportCurrentAuthor}[0]{Alexander Author}
+\newcommand{\reportCurrentDesc}[0]{Initial Draft}
+
+\begin{document}%
+\makeROSFrontPage{}%
+
+\makeROSDocumentInfo{}%
+\begin{versionTable}
+  \makeROSversionLine{\reportCurrentVersion}{\reportCurrentDate}{\reportCurrentAuthor}{\reportCurrentDesc}\\
+  \makeROSversionLine{}{}{}{}\\
+  \makeROSversionLine{}{}{}{}\\
+  \hline
+\end{versionTable}
+\makeROSContactInfo{}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Here is the text of your introduction.
+
+\begin{equation}
+    \label{simple_equation}
+    \alpha = \sqrt{ \beta }
+\end{equation}
+
+\subsection{Exploits}
+\begin{shellCode}
+Starting Nmap 6.47 ( http://nmap.org ) at 2014-8-7 20:32 CEST
+Nmap scan report for audit001.test.net (82.199.82.183)
+Host is up (0.034s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+Nmap scan report for 88.111.88.111
+Host is up (0.016s latency).
+All 1000 scanned ports on 88.111.88.111 are filtered
+Nmap scan report for audit002.test.net (88.111.88.111)
+\end{shellCode}
+
+\section{Findings}
+\begin{findingsTable}
+\makeROSfindingLine{AUD-001}{Remote Code Execution}{ Unsanitized user input in the  cgi script at  allows logged-in users to execute arbitrary commands as the woops user on the blub host. The script generates and executes a commandline, which includes user input verbatim. By inserting, e.g., newline characters, the attack can break out of the intended commandline and execute arbitrary commands.}{High}\\
+\makeROSfindingLine{AUD-002}{Remote Code Execution}{ Unsanitized user input in the  cgi script at  allows logged-in users to execute arbitrary commands as the woops user on the blub host. The script generates and executes a commandline, which includes user input verbatim. By inserting, e.g., newline characters, the attack can break out of the intended commandline and execute arbitrary commands.}{High}\\
+\hline
+\end{findingsTable}
+
+\section{Recommendations}
+
+\begin{recommendationTable}
+\makeROSrecommendationLine{AUD-001}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-002}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-003}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-004}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-005}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-005}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-005}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-005}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-005}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-005}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-005}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-005}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\makeROSrecommendationLine{AUD-005}{Remote Code Execution}{Update Fnord to the latest version, in which the vulnerable script has been removed.}\\
+\hline
+\end{recommendationTable}
+
+\section{Conclusion}
+Write your conclusion here.
+
+\end{document}
