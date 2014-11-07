@@ -1,4 +1,4 @@
-templates
+Templates
 =========
 
 A place to collect the different document templates for ROS. All documents are released under CC by 4.0 (https://creativecommons.org/licenses/by/4.0/)
