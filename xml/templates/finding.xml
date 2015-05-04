@@ -1,0 +1,20 @@
+<finding threatLevel="Moderate" type="Information Leak">
+	<!-- Note: threatLevel can be Low, Moderate, Elevated, High or Extreme; type is free text -->
+
+<description>
+Short general description of the problem
+</description>
+
+<technicaldescription>
+Long and/or in-depth description of the problem.
+</technicaldescription>
+
+<impact>
+Impact on the system. What are the consequences if someone were to exploit this issue?
+</impact>
+
+<recommendation>
+Recommendation for the client: what steps need to be taken to resolve the issue?
+</recommendation>
+
+</finding>
