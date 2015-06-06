@@ -89,6 +89,7 @@
                         <p>This report contains our findings as well as detailed explanations of exactly how ROS performed
                                 the penetration test.</p>
                 </section>
+                
                 <section id="scope">
                         <title>Scope of work</title>
                         <p>The scope of the Sitting Duck penetration test was limited to the following
@@ -201,7 +202,39 @@ Raw packets sent: 1681 (73.962KB) | Rcvd: 1681 (77.322KB)</pre>
                         
                         <p>We have identified the following issues:</p>
                         
-                        <finding id="f1" threatLevel="Moderate" type="Information Leak">
+                        
+                        
+                        <finding id="f2" threatLevel="High" type="XSS">
+                                <title>A terrible XSS issue</title>
+                                <description>
+                                        <p>A general description of the problem.</p>
+                                </description>
+                                <technicaldescription>
+                                        <p>This is we go into great detail about the vulnerability.</p>
+                                </technicaldescription>
+                                <impact>
+                                        <p>This is where we explain why this vulnerability is a problem.</p>
+                                </impact>
+                                <recommendation>
+                                        <p>This is where we solve everything and the sun starts shining again.</p>
+                                </recommendation>
+                        </finding>
+                        <finding id="f2" threatLevel="High" type="XSS">
+                                <title>A terrible XSS issue</title>
+                                <description>
+                                        <p>A general description of the problem.</p>
+                                </description>
+                                <technicaldescription>
+                                        <p>This is we go into great detail about the vulnerability.</p>
+                                </technicaldescription>
+                                <impact>
+                                        <p>This is where we explain why this vulnerability is a problem.</p>
+                                </impact>
+                                <recommendation>
+                                        <p>This is where we solve everything and the sun starts shining again.</p>
+                                </recommendation>
+                        </finding>
+                        <finding id="f3" threatLevel="Moderate" type="Information Leak">
                                 <title>PHPInfo Disclosure</title>
                                 <description>
                                         <p>The phpinfo() function of the PHP language is readable,
@@ -220,23 +253,6 @@ Raw packets sent: 1681 (73.962KB) | Rcvd: 1681 (77.322KB)</pre>
                                         <p>Here is where we write some tips to solve the problem.</p>
                                 </recommendation>
                         </finding>
-                        
-                        <finding id="f2" threatLevel="High" type="XSS">
-                                <title>A terrible XSS issue</title>
-                                <description>
-                                        <p>A general description of the problem.</p>
-                                </description>
-                                <technicaldescription>
-                                        <p>This is we go into great detail about the vulnerability.</p>
-                                </technicaldescription>
-                                <impact>
-                                        <p>This is where we explain why this vulnerability is a problem.</p>
-                                </impact>
-                                <recommendation>
-                                        <p>This is where we solve everything and the sun starts shining again.</p>
-                                </recommendation>
-                        </finding>
-                        
                         
                 </section>
                 

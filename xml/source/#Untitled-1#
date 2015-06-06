@@ -1,0 +1,312 @@
+
+<cvrfdoc xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1" xmlns:cvrf="http://www.icasi.org/CVRF/schema/cvrf/1.1">
+<DocumentTitle xml:lang="en">Red Hat Security Advisory: jasper security update</DocumentTitle>
+<DocumentType>Security Advisory</DocumentType>
+<DocumentPublisher Type="Vendor">
+<ContactDetails>secalert@redhat.com</ContactDetails>
+<IssuingAuthority>Red Hat Security Response Team</IssuingAuthority>
+</DocumentPublisher>
+<DocumentTracking>
+<Identification>
+<ID>RHSA-2015:0074</ID>
+</Identification>
+<Status>Final</Status>
+<Version>1</Version>
+<RevisionHistory>
+<Revision>
+<Number>1</Number>
+<Date>2015-01-22T21:05:00Z</Date>
+<Description>Current version</Description>
+</Revision>
+</RevisionHistory>
+<InitialReleaseDate>2015-01-22T18:13:00Z</InitialReleaseDate>
+<CurrentReleaseDate>2015-01-22T21:05:00Z</CurrentReleaseDate>
+<Generator>
+<Engine>Red Hat rhsa-to-cvrf 1.1</Engine>
+<Date>2015-01-22T21:20:15Z</Date>
+</Generator>
+</DocumentTracking>
+<DocumentNotes>
+<Note Title="Topic" Type="Summary" Ordinal="1" xml:lang="en">
+Updated jasper packages that fix two security issues are now available for Red Hat Enterprise Linux 6 and 7. Red Hat Product Security has rated this update as having Important security impact. Common Vulnerability Scoring System (CVSS) base scores, which give detailed severity ratings, are available for each vulnerability from the CVE links in the References section.
+</Note>
+<Note Title="Details" Type="General" Ordinal="2" xml:lang="en">
+JasPer is an implementation of Part 1 of the JPEG 2000 image compression standard. An off-by-one flaw, leading to a heap-based buffer overflow, was found in the way JasPer decoded JPEG 2000 image files. A specially crafted file could cause an application using JasPer to crash or, possibly, execute arbitrary code. (CVE-2014-8157) An unrestricted stack memory use flaw was found in the way JasPer decoded JPEG 2000 image files. A specially crafted file could cause an application using JasPer to crash or, possibly, execute arbitrary code. (CVE-2014-8158) Red Hat would like to thank oCERT for reporting these issues. oCERT acknowledges pyddeh as the original reporter. All JasPer users are advised to upgrade to these updated packages, which contain backported patches to correct these issues. All applications using the JasPer libraries must be restarted for the update to take effect.
+</Note>
+<Note Title="Terms of Use" Ordinal="3" Type="Legal Disclaimer" xml:lang="en">
+Please see https://www.redhat.com/footer/terms-of-use.html
+</Note>
+</DocumentNotes>
+<DocumentDistribution xml:lang="en">
+Copyright © 2015 Red Hat, Inc. All rights reserved.
+</DocumentDistribution>
+<AggregateSeverity Namespace="https://access.redhat.com/security/updates/classification/">Important</AggregateSeverity>
+<DocumentReferences>
+<Reference Type="Self">
+<URL>https://rhn.redhat.com/errata/RHSA-2015-0074.html</URL>
+<Description>https://rhn.redhat.com/errata/RHSA-2015-0074.html</Description>
+</Reference>
+<Reference>
+<URL>
+https://access.redhat.com/security/updates/classification/#important
+</URL>
+<Description>
+https://access.redhat.com/security/updates/classification/#important
+</Description>
+</Reference>
+</DocumentReferences>
+<ProductTree xmlns="http://www.icasi.org/CVRF/schema/prod/1.1">
+<Branch Type="Product Family" Name="Red Hat Enterprise Linux">
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Server (v. 7)">
+<FullProductName ProductID="7Server-7.0.Z">Red Hat Enterprise Linux Server (v. 7)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Workstation Optional (v. 7)">
+<FullProductName ProductID="7Workstation-optional-7.0.Z">
+Red Hat Enterprise Linux Workstation Optional (v. 7)
+</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Workstation (v. 6)">
+<FullProductName ProductID="6Workstation-6.6.z">Red Hat Enterprise Linux Workstation (v. 6)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Client (v. 7)">
+<FullProductName ProductID="7Client-7.0.Z">Red Hat Enterprise Linux Client (v. 7)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Desktop (v. 6)">
+<FullProductName ProductID="6Client-6.6.z">Red Hat Enterprise Linux Desktop (v. 6)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Workstation Optional (v. 6)">
+<FullProductName ProductID="6Workstation-optional-6.6.z">
+Red Hat Enterprise Linux Workstation Optional (v. 6)
+</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux ComputeNode (v. 7)">
+<FullProductName ProductID="7ComputeNode-7.0.Z">Red Hat Enterprise Linux ComputeNode (v. 7)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Desktop Optional (v. 6)">
+<FullProductName ProductID="6Client-optional-6.6.z">Red Hat Enterprise Linux Desktop Optional (v. 6)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Server Optional (v. 6)">
+<FullProductName ProductID="6Server-optional-6.6.z">Red Hat Enterprise Linux Server Optional (v. 6)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Workstation (v. 7)">
+<FullProductName ProductID="7Workstation-7.0.Z">Red Hat Enterprise Linux Workstation (v. 7)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux HPC Node (v. 6)">
+<FullProductName ProductID="6ComputeNode-6.6.z">Red Hat Enterprise Linux HPC Node (v. 6)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Client Optional (v. 7)">
+<FullProductName ProductID="7Client-optional-7.0.Z">Red Hat Enterprise Linux Client Optional (v. 7)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Server Optional (v. 7)">
+<FullProductName ProductID="7Server-optional-7.0.Z">Red Hat Enterprise Linux Server Optional (v. 7)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux HPC Node Optional (v. 6)">
+<FullProductName ProductID="6ComputeNode-optional-6.6.z ">Red Hat Enterprise Linux HPC Node Optional (v. 6)</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux ComputeNode Optional (v. 7)">
+<FullProductName ProductID="7ComputeNode-optional-7.0.Z">
+Red Hat Enterprise Linux ComputeNode Optional (v. 7)
+</FullProductName>
+</Branch>
+<Branch Type="Product Name" Name="Red Hat Enterprise Linux Server (v. 6)">
+<FullProductName ProductID="6Server-6.6.z">Red Hat Enterprise Linux Server (v. 6)</FullProductName>
+</Branch>
+</Branch>
+<Branch Type="Product Version" Name="jasper-1.900.1-16.el6_6.3">
+<FullProductName ProductID="jasper-1.900.1-16.el6_6.3">jasper-1.900.1-16.el6_6.3.src.rpm</FullProductName>
+</Branch>
+<Branch Type="Product Version" Name="jasper-1.900.1-26.el7_0.3">
+<FullProductName ProductID="jasper-1.900.1-26.el7_0.3">jasper-1.900.1-26.el7_0.3.src.rpm</FullProductName>
+</Branch>
+<Relationship ProductReference="jasper-1.900.1-26.el7_0.3" RelationType="Default Component Of" RelatesToProductReference="7Server-7.0.Z">
+<FullProductName ProductID="7Server-7.0.Z:jasper-1.900.1-26.el7_0.3">
+jasper-1.900.1-26.el7_0.3 as a component of Red Hat Enterprise Linux Server (v. 7)
+</FullProductName>
+</Relationship>
+<Relationship ProductReference="jasper-1.900.1-16.el6_6.3" RelationType="Default Component Of" RelatesToProductReference="6Workstation-6.6.z">
+<FullProductName ProductID="6Workstation-6.6.z:jasper-1.900.1-16.el6_6.3">
+jasper-1.900.1-16.el6_6.3 as a component of Red Hat Enterprise Linux Workstation (v. 6)
+</FullProductName>
+</Relationship>
+<Relationship ProductReference="jasper-1.900.1-26.el7_0.3" RelationType="Default Component Of" RelatesToProductReference="7Client-7.0.Z">
+<FullProductName ProductID="7Client-7.0.Z:jasper-1.900.1-26.el7_0.3">
+jasper-1.900.1-26.el7_0.3 as a component of Red Hat Enterprise Linux Client (v. 7)
+</FullProductName>
+</Relationship>
+<Relationship ProductReference="jasper-1.900.1-16.el6_6.3" RelationType="Default Component Of" RelatesToProductReference="6Client-6.6.z">
+<FullProductName ProductID="6Client-6.6.z:jasper-1.900.1-16.el6_6.3">
+jasper-1.900.1-16.el6_6.3 as a component of Red Hat Enterprise Linux Desktop (v. 6)
+</FullProductName>
+</Relationship>
+<Relationship ProductReference="jasper-1.900.1-26.el7_0.3" RelationType="Default Component Of" RelatesToProductReference="7ComputeNode-7.0.Z">
+<FullProductName ProductID="7ComputeNode-7.0.Z:jasper-1.900.1-26.el7_0.3">
+jasper-1.900.1-26.el7_0.3 as a component of Red Hat Enterprise Linux ComputeNode (v. 7)
+</FullProductName>
+</Relationship>
+<Relationship ProductReference="jasper-1.900.1-26.el7_0.3" RelationType="Default Component Of" RelatesToProductReference="7Workstation-7.0.Z">
+<FullProductName ProductID="7Workstation-7.0.Z:jasper-1.900.1-26.el7_0.3">
+jasper-1.900.1-26.el7_0.3 as a component of Red Hat Enterprise Linux Workstation (v. 7)
+</FullProductName>
+</Relationship>
+<Relationship ProductReference="jasper-1.900.1-16.el6_6.3" RelationType="Default Component Of" RelatesToProductReference="6ComputeNode-6.6.z">
+<FullProductName ProductID="6ComputeNode-6.6.z:jasper-1.900.1-16.el6_6.3">
+jasper-1.900.1-16.el6_6.3 as a component of Red Hat Enterprise Linux HPC Node (v. 6)
+</FullProductName>
+</Relationship>
+<Relationship ProductReference="jasper-1.900.1-16.el6_6.3" RelationType="Default Component Of" RelatesToProductReference="6Server-6.6.z">
+<FullProductName ProductID="6Server-6.6.z:jasper-1.900.1-16.el6_6.3">
+jasper-1.900.1-16.el6_6.3 as a component of Red Hat Enterprise Linux Server (v. 6)
+</FullProductName>
+</Relationship>
+</ProductTree>
+<Vulnerability xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1" Ordinal="1">
+<Notes>
+<Note Title="Vulnerability Description" Type="General" Ordinal="1" xml:lang="en">
+An off-by-one flaw, leading to a heap-based buffer overflow, was found in the way JasPer decoded JPEG 2000 image files. A specially crafted file could cause an application using JasPer to crash or, possibly, execute arbitrary code.
+</Note>
+</Notes>
+<DiscoveryDate>2015-01-06T00:00:00Z</DiscoveryDate>
+<ReleaseDate>2015-01-21T00:00:00Z</ReleaseDate>
+<Involvements>
+<Involvement Party="Vendor" Status="Completed"/>
+</Involvements>
+<CVE>CVE-2014-8157</CVE>
+<ProductStatuses>
+<Status Type="Fixed">
+<ProductID>6Client-6.6.z:jasper-1.900.1-16.el6_6.3</ProductID>
+<ProductID>6ComputeNode-6.6.z:jasper-1.900.1-16.el6_6.3</ProductID>
+<ProductID>6Server-6.6.z:jasper-1.900.1-16.el6_6.3</ProductID>
+<ProductID>6Workstation-6.6.z:jasper-1.900.1-16.el6_6.3</ProductID>
+<ProductID>7Client-7.0.Z:jasper-1.900.1-26.el7_0.3</ProductID>
+<ProductID>7ComputeNode-7.0.Z:jasper-1.900.1-26.el7_0.3</ProductID>
+<ProductID>7Server-7.0.Z:jasper-1.900.1-26.el7_0.3</ProductID>
+<ProductID>7Workstation-7.0.Z:jasper-1.900.1-26.el7_0.3</ProductID>
+</Status>
+</ProductStatuses>
+<Threats>
+<Threat Type="Impact">
+<Description>Important</Description>
+</Threat>
+</Threats>
+<CVSSScoreSets>
+<ScoreSet>
+<BaseScore>6.8</BaseScore>
+<Vector>AV:N/AC:M/Au:N/C:P/I:P/A:P</Vector>
+</ScoreSet>
+</CVSSScoreSets>
+<Remediations>
+<Remediation Type="Vendor Fix">
+<Description xml:lang="en">
+Before applying this update, make sure all previously released errata relevant to your system have been applied. This update is available via the Red Hat Network. Details on how to use the Red Hat Network to apply this update are available at https://access.redhat.com/articles/11258
+</Description>
+<URL>https://rhn.redhat.com/errata/RHSA-2015-0074.html</URL>
+</Remediation>
+</Remediations>
+<References>
+<Reference>
+<URL>
+http://www.ocert.org/advisories/ocert-2015-001.html
+</URL>
+<Description>
+http://www.ocert.org/advisories/ocert-2015-001.html
+</Description>
+</Reference>
+<Reference>
+<URL>
+https://access.redhat.com/security/cve/CVE-2014-8157
+</URL>
+<Description>CVE-2014-8157</Description>
+</Reference>
+<Reference>
+<URL>
+https://bugzilla.redhat.com/show_bug.cgi?id=1179282
+</URL>
+<Description>
+bz#1179282: CVE-2014-8157 jasper: dec->numtiles off-by-one check in jpc_dec_process_sot() (oCERT-2015-001)
+</Description>
+</Reference>
+</References>
+<Acknowledgments>
+<Acknowledgment>
+<Description>
+Red Hat would like to thank oCERT for reporting this issue. oCERT acknowledges pyddeh as the original reporter.
+</Description>
+</Acknowledgment>
+</Acknowledgments>
+</Vulnerability>
+<Vulnerability xmlns="http://www.icasi.org/CVRF/schema/vuln/1.1" Ordinal="2">
+<Notes>
+<Note Title="Vulnerability Description" Type="General" Ordinal="1" xml:lang="en">
+An unrestricted stack memory use flaw was found in the way JasPer decoded JPEG 2000 image files. A specially crafted file could cause an application using JasPer to crash or, possibly, execute arbitrary code.
+</Note>
+</Notes>
+<DiscoveryDate>2014-01-06T00:00:00Z</DiscoveryDate>
+<ReleaseDate>2015-01-21T00:00:00Z</ReleaseDate>
+<Involvements>
+<Involvement Party="Vendor" Status="Completed"/>
+</Involvements>
+<CVE>CVE-2014-8158</CVE>
+<ProductStatuses>
+<Status Type="Fixed">
+<ProductID>6Client-6.6.z:jasper-1.900.1-16.el6_6.3</ProductID>
+<ProductID>6ComputeNode-6.6.z:jasper-1.900.1-16.el6_6.3</ProductID>
+<ProductID>6Server-6.6.z:jasper-1.900.1-16.el6_6.3</ProductID>
+<ProductID>6Workstation-6.6.z:jasper-1.900.1-16.el6_6.3</ProductID>
+<ProductID>7Client-7.0.Z:jasper-1.900.1-26.el7_0.3</ProductID>
+<ProductID>7ComputeNode-7.0.Z:jasper-1.900.1-26.el7_0.3</ProductID>
+<ProductID>7Server-7.0.Z:jasper-1.900.1-26.el7_0.3</ProductID>
+<ProductID>7Workstation-7.0.Z:jasper-1.900.1-26.el7_0.3</ProductID>
+</Status>
+</ProductStatuses>
+<Threats>
+<Threat Type="Impact">
+<Description>Moderate</Description>
+</Threat>
+</Threats>
+<CVSSScoreSets>
+<ScoreSet>
+<BaseScore>5.1</BaseScore>
+<Vector>AV:N/AC:H/Au:N/C:P/I:P/A:P</Vector>
+</ScoreSet>
+</CVSSScoreSets>
+<Remediations>
+<Remediation Type="Vendor Fix">
+<Description xml:lang="en">
+Before applying this update, make sure all previously released errata relevant to your system have been applied. This update is available via the Red Hat Network. Details on how to use the Red Hat Network to apply this update are available at https://access.redhat.com/articles/11258
+</Description>
+<URL>https://rhn.redhat.com/errata/RHSA-2015-0074.html</URL>
+</Remediation>
+</Remediations>
+<References>
+<Reference>
+<URL>
+http://www.ocert.org/advisories/ocert-2015-001.html
+</URL>
+<Description>
+http://www.ocert.org/advisories/ocert-2015-001.html
+</Description>
+</Reference>
+<Reference>
+<URL>
+https://access.redhat.com/security/cve/CVE-2014-8158
+</URL>
+<Description>CVE-2014-8158</Description>
+</Reference>
+<Reference>
+<URL>
+https://bugzilla.redhat.com/show_bug.cgi?id=1179298
+</URL>
+<Description>
+bz#1179298: CVE-2014-8158 jasper: unrestricted stack memory use in jpc_qmfb.c (oCERT-2015-001)
+</Description>
+</Reference>
+</References>
+<Acknowledgments>
+<Acknowledgment>
+<Description>
+Red Hat would like to thank oCERT for reporting this issue. oCERT acknowledges pyddeh as the original reporter.
+</Description>
+</Acknowledgment>
+</Acknowledgments>
+</Vulnerability>
+</cvrfdoc>

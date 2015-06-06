@@ -15,7 +15,7 @@ The report's main element is `<pentest_report>`. It contains four major parts:
 
 Additionally, the `<pentest_report>` element has two attributes: 
 
-- `findingCode`, which is a three-letter prefix for the finding numbers, derivated from the client name ('TEN' for TenneT, 'UVA' for Universiteit van Amsterdam, etc.)
+- `findingCode`, which is a three-letter prefix for the finding numbers, derivated from the client name (e.g. 'SID' for Sitting Duck BV, 'BIC' for Big International Company Ltd, etc.)
 - `findingNumberingBase`, which can be set to 'Report' or 'Section' - this configures whether the numbering of findings in the report is report-based (i.e. starting with XXX-001 and continuing upwards) or section-based (i.e. findings in section 3 are numbered XXX-301 and up, findings in section 5 are numbered XXX-501 and up). Use 'Report' for smaller pentest reports and 'Section' for large ones.
 
 ## Document information / metadata
@@ -45,8 +45,8 @@ Example:
 
 The `<client>` element contains two other elements:
 
-- `<full_name>`, in which you should type the client's official name, e.g. 'Universiteit van Amsterdam', or 'Company BV'
-- `<short_name>`, in which you should type the client's shorter name, e.g. 'UvA' or 'Company' (or, if there is no shorter name, just type the long name again)
+- `<full_name>`, in which you should type the client's official name, e.g. 'Sitting Duck BV', or 'Big International Company Ltd'
+- `<short_name>`, in which you should type the client's shorter name, e.g. 'Sitting Duck' or 'Big International' (or, if there is no shorter name, just type the long name again)
 
 Example:
 ```
