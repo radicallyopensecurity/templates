@@ -93,9 +93,9 @@ Make sure the XML file you've created with jEdit is valid (no errors in the Erro
 
 To transform your XML file into XSL-FO, use the following command from the saxon directory:
 
-```java  -jar saxon9he.jar -s:/path/to/report/source/pentestreport.xml -xsl:/path/to/report/xslt/content.xsl -o:/path/to/report/target/pentestreport.fo```
+```java  -jar saxon9he.jar -s:/path/to/report/source/pentestreport.xml -xsl:/path/to/report/xslt/content.xsl -o:/path/to/report/target/pentestreport.fo -xi```
 
-(Note the source/xslt/target directories in this example, which correspond to the directory structure in the report directory)
+(Note the source/xslt/target directories in this example, which correspond to the directory structure in the report directory. Also make sure to add the -xi option!)
 
 ### FOP
 

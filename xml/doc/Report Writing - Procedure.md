@@ -513,6 +513,10 @@ This is not a haiku.</pre>
 </section>
 ```
 
+#### Help! The code in my pre element contains < characters and it messes with my xml!
+
+You can escape the < character by replacing it with its entity `&lt;`.
+
 ### Tables
 
 **Rows**
