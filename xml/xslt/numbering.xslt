@@ -22,7 +22,7 @@
         />
     </xsl:template>
     
-    <xsl:template match="section|appendix" mode="number">
+    <xsl:template match="section|appendix|non-finding" mode="number">
         <xsl:choose>
             <xsl:when test="self::appendix">
                 <fo:inline> Appendix&#160;<xsl:number count="appendix" level="multiple"
