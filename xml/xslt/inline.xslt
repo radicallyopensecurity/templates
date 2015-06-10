@@ -31,8 +31,10 @@
             <xsl:choose>
                 <xsl:when test="starts-with(@href, '#') and not(text())">
                     <xsl:for-each select="key('rosid',$destination)">
-                        <xsl:value-of select="local-name()"/>
-                        <xsl:text> </xsl:text>
+                        <xsl:if test="not(local-name() = 'appendix')">
+                            <xsl:value-of select="local-name()"/>
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
                         <xsl:apply-templates select="." mode="number"/>
                     </xsl:for-each>
                 </xsl:when>

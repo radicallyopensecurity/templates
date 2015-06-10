@@ -40,21 +40,4 @@
         </fo:block>
     </xsl:template>
     
-    <xsl:template match="finding" mode="number">
-        <!-- Output finding display number (context is finding) -->
-        <xsl:variable name="sectionNumber">
-            <xsl:choose>
-                <xsl:when test="/pentest_report/@findingNumberingBase = 'Section'">
-                    <xsl:value-of select="count(ancestor::section[last()]/preceding-sibling::section) + 1"/>
-                </xsl:when>
-                <xsl:otherwise>0</xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
-        <xsl:variable name="findingNumber" select="count(preceding-sibling::finding)+1"/>
-        <xsl:variable name="numFormat" select="'00'"/>
-        <xsl:value-of
-            select="concat(ancestor::*[@findingCode][1]/@findingCode,'-',$sectionNumber, string(format-number($findingNumber, $numFormat)))"
-        />
-    </xsl:template>
-    
 </xsl:stylesheet>

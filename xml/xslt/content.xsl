@@ -17,6 +17,7 @@
     <xsl:import href="inline.xslt"/>
     <xsl:import href="graphics.xslt"/>
     <xsl:import href="generic.xslt"/>
+    <xsl:import href="numbering.xslt"/>
     
     <xsl:include href="styles.xslt"/>
     
