@@ -20,6 +20,9 @@
         </fo:block>
     </xsl:template>
     
+    <!-- ignore summary-table-only elements in the findings -->
+    <xsl:template match="description_summary|recommendation_summary"/>
+    
     <xsl:template match="description">
         <fo:block xsl:use-attribute-sets="title-4">Description:</fo:block>
         <fo:block margin-bottom="{$large-space}">
