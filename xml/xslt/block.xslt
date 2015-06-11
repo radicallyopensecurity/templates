@@ -33,6 +33,10 @@
         </fo:block>
     </xsl:template>
     
+    <xsl:template match="p" mode="summarytable">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
     <xsl:template match="pre">
         <fo:block xsl:use-attribute-sets="pre">
             <xsl:call-template name="checkIfLast"/>

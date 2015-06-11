@@ -34,7 +34,7 @@
             <xsl:if test="img|table">
                 <xsl:message>WARNING: description containing img or table may not look very good in the finding summary table. Consider using a description_summary element instead.</xsl:message>
             </xsl:if>
-            <xsl:apply-templates/>
+            <xsl:apply-templates mode="summarytable"/>
     </xsl:template>
     
     <xsl:template match="technicaldescription">
@@ -62,7 +62,7 @@
         <xsl:if test="img|table">
             <xsl:message>WARNING: recommendation containing img or table may not look very good in the finding summary table. Consider using a recommendation_summary element instead.</xsl:message>
         </xsl:if>
-        <xsl:apply-templates/>
+        <xsl:apply-templates mode="summarytable"/>
     </xsl:template>
     
 </xsl:stylesheet>
