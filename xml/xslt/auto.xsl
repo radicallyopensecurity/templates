@@ -91,7 +91,7 @@
                             <xsl:value-of select="description_summary"/>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="description"/>
+                            <xsl:apply-templates select="description" mode="summarytable"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </fo:block>
@@ -165,7 +165,7 @@
                             <xsl:value-of select="recommendation_summary"/>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="recommendation"/>
+                            <xsl:apply-templates select="recommendation" mode="summarytable"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </fo:block>

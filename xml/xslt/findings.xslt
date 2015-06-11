@@ -30,6 +30,13 @@
         </fo:block>
     </xsl:template>
     
+    <xsl:template match="description" mode="summarytable">
+            <xsl:if test="img|table">
+                <xsl:message>WARNING: description containing img or table may not look very good in the finding summary table. Consider using a description_summary element instead.</xsl:message>
+            </xsl:if>
+            <xsl:apply-templates/>
+    </xsl:template>
+    
     <xsl:template match="technicaldescription">
         <fo:block xsl:use-attribute-sets="title-4">Technical description:</fo:block>
         <fo:block margin-bottom="{$large-space}">
@@ -49,6 +56,13 @@
         <fo:block margin-bottom="{$large-space}">
             <xsl:apply-templates/>
         </fo:block>
+    </xsl:template>
+    
+    <xsl:template match="recommendation" mode="summarytable">
+        <xsl:if test="img|table">
+            <xsl:message>WARNING: recommendation containing img or table may not look very good in the finding summary table. Consider using a recommendation_summary element instead.</xsl:message>
+        </xsl:if>
+        <xsl:apply-templates/>
     </xsl:template>
     
 </xsl:stylesheet>
