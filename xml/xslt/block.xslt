@@ -34,7 +34,7 @@
     </xsl:template>
     
     <xsl:template match="p" mode="summarytable">
-        <xsl:apply-templates/>
+        <xsl:apply-templates mode="summarytable"/>
     </xsl:template>
     
     <xsl:template match="pre">

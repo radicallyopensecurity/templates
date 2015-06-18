@@ -14,6 +14,11 @@
     <xsl:variable name="large-space">8mm</xsl:variable>
     <xsl:variable name="very-large-space">1.5cm</xsl:variable>
     
+    <!-- User-accessible classes -->
+    <xsl:attribute-set name="keep-together">
+        <xsl:attribute name="keep-together">always</xsl:attribute>
+    </xsl:attribute-set>
+    
     <!-- Text -->
     <xsl:attribute-set name="DefaultFont">
         <xsl:attribute name="font-family">LiberationSansNarrow</xsl:attribute>
