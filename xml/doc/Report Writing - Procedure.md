@@ -178,7 +178,7 @@ start a new version, add a `<version>` element to the list.
 The `<version>` element should contain the following:
 
 -   a `date` attribute with a date of your version as a value, in the
-    format YYYY-MM-DD, e.g. 2015-04-18
+    format YYYY-MM-DDT00:00:00, e.g. 2015-04-18T00:00:00
 -   a `number` attribute with the version number as a value. This value
     can either be 'auto' or an actual version number, e.g. 1.0. If you
     use the 'auto' value, the system will automatically count it
@@ -194,11 +194,11 @@ The `<version>` element should contain the following:
 Example:
 
     <version_history>
-        <version number="auto" date="2014-12-18">
+        <version number="auto" date="2014-12-18T00:00:00">
             <v_author>Bob Goudriaan</v_author>
             <v_description>Initial draft</v_description>
         </version>
-        <version date="2014-12-22" number="auto">
+        <version date="2014-12-22T00:00:00" number="auto">
             <v_author>Bob Goudriaan</v_author>
             <v_author>Patricia Piolon</v_author>
             <v_description>Revision</v_description>

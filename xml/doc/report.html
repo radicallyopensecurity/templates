@@ -99,18 +99,18 @@
 <p>The <code>&lt;version_history&gt;</code> element contains one or more <code>&lt;version&gt;</code> elements, one for each version of the document you create. Whenever you start a new version, add a <code>&lt;version&gt;</code> element to the list.</p>
 <p>The <code>&lt;version&gt;</code> element should contain the following:</p>
 <ul>
-<li>a <code>date</code> attribute with a date of your version as a value, in the format YYYY-MM-DD, e.g. 2015-04-18</li>
+<li>a <code>date</code> attribute with a date of your version as a value, in the format YYYY-MM-DDT00:00:00, e.g. 2015-04-18T00:00:00</li>
 <li>a <code>number</code> attribute with the version number as a value. This value can either be 'auto' or an actual version number, e.g. 1.0. If you use the 'auto' value, the system will automatically count it (starting with 0.1 for the first <code>&lt;version&gt;</code> element and going up from there: 0.2, 0.3, etc...).</li>
 <li>One or more <code>&lt;v_author&gt;</code> elements, each containing the name of the person who worked on this version (that would be you at least, and perhaps a pentester or colleague who did significant work on it)</li>
 <li>A <code>&lt;v_description&gt;</code> element with a (very short!) description of what has been done in this version, e.g. 'Added non-findings' or 'Revision'</li>
 </ul>
 <p>Example:</p>
 <pre><code>&lt;version_history&gt;
-    &lt;version number=&quot;auto&quot; date=&quot;2014-12-18&quot;&gt;
+    &lt;version number=&quot;auto&quot; date=&quot;2014-12-18T00:00:00&quot;&gt;
         &lt;v_author&gt;Bob Goudriaan&lt;/v_author&gt;
         &lt;v_description&gt;Initial draft&lt;/v_description&gt;
     &lt;/version&gt;
-    &lt;version date=&quot;2014-12-22&quot; number=&quot;auto&quot;&gt;
+    &lt;version date=&quot;2014-12-22T00:00:00&quot; number=&quot;auto&quot;&gt;
         &lt;v_author&gt;Bob Goudriaan&lt;/v_author&gt;
         &lt;v_author&gt;Patricia Piolon&lt;/v_author&gt;
         &lt;v_description&gt;Revision&lt;/v_description&gt;

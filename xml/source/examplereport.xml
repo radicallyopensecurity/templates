@@ -40,28 +40,28 @@
                 </collaborators>
                 <classification>Confidential</classification>
                 <version_history>
-                        <version date="2015-01-19" number="auto">
+                        <version date="2015-01-19T00:00:00" number="auto">
                                 <v_author>Patricia Piolon</v_author>
                                 <v_description>Initial draft</v_description>
                         </version>
-                        <version date="2015-01-20" number="auto">
+                        <version date="2015-01-20T00:00:00" number="auto">
                                 <v_author>Ernest Hemingway</v_author>
                                 <v_description>Structure &amp; contents revision</v_description>
                         </version>
-                        <version date="2015-01-21" number="auto">
+                        <version date="2015-01-21T00:00:00" number="auto">
                                 <v_author>Patricia Piolon</v_author>
                                 <v_description>Added threat levels and recommendations</v_description>
                         </version>
-                        <version date="2015-01-22" number="auto">
+                        <version date="2015-01-22T00:00:00" number="auto">
                                 <v_author>Patricia Piolon</v_author>
                                 <v_author>JRR Tolkien</v_author>
                                 <v_description>Revision</v_description>
                         </version>
-                        <version date="2015-01-23" number="auto">
+                        <version date="2015-01-23T00:00:00" number="auto">
                                 <v_author>Patricia Piolon</v_author>
                                 <v_description>Revision</v_description>
                         </version>
-                        <version date="2015-01-26" number="1.0">
+                        <version date="2015-01-26T00:00:00" number="1.0">
                                 <v_author>Arthur Conan Doyle</v_author>
                                 <v_description>Finalizing</v_description>
                         </version>

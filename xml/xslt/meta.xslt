@@ -7,15 +7,15 @@
       <xsl:template match="meta">
         <xsl:variable name="latestVersionDate">
             <xsl:for-each select="version_history/version">
-                <xsl:sort select="xs:date(@date)" order="descending"/>
+                <xsl:sort select="xs:dateTime(@date)" order="descending"/>
                 <xsl:if test="position() = 1">
-                    <xsl:value-of select="format-date(@date, '[MNn] [D1o], [Y]', 'en', (), ())"/>
+                    <xsl:value-of select="format-dateTime(@date, '[MNn] [D1o], [Y]', 'en', (), ())"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
         <xsl:variable name="latestVersionNumber">
             <xsl:for-each select="version_history/version">
-                <xsl:sort select="xs:date(@date)" order="descending"/>
+                <xsl:sort select="xs:dateTime(@date)" order="descending"/>
                 <xsl:if test="position() = 1">
                     <xsl:call-template name="VersionNumber">
                         <xsl:with-param name="number" select="@number"/>
@@ -66,7 +66,7 @@
     <xsl:template name="DocProperties">
         <xsl:variable name="latestVersionNumber">
             <xsl:for-each select="version_history/version">
-                <xsl:sort select="xs:date(@date)" order="descending"/>
+                <xsl:sort select="xs:dateTime(@date)" order="descending"/>
                 <xsl:if test="position() = 1">
                     <xsl:call-template name="VersionNumber">
                         <xsl:with-param name="number" select="@number"/>
@@ -230,7 +230,7 @@
                     </fo:table-row>
                     <xsl:for-each select="$versions">
                         <!-- todo: guard date format in schema -->
-                        <xsl:sort select="xs:date(@date)" order="ascending"/>
+                        <xsl:sort select="xs:dateTime(@date)" order="ascending"/>
                         <fo:table-row xsl:use-attribute-sets="borders">
                             <fo:table-cell xsl:use-attribute-sets="td">
                                 <fo:block>
@@ -242,7 +242,7 @@
                             <fo:table-cell xsl:use-attribute-sets="td">
                                 <fo:block>
                                     <xsl:value-of
-                                        select="format-date(@date, '[MNn] [D1o], [Y]', 'en', (), ())"
+                                        select="format-dateTime(@date, '[MNn] [D1o], [Y]', 'en', (), ())"
                                     />
                                 </fo:block>
                             </fo:table-cell>
