@@ -44,4 +44,11 @@
         </fo:block>
     </xsl:template>
     
+    <xsl:template match="code">
+        <fo:block xsl:use-attribute-sets="code">
+            <xsl:call-template name="checkIfLast"/>
+            <xsl:apply-templates/>
+        </fo:block>
+    </xsl:template>
+    
 </xsl:stylesheet>

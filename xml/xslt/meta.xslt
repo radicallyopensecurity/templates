@@ -191,7 +191,7 @@
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="td">
                             <fo:block>
-                                <xsl:value-of select="collaborators/approver"/>
+                                <xsl:value-of select="collaborators/approver/name"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>

@@ -33,6 +33,10 @@
     <xsl:attribute-set name="TinyFont" use-attribute-sets="DefaultFont">
         <xsl:attribute name="font-size">8pt</xsl:attribute>
     </xsl:attribute-set>
+    <xsl:attribute-set name="CodeFont" use-attribute-sets="DefaultFont">
+        <xsl:attribute name="font-family">LiberationMono</xsl:attribute>
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
+    </xsl:attribute-set>
     <xsl:attribute-set name="title" use-attribute-sets="bold">
         <xsl:attribute name="keep-with-next.within-page">always</xsl:attribute>
     </xsl:attribute-set>
@@ -108,6 +112,10 @@
         <xsl:attribute name="white-space-collapse">false</xsl:attribute>
         <xsl:attribute name="linefeed-treatment">preserve</xsl:attribute>
         <xsl:attribute name="white-space-treatment">preserve</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="code" use-attribute-sets="borders pre">
+        <xsl:attribute name="font-family">LiberationMono</xsl:attribute>
+        <xsl:attribute name="font-size">9pt</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="finding-meta">
         <xsl:attribute name="margin-bottom" select="$small-space"/>

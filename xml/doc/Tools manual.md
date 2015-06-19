@@ -51,6 +51,8 @@ You may also want to dock the various plugin panes so they're easy to find and u
 
 ### FOP
 
+First, make sure you have installed the LiberationSansNarrow and LiberationMono fonts on your machine.
+
 In the fop directory, find directory 'conf'. In this directory you'll find a file 'fop.xconf'. Make a copy of this file and rename it, maybe to rosfop.xconf.
 
 Edit rosfop.xconf:
@@ -60,7 +62,7 @@ Edit rosfop.xconf:
 3. Remove the line `<directory recursive="true">/Library/Fonts/</directory>` and in its place, add:
 ```
 <font kerning="yes" embed-url="LiberationSansNarrow-Regular.ttf">
-          <font-triplet name="LiberationSansNarrow" style="normal" weight="normal"/>
+        <font-triplet name="LiberationSansNarrow" style="normal" weight="normal"/>
         </font>
         <font kerning="yes" embed-url="LiberationSansNarrow-Bold.ttf">
           <font-triplet name="LiberationSansNarrow" style="normal" weight="bold"/>
@@ -70,6 +72,18 @@ Edit rosfop.xconf:
         </font>
         <font kerning="yes" embed-url="LiberationSansNarrow-BoldItalic.ttf">
           <font-triplet name="LiberationSansNarrow" style="italic" weight="bold"/>
+        </font>
+        <font kerning="yes" embed-url="LiberationMono-Regular.ttf">
+        <font-triplet name="LiberationMono" style="normal" weight="normal"/>
+        </font>
+        <font kerning="yes" embed-url="LiberationMono-Bold.ttf">
+          <font-triplet name="LiberationMono" style="normal" weight="bold"/>
+        </font>
+        <font kerning="yes" embed-url="LiberationMono-Italic.ttf">
+          <font-triplet name="LiberationMono" style="italic" weight="normal"/>
+        </font>
+        <font kerning="yes" embed-url="LiberationMono-BoldItalic.ttf">
+          <font-triplet name="LiberationMono" style="italic" weight="bold"/>
         </font>
         <auto-detect/>
 ```
