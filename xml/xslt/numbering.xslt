@@ -15,7 +15,7 @@
                 <xsl:otherwise>0</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="findingNumber" select="count(preceding-sibling::finding)+1"/>
+        <xsl:variable name="findingNumber" select="count(preceding::finding)+1"/>
         <xsl:variable name="numFormat" select="'00'"/>
         <xsl:value-of
             select="concat(ancestor::*[@findingCode][1]/@findingCode,'-',$sectionNumber, string(format-number($findingNumber, $numFormat)))"
