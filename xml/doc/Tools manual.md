@@ -34,6 +34,8 @@ Download Apache FOP 1.1 at https://xmlgraphics.apache.org/fop/download.html and 
 
 Download the Liberation Sans font from http://www.fontsquirrel.com/fonts/liberation-sans and install.
 
+Download the Liberation Mono font from http://www.fontsquirrel.com/fonts/Liberation-Mono and install.
+
 
 ## Configuring
 
