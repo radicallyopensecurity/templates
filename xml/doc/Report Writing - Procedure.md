@@ -805,6 +805,14 @@ Example:
 
 `<p><u>This text is underlined</u> and this text is not.</p>`
 
+**Monospace**
+
+To have inline text in a monospace font, wrap it in `<monospace>` tags.
+
+Example:
+
+`<p><monospace>This text is monospace</monospace> and this text is not.</p>`
+
 **Links**
 
 Link to internal (in the report) or external (on the web) pages using

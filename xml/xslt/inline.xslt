@@ -105,4 +105,8 @@
         <fo:inline xsl:use-attribute-sets="underline"><xsl:apply-templates/></fo:inline>
     </xsl:template>
     
+    <xsl:template match="monospace">
+        <fo:inline xsl:use-attribute-sets="monospace"><xsl:apply-templates/></fo:inline>
+    </xsl:template>
+    
 </xsl:stylesheet>
