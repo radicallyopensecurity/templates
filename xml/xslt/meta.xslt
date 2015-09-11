@@ -48,7 +48,7 @@
                             <fo:block> V<xsl:value-of select="$latestVersionNumber"/>
                             </fo:block>
                             <fo:block>
-                                <xsl:text>Amsterdam,</xsl:text>
+                                <xsl:text>Amsterdam</xsl:text>
                             </fo:block>
                             <fo:block>
                                 <xsl:value-of select="$latestVersionDate"/>
