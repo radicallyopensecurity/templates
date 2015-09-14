@@ -1,0 +1,48 @@
+#!/bin/bash
+
+
+# REQUIRES: hubot with extension "hubot-script-shellcmd"
+# add this script to node_modules/hubot-script-shellcmd/bash/handlers
+#
+# usage: botname shellcmd pdfbuild repositoryname
+#
+# fill in this location: it's the full path to saxon9he.jar
+
+SAXON=/home/user/saxon9he.jar
+
+# and the email of the user doing the commit:
+COMMITUSER=user@radicallyopensecurity.com
+
+PDFLOC=`mktemp -d`
+timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
+
+cd $PDFLOC
+echo git clone...
+
+git clone ssh://git@localhost:/root/$1.git
+cd $1
+
+
+java -jar $SAXON -s:$PDFLOC/$1/Report/source/report.xml -xsl:$PDFLOC/$1/Report/xslt/content.xsl -o:$PDFLOC/$1/Report/target/report.fo -xi
+echo -----------------------
+echo fop -q -c ~sinteur/fonts/rosfop.conf Report/target/report.fo Report/target/report.$timestamp.pdf
+
+fop -q -c $PDFLOC/$1/Report/rosbot/fop.conf Report/target/report.fo Report/target/report.$timestamp.pdf
+
+git config --global user.email $COMMITUSER
+git config --global user.name "ROS chat robot"
+
+echo git add Report/target/report.$timestamp.pdf
+git rm Report/target/report.2015*pdf
+
+git add Report/target/report.$timestamp.pdf
+
+echo ----------------
+echo git commit Report/target/report.$timestamp.pdf -m 'automated build by chat'
+
+git commit Report/target/report.$timestamp.pdf -m 'automated build by chat'
+git config --global push.default simple
+git push -q
+echo  -------------
+echo https://gitlabs.radicallyopensecurity.com/root/$1/blob/master/Report/target/report.$timestamp.pdf
+rm -rf $PDFLOC
