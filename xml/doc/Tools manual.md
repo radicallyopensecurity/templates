@@ -59,9 +59,9 @@ In the fop directory, find directory 'conf'. In this directory you'll find a fil
 
 Edit rosfop.xconf:
 
-1. Under `<base>.</base>`, add the line: `<font-base>/Users/patje/Library/Fonts</font-base>` (but using the path to the Fonts directory on your own pc, obviously)
+1. Under `<base>.</base>`, add the line: `<font-base>/Path/To/Your/Fonts/Directory</font-base>` (using the actual path to the Fonts directory on your own pc)
 2. Change the line `<default-page-settings height="11in" width="8.26in"/>` to `<default-page-settings height="29.7cm" width="21cm"/>`
-3. Remove the line `<directory recursive="true">/Library/Fonts/</directory>` and in its place, add:
+3. Just above the `</fonts>` closing tag, add:
 ```
 <font kerning="yes" embed-url="LiberationSansNarrow-Regular.ttf">
         <font-triplet name="LiberationSansNarrow" style="normal" weight="normal"/>
