@@ -5,14 +5,20 @@
         <title>Planning</title>
         <p>Our general approach during this penetration test was as follows:</p>
         <ol>
-            <li><b>Reconnaissance</b><br/>We attempted to gather as much information as possible about the
-                target. Reconnaissance can take two forms i.e. active and passive. A
-                passive attack is always the best starting point as this would normally defeat
-                intrusion detection systems and other forms of protection etc. afforded to the
-                network. This would usually involve trying to discover publicly available
-                information by utilizing a web browser and visiting newsgroups etc. An active form
-                would be more intrusive and may show up in audit logs and may take the form of a
-                social engineering type of attack.</li>
+            <li><b>Reconnaissance</b><br/>
+	    We attempted to gather as much information as possible about the target. Reconnaissance can
+	    take two forms: active and passive. Passive reconnaissance is always the best starting point as
+	    this is not touching the target systems in any suspicious way, and is therefore (nearly) impossible
+	    to detect. Passive reconnaisance uses publicly available information, e.g. from DNS, WHOIS,
+	    Chamber of Commerce, performing searches in regular search engines such as Google, but
+	    also datasources specialized in IT security information such as Shodan and censys.io. If social
+	    engineering is involved, passive reconnaisance also involves gathering information about people
+	    working for or dealing with the target, using public sources like social media and search engines.
+	    Active forms of reconnaissance use techniques like scanning and fingerprinting, which show up
+	    in audit logs, and trigger IDS and SIEM systems protecting the target. Active reconnaissance with
+	    social engineering involves contacting people within the target or affiliated organizations, which
+	    may raise suspicion.
+            </li>
             <li><b>Enumeration</b><br/>We used varied operating system fingerprinting tools to determine
                 what hosts are alive on the network and more importantly what services and operating
                 systems they are running. Research into these services would then be carried out to
