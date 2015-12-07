@@ -92,6 +92,11 @@
     <xsl:attribute-set name="underline">
         <xsl:attribute name="text-decoration">underline</xsl:attribute>
     </xsl:attribute-set>
+    <xsl:attribute-set name="monospace" use-attribute-sets="DefaultFont">
+        <xsl:attribute name="font-family">LiberationMono</xsl:attribute>
+        <xsl:attribute name="font-size">9pt</xsl:attribute>
+        <xsl:attribute name="background-color">#eeeeee</xsl:attribute>
+    </xsl:attribute-set>
     <xsl:attribute-set name="p">
         <xsl:attribute name="margin-bottom">
             <xsl:value-of select="$small-space"/>
@@ -164,7 +169,7 @@
     <xsl:attribute-set name="logo">
         <xsl:attribute name="padding-top">2cm</xsl:attribute>
         <xsl:attribute name="padding-bottom">3cm</xsl:attribute>
-        <xsl:attribute name="src">url(../graphics/logo.png)</xsl:attribute>
+        <xsl:attribute name="src">url(graphics/logo.png)</xsl:attribute>
         <xsl:attribute name="width">70mm</xsl:attribute>
         <xsl:attribute name="content-width">scale-to-fit</xsl:attribute>
         <xsl:attribute name="content-height">scale-to-fit</xsl:attribute>
