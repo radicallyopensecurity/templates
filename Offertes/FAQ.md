@@ -16,7 +16,12 @@ to do a Crystal Box so the targets can be more thoroughly tested for vulnerabili
 
 * What is the difference between pentesting and running Nessus?
 ```
-
+Nessus Vulnerability Scanner is just one of many tools that can be used during a 
+penetration test. To use Nessus on its own wouldn't provide much information, as
+it checks computers and firewalls for open ports. It also does so quite visibly, 
+so it's not even a good choice to use during a pentest. Nmap works much better 
+for this purpose. Nevertheless, scanning for open ports is just one of many tests
+to determine security vulnerabilites, regardless of the tool used.
 ```
 
 * What does ROS mean by "look over the shoulder"?
