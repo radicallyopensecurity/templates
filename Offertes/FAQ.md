@@ -12,6 +12,7 @@ exactly what's there, so it's easier for them to find vulnerabilities. A Grey Bo
 is in between the two. Although a malicious attacker will know little to no information 
 (unless it's an inside job) about the environment/applications, it's often beneficial 
 to do a Crystal Box so the targets can be more thoroughly tested for vulnerabilites.
+Refer to [this link](https://www.vaadata.com/blog/black-grey-or-crystal-box-web-pen-testing-3-different-options/) for more information: 
 ```
 
 * What is the difference between pentesting and running Nessus?
@@ -29,8 +30,9 @@ to determine security vulnerabilites, regardless of the tool used.
 Also referred to as the "teach to fish" principle, ROS organizes their pentesting 
 services so that clients not only get a high-quality, informative report, but they also
 receive a deeper understanding about their security and how to remedy/spot issues
-in the future. People with highly technical skills and knowledge are normal people
-who have learned to provide a valuable service. ROS strives to not only provide an
-excellent service but to also demystify the process, all while teaching their clients
-about computer security and safety.
+in the future. ROS invites their customers to join the test as volunteers or pentesters. 
+People with highly technical skills and knowledge are normal people who have learned 
+to provide a valuable service. ROS strives to not only provide an excellent service 
+but to also demystify the process, all while teaching their clients about computer 
+security and safety.
 ```
