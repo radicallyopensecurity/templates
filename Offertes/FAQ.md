@@ -24,7 +24,13 @@ for this purpose. Nevertheless, scanning for open ports is just one of many test
 to determine security vulnerabilites, regardless of the tool used.
 ```
 
-* What does ROS mean by "look over the shoulder"?
+* What does ROS mean by "peek over the shoulder"?
 ```
-
+Also referred to as the "teach to fish" principle, ROS organizes their pentesting 
+services so that clients not only get a high-quality, informative report, but they also
+receive a deeper understanding about their security and how to remedy/spot issues
+in the future. People with highly technical skills and knowledge are normal people
+who have learned to provide a valuable service. ROS strives to not only provide an
+excellent service but to also demystify the process, all while teaching their clients
+about computer security and safety.
 ```
