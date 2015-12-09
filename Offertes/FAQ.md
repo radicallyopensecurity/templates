@@ -12,7 +12,8 @@ exactly what's there, so it's easier for them to find vulnerabilities. A Grey Bo
 is in between the two. Although a malicious attacker will know little to no information 
 (unless it's an inside job) about the environment/applications, it's often beneficial 
 to do a Crystal Box so the targets can be more thoroughly tested for vulnerabilites.
-Refer to [this link](https://www.vaadata.com/blog/black-grey-or-crystal-box-web-pen-testing-3-different-options/) for more information: 
+Refer to this link for more information: 
+https://www.vaadata.com/blog/black-grey-or-crystal-box-web-pen-testing-3-different-options/
 ```
 
 * What is the difference between pentesting and running Nessus?
