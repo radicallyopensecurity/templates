@@ -9,7 +9,7 @@ whatsoever about the targest(s). With Crystal Box Testing, pentesters are given 
 requested about the target(s), including source-code, access to developers, etc..
 
 Refer to this link for an excellent description: 
-[https://www.vaadata.com/blog/black-grey-or-crystal-box-web-pen-testing-3-different-options/]
+https://www.vaadata.com/blog/black-grey-or-crystal-box-web-pen-testing-3-different-options/
 
 At Radically Open Security, we generally prefer crystal-box pentesting.  Unlike real-world
 attackers (who have all of the time in the world), penetration testing tends to happen within
