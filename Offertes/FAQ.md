@@ -32,7 +32,7 @@ Pentesting is a creative manual process.  While scanning is a great introductory
 the work that we do during pentests is primarily by hand.
 ```
 
-* What does ROS mean by "peek over the shoulder"?
+* What does ROS mean by "Peek over our Shoulder" (PooS)?
 ```
 Related to our "teach to fish" principle, we aim to give our customers a deeper understanding 
 of exactly *how* we work.  We do this by structurally inviting our customers to join our 
