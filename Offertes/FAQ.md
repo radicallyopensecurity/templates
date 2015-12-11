@@ -29,8 +29,8 @@ hand, and this is a time-consuming manual process.  Additionally, there's a trem
 of false negatives - vulnerabilities that the scanning tools miss.  
 
 Pentesting is a creative manual process.  While scanning is a great introductory first step,
-the work that we do during pentests is primarily by hand.  Creative exploitation
-cannot be fully automated.
+the work that we do during pentests is primarily by hand.  Creative exploitation cannot be 
+fully automated.
 ```
 
 * What does ROS mean by "Peek over our Shoulder" (PooS)?
