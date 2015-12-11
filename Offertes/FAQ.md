@@ -25,11 +25,11 @@ Pentesting is *not* the same thing as vulnerability scanning.  While we most cer
 use of scanning tools like nmap, OpenVAS, w3af, OWASP ZAP, etc..   that is step 0.5 of the 
 work that we do.  Scanning provides pentesters with a few leads, but 98% of what comes out 
 of scanning tools tends to be false positives.  Scanner output thus needs to be validated by
-hand, and this is a time-consuming manual process.  Not to mention, there's also a tremendous
-amount of false negatives - things that the scanning tools miss.
+hand, and this is a time-consuming manual process.  Additionally, there's a tremendous amount
+of false negatives - vulnerabilities that the scanning tools miss.  
 
-Pentesting is a creative manual process, and the majority of the work that we do during pentests
-is by hand.
+Pentesting is a creative manual process.  The work that we do during pentests is primarily 
+performed by hand.
 ```
 
 * What does ROS mean by "peek over the shoulder"?
