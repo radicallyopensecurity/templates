@@ -28,8 +28,8 @@ of scanning tools tends to be false positives.  Scanner output thus needs to be 
 hand, and this is a time-consuming manual process.  Additionally, there's a tremendous amount
 of false negatives - vulnerabilities that the scanning tools miss.  
 
-Pentesting is a creative manual process.  The work that we do during pentests is primarily 
-performed by hand.
+Pentesting is a creative manual process.  While scanning is a great first introductory step,
+the work that we do during pentests is primarily by hand.
 ```
 
 * What does ROS mean by "peek over the shoulder"?
