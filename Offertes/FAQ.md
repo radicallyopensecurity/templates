@@ -34,12 +34,9 @@ the work that we do during pentests is primarily by hand.
 
 * What does ROS mean by "peek over the shoulder"?
 ```
-Also referred to as the "teach to fish" principle, ROS organizes their pentesting 
-services so that clients not only get a high-quality, informative report, but they also
-receive a deeper understanding about their security and how to remedy/spot issues
-in the future. ROS invites their customers to join the test as volunteers or pentesters. 
-People with highly technical skills and knowledge are normal people who have learned 
-to provide a valuable service. ROS strives to not only provide an excellent service 
-but to also demystify the process, all while teaching their clients about computer 
-security and safety.
+Related to our "teach to fish" principle, we aim to give our customers a deeper understanding 
+of exactly *how* we work.  We do this by structurally inviting our customers to join our 
+engagements (often pentests) as either active volunteers or passive observers.  In such a way, we
+hope to demystify the pentesting process, thus promoting self-sufficiency, and helping the customer 
+to autonomously audit/monitor their own systems and software when we are not around.
 ```
