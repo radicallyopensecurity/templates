@@ -2,18 +2,23 @@
 
 * What is the difference between Crystal Box and Black Box testing?
 ```
-Basically, the difference between Crystal Box, Gray Box, and Black Box pentesting 
+Basically, the difference between Crystal Box and Black Box pentesting 
 is the amount of knowledge the testers have on the target environment, architecture, 
 and/or applications. Block Box Testing has the least (or no) information on the targest. 
 It's like the targets are inside a black box and the testers have to figure out how to 
 get inside. Crystal Box Testing is when the testers have a considerable amount of 
 knowledge about the target(s), like they're inside a see-through box. They can see 
-exactly what's there, so it's easier for them to find vulnerabilities. A Grey Box 
-is in between the two. Although a malicious attacker will know little to no information 
-(unless it's an inside job) about the environment/applications, it's often beneficial 
-to do a Crystal Box so the targets can be more thoroughly tested for vulnerabilites.
-Refer to this link for more information: 
+exactly what's there, so it's easier for them to find vulnerabilities.
+
+Refer to this link for more an excellent detailed description: 
 https://www.vaadata.com/blog/black-grey-or-crystal-box-web-pen-testing-3-different-options/
+
+At Radically Open Security, we generally prefer crystal-box pentesting.  Unlike real-world
+attackers (who have all of the time in the world), penetration testing tends to happen within
+a limited timebox.  Crystal-box pentesting allows us to make the most efficent use of the 
+timebox possible, so we find the maximum number of vulnerabilities in the time allotted.  
+Additionally Crystal-Box pentesting fits naturally hand-in-hand with the "Peek Over Our Shoulder"
+option that we offer to our customers.
 ```
 
 * What is the difference between pentesting and running Nessus?
