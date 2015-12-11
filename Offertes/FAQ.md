@@ -37,6 +37,6 @@ the work that we do during pentests is primarily by hand.
 In accordance with our "Teach to Fish" principle, we aim to give our customers a deeper understanding 
 of exactly *how* we work.  We do this by structurally inviting our customers to join our 
 engagements (often pentests) as either active volunteers or passive observers.  In such a way, we
-hope to demystify the pentesting process, thus promoting self-sufficiency, and helping the customer 
-to autonomously audit/monitor their own systems and software when we are not around.
+hope to demystify the pentesting process, thus promoting self-sufficiency and better enabling the 
+customer to autonomously audit/monitor their own systems and software when we are not around.
 ```
