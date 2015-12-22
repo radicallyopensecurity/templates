@@ -19,6 +19,15 @@ Crystal-Box pentesting fits naturally hand-in-hand with the "Peek Over Our Shoul
 option that we offer to our customers.
 ```
 
+* What does ROS mean by "Peek over our Shoulder" (PooS)?
+```
+In accordance with our "Teach to Fish" principle, we aim to give our customers a deeper understanding 
+of exactly *how* we work.  We do this by structurally inviting our customers to join our 
+engagements (often pentests) as either active volunteers or passive observers.  In such a way, we
+hope to demystify the pentesting process, thus promoting self-sufficiency and better enabling the 
+customer to autonomously audit/monitor their own systems and software when we are not around.
+```
+
 * What is the difference between pentesting and running Nessus?
 ```
 Pentesting is *not* the same thing as vulnerability scanning.  While we most certainly make
@@ -31,13 +40,4 @@ of false negatives - vulnerabilities that the scanning tools miss.
 Pentesting is a creative manual process.  While scanning is a great introductory first step,
 the work that we do during pentests is primarily by hand.  Creative exploitation cannot be 
 fully automated.
-```
-
-* What does ROS mean by "Peek over our Shoulder" (PooS)?
-```
-In accordance with our "Teach to Fish" principle, we aim to give our customers a deeper understanding 
-of exactly *how* we work.  We do this by structurally inviting our customers to join our 
-engagements (often pentests) as either active volunteers or passive observers.  In such a way, we
-hope to demystify the pentesting process, thus promoting self-sufficiency and better enabling the 
-customer to autonomously audit/monitor their own systems and software when we are not around.
 ```
