@@ -24,7 +24,7 @@ Download jEdit (5.x) at: http://jedit.org/index.php?page=download and install.
 
 ### Saxon
 
-Download Saxon Home Edition (HE) 9.6 **for Java** at: http://saxon.sourceforge.net/ and unzip.
+Download Saxon Home Edition (HE) 9.6 **for Java** at: http://saxon.sourceforge.net/ and unzip to a location of your choice.
 
 ### FOP
 
@@ -87,7 +87,6 @@ Edit rosfop.xconf:
         <font kerning="yes" embed-url="LiberationMono-BoldItalic.ttf">
           <font-triplet name="LiberationMono" style="italic" weight="bold"/>
         </font>
-        <auto-detect/>
 ```
 4. Save the file.
 
@@ -109,15 +108,40 @@ Make sure the XML file you've created with jEdit is valid (no errors in the Erro
 
 To transform your XML file into XSL-FO, use the following command from the saxon directory:
 
-```java  -jar saxon9he.jar -s:/path/to/report/source/pentestreport.xml -xsl:/path/to/report/xslt/content.xsl -o:/path/to/report/target/pentestreport.fo -xi```
+#### To Generate a Pentest Report
+
+```java  -jar saxon9he.jar -s:/path/to/report/source/pentestreport.xml -xsl:/path/to/report/xslt/generate_report.xsl -o:/path/to/report/target/pentestreport.fo -xi```
 
 (Note the source/xslt/target directories in this example, which correspond to the directory structure in the report directory. Also make sure to add the -xi option!)
 
+#### To Generate an Offerte
+
+```java  -jar saxon9he.jar -s:/path/to/report/source/offerte.xml -xsl:/path/to/report/xslt/generate_offerte.xsl -o:/path/to/report/target/offerte.fo```
+
+(Note the source/xslt/target directories in this example, which correspond to the directory structure in the report directory.)
+
+If you have defined extra parties that need to give permission, waivers for these parties will be generated in .fo format automatically
+
 ### FOP
 
-To then convert your XSL-FO report into a nice and shiny pdf, use the following command from the fop directory:
+To then convert your XSL-FO file into a nice and shiny pdf, use the following command from the fop directory:
+
+#### To Generate a Pentest Report
 
 ```fop -c conf/rosfop.xconf /path/to/report/target/pentestreport.fo path/to/report/target/pentestreport.pdf```
 
 (If you used another name for your custom FOP configuration file, use that.)
 
+or maybe it is easier to go to your target directory and type:
+
+```/path/to/fop -c path/to/fop/conf/rosfop.xconf offerte.fo offerte.pdf```
+
+it depends on your directory structure, I guess.
+
+Note that, if you define extra parties that need to give permission, you'll need to convert the waiver fo files to pdf as well.
+
+#### To Generate an Offerte
+
+```fop -c conf/rosfop.xconf /path/to/report/target/offerte.fo path/to/report/target/offerte.pdf```
+
+(If you used another name for your custom FOP configuration file, use that.)

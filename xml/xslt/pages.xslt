@@ -50,13 +50,13 @@
         </fo:static-content>
     </xsl:template>
     
-    <xsl:template name="ReportContent">
+    <xsl:template name="Content">
         <fo:page-sequence master-reference="Report">
             <xsl:call-template name="page_header"/>
             <xsl:call-template name="page_footer"/>
             <fo:flow flow-name="region-body" xsl:use-attribute-sets="DefaultFont">
                 <fo:block>
-                    <xsl:apply-templates select="pentest_report"/>
+                    <xsl:apply-templates select="pentest_report|offerte|quickscope"/>
                 </fo:block>
                 <fo:block id="EndOfDoc"/>
             </fo:flow>

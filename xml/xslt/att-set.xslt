@@ -4,7 +4,7 @@
     exclude-result-prefixes="xs" xmlns:fo="http://www.w3.org/1999/XSL/Format"
     version="2.0">
     
-    <xsl:variable name="CLASSES" select="document('../xslt/styles.xslt')/*/xsl:attribute-set"/>
+    
     
     <xsl:template name="use-att-set">
         <xsl:param name="CLASS" select="."/>

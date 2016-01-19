@@ -4,9 +4,9 @@
     exclude-result-prefixes="xs" xmlns:fo="http://www.w3.org/1999/XSL/Format"
     version="2.0">
     
-    <xsl:template match="section|appendix|finding|non-finding">
+    <xsl:template match="section|appendix|finding|non-finding|annex">
         <fo:block xsl:use-attribute-sets="section">
-            <xsl:if test="self::appendix">
+            <xsl:if test="self::appendix or self::annex">
                 <xsl:attribute name="break-before">page</xsl:attribute>
             </xsl:if>
             <xsl:apply-templates select="@*|node()"/>

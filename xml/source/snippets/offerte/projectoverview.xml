@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section>
+        <title>Project Overview</title><!-- section with an overview of ROS activities -->
+        <!-- snippet --><p><ros_short/> will perform <ros_svc_long/> for <c_short/> of the systems described below. The services are intended to gain insight into the security of these systems. To do so, <ros_short/> will access these systems, attempt to find vulnerabilities and gain further access and elevated privileges by exploiting any vulnerabilities found.</p>
+        <!-- snippet --><p><ros_short/> will test the following targets (the “<b>Targets</b>”):</p>
+        <generate_targets/>
+        <!-- snippet --><p><ros_short/> will test for the presence of the most common vulnerabilities, using both publicly available vulnerability
+scanning tools and manual testing. <ros_short/> shall perform a <p_duration/>-day, <p_boxtype/>, intrusive test, via the internet.</p>
+        <!-- snippet --><p>It is possible that in the course of the penetration testing, <ros_short/> might hinder the operations of the Targets or cause damage to the Targets. <c_short/> gives permission for this, to the extent that <ros_short/> does not act negligently or recklessly. <c_short/> also warrants it has the authority to give such permission.</p>
+        <!-- snippet --><p>It is important to understand the limits of <ros_short/>' services. <ros_short/> does not (and cannot) give guarantees that something is secure. <ros_short/> instead has an obligation to make reasonable efforts (in Dutch: “<i>inspanningsverplichting</i>”) to perform the agreed services.</p>
+    </section>

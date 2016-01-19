@@ -1,53 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0" vc:maxVersion="1.1">
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0" vc:maxVersion="1.1">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
   <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="http://www.w3.org/2001/XInclude/XInclude.xsd"/>
-  <xs:element name="pentest_report">
+  <xs:element name="offerte">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="meta"/>
-        <xs:element ref="generate_index"/>
-        <xs:choice maxOccurs="unbounded">
-          <xs:element ref="section"/>
-        </xs:choice>
-        <xs:element maxOccurs="unbounded" ref="appendix"/>
+        <xs:element maxOccurs="unbounded" ref="section"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="annex"/>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="generate_waivers"/>
       </xs:sequence>
-      <xs:attribute name="findingCode" use="required" type="xs:NCName"/>
-      <xs:attribute name="findingNumberingBase" use="optional" default="Report"> 
-        <xs:simpleType> 
-          <xs:restriction base="xs:string"> 
-            <xs:enumeration value="Report"/>
-            <xs:enumeration value="Section"/>
-          </xs:restriction> 
-        </xs:simpleType> 
-      </xs:attribute>
     </xs:complexType>
   </xs:element>
   <xs:element name="meta">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="title"/>
-        <xs:element ref="client"/>
+        <xs:element ref="offered_service_long"/>
+        <xs:element ref="offered_service_short"/>
+        <xs:element ref="ros"/>
         <xs:element ref="targets"/>
-        <xs:element ref="collaborators"/>
-        <xs:element ref="classification"/>
+        <xs:element ref="permission_parties"/>
+        <xs:element ref="pentestinfo"/>
         <xs:element ref="version_history"/>
-        <xs:element ref="contact"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="client">
+  <xs:element name="offered_service_long" type="xs:string"/>
+  <xs:element name="offered_service_short" type="xs:string"/>
+  <xs:element name="full_name" type="xs:string"/>
+  <xs:element name="short_name" type="xs:string"/>
+  <xs:element name="city" type="xs:string"/>
+  <xs:element name="country" type="xs:string"/>
+  <xs:element name="coc">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="nationality" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="legal_rep" type="xs:string"/>
+  <xs:element name="waiver_rep" type="xs:string"/>
+  <xs:element name="ros">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="full_name"/>
         <xs:element ref="short_name"/>
+        <xs:element ref="legal_rep"/>
+        <xs:element ref="poc1"/>
+        <xs:element ref="address"/>
+        <xs:element ref="postal_code"/>
+        <xs:element ref="city"/>
+        <xs:element ref="country"/>
+        <xs:element ref="email"/>
       </xs:sequence>
+      <xs:attribute ref="xml:base"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="full_name" type="xs:string"/>
-  <xs:element name="short_name" type="xs:string"/>
+  <xs:element name="poc1" type="xs:string"/>
+  <xs:element name="postal_code" type="xs:string"/>
   <xs:element name="targets">
     <xs:complexType>
       <xs:sequence>
@@ -56,48 +70,74 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="target" type="xs:string"/>
-  <xs:element name="collaborators">
+  <xs:element name="permission_parties">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="reviewers"/>
-        <xs:element ref="approver"/>
-        <xs:element ref="pentesters"/>
+        <xs:element maxOccurs="1" ref="client"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="party"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="reviewers">
+  <xs:element name="party">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="reviewer"/>
+        <xs:element ref="full_name"/>
+        <xs:element ref="short_name"/>
+        <xs:element ref="waiver_rep"/>
+        <xs:element ref="address"/>
+        <xs:element ref="city"/>
+        <xs:element ref="country"/>
+        <xs:element minOccurs="0" ref="coc"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="reviewer" type="xs:string"/>
-  <xs:element name="approver">
+  <xs:element name="client">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="name"/>
-        <xs:element ref="bio"/>
+        <xs:element ref="full_name"/>
+        <xs:element ref="short_name"/>
+        <xs:element ref="legal_rep"/>
+        <xs:element ref="waiver_rep"/>
+        <xs:element ref="poc1"/>
+        <xs:element ref="address"/>
+        <xs:element ref="city"/>
+        <xs:element ref="country"/>
+        <xs:element minOccurs="0" ref="coc"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="pentesters">
+  <xs:element name="pentestinfo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="pentester"/>
+        <xs:element ref="duration"/>
+        <xs:element ref="test_planning"/>
+        <xs:element ref="report_writing"/>
+        <xs:element ref="report_due"/>
+        <xs:element ref="nature"/>
+        <xs:element ref="type"/>
+        <xs:element ref="fee"/>
+        <xs:element minOccurs="0" ref="target_application"/>
+        <xs:element minOccurs="0" ref="target_application_producer"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="pentester">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="name"/>
-        <xs:element ref="bio"/>
-      </xs:sequence>
-    </xs:complexType>
+  <xs:element name="duration" type="xs:nonNegativeInteger"/>
+  <xs:element name="test_planning" type="xs:string"/>
+  <xs:element name="report_writing" type="xs:string"/>
+  <xs:element name="report_due" type="xs:string"/>
+  <xs:element name="nature" type="xs:string"/>
+  <xs:element name="type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="black-box"/>
+            <xs:enumeration value="crystal-box"/>
+            <xs:enumeration value="grey-box"/>
+          </xs:restriction>
+        </xs:simpleType>
   </xs:element>
-  <xs:element name="bio" type="xs:string"/>
-  <xs:element name="classification" type="xs:NCName"/>
+  <xs:element name="fee" type="xs:string"/>
+  <xs:element name="target_application" type="xs:string"/>
+  <xs:element name="target_application_producer" type="xs:string"/>
   <xs:element name="version_history">
     <xs:complexType>
       <xs:sequence>
@@ -120,7 +160,6 @@
       <xs:sequence>
         <xs:element ref="name"/>
         <xs:element ref="address"/>
-        <xs:element ref="phone"/>
         <xs:element ref="email"/>
       </xs:sequence>
       <xs:attribute ref="xml:base"/>
@@ -128,25 +167,22 @@
   </xs:element>
   <xs:element name="address">
     <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="br"/>
-      </xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="br"/>
+        <xs:group ref="placeholders"></xs:group>
+      </xs:choice>
     </xs:complexType>
   </xs:element>
   <xs:element name="phone" type="xs:string"/>
   <xs:element name="email" type="xs:string"/>
-  <xs:element name="generate_index">
-    <xs:complexType/>
-  </xs:element>
   <xs:element name="generate_targets">
     <xs:complexType/>
   </xs:element>
-  <xs:element name="appendix">
+  <xs:element name="annex">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="title"/>
         <xs:choice maxOccurs="unbounded">
-          <xs:element ref="generate_testteam"/>
           <xs:element name="p" type="block"/>
           <xs:element ref="pre"/>
           <xs:element ref="code"/>
@@ -155,18 +191,30 @@
           <xs:element ref="ul"/>
           <xs:element ref="img"/>
           <xs:element ref="section"/>
+          <xs:element ref="generate_targets"/>
         </xs:choice>
       </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:attribute ref="xml:base"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="generate_testteam">
-    <xs:complexType/>
+  <xs:element name="generate_waivers"/>
+  <xs:element name="title">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="br"/>
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
   </xs:element>
-  <xs:element name="title" type="xs:string"/>
   <xs:element name="v_author" type="xs:string"/>
   <xs:element name="v_description" type="xs:string"/>
-  <xs:element name="name" type="xs:string"/>
+  <xs:element name="name">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="placeholders"></xs:group>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="br">
     <xs:complexType/>
   </xs:element>
@@ -184,40 +232,10 @@
           <xs:element ref="ol"/>
           <xs:element ref="img"/>
           <xs:element ref="generate_targets"/>
-          <xs:element ref="generate_recommendations"/>
-          <xs:element minOccurs="0" maxOccurs="unbounded" ref="generate_findings"/>
-          <xs:element minOccurs="0" maxOccurs="unbounded" ref="finding"/>
-          <xs:element minOccurs="0" maxOccurs="unbounded" ref="non-finding"/>
+          <xs:element ref="contact"/>
+          <xs:element ref="generate_offer_signature_box"/>
         </xs:choice>
       </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:ID"/>
-      <xs:attribute name="break" use="optional">
-        <xs:simpleType> 
-          <xs:restriction base="xs:string"> 
-            <xs:enumeration value="before"/>
-            <xs:enumeration value="after"/>
-          </xs:restriction> 
-        </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute ref="xml:base"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="non-finding">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="title"/>
-        <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element ref="pre"/>
-          <xs:element ref="code"/>
-          <xs:element name="p" type="block"/>
-          <xs:element ref="table"/>
-          <xs:element ref="ul"/>
-          <xs:element ref="ol"/>
-          <xs:element ref="img"/>
-          <xs:element ref="section"/>
-        </xs:choice>
-      </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:ID"/>
       <xs:attribute name="break" use="optional">
         <xs:simpleType> 
           <xs:restriction base="xs:string"> 
@@ -254,7 +272,7 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="br"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="i"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="u"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" ref="monospace"/>
+        <xs:group ref="placeholders"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -290,8 +308,10 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="br"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="i"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="u"/>
-    <xs:element minOccurs="0" maxOccurs="unbounded" ref="monospace"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="generate_permission_parties"/>
+      <xs:group ref="placeholders"/>
     </xs:choice>
+    <xs:attribute ref="xml:base"/>
   </xs:complexType>
   <xs:complexType name="li" mixed="true">
     <xs:choice maxOccurs="unbounded">
@@ -302,134 +322,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="u"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="ul"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="ol"/>
-    <xs:element minOccurs="0" maxOccurs="unbounded" ref="monospace"/>
+        <xs:group ref="placeholders"/>
     </xs:choice>
   </xs:complexType>
-  <xs:element name="generate_recommendations">
-    <xs:complexType>
-      <xs:attribute name="Ref" use="optional" type="xs:IDREF"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="generate_findings">
-    <xs:complexType>
-      <xs:attribute name="Ref" use="optional" type="xs:IDREF"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="finding">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="title"/>
-        <xs:choice minOccurs="0">
-          <xs:element name="p"/>
-        </xs:choice>
-        <xs:element ref="description"/>
-        <xs:choice minOccurs="0" maxOccurs="1">
-          <xs:element ref="description_summary"/>
-        </xs:choice>
-        <xs:element ref="technicaldescription"/>
-        <xs:element ref="impact"/>
-        <xs:element ref="recommendation"/>
-        <xs:choice minOccurs="0" maxOccurs="1">
-          <xs:element ref="recommendation_summary"/>
-        </xs:choice>
-      </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:ID"/>
-      <xs:attribute name="threatLevel" use="optional" default="N/A">
-        <xs:simpleType> 
-          <xs:restriction base="xs:string"> 
-            <xs:enumeration value="N/A"/>
-            <xs:enumeration value="Unknown"/>
-            <xs:enumeration value="Low"/>
-            <xs:enumeration value="Moderate"/>
-            <xs:enumeration value="Elevated"/>
-            <xs:enumeration value="High"/>
-            <xs:enumeration value="Extreme"/>
-          </xs:restriction> 
-        </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="type" use="required"/>
-      <xs:attribute name="break" use="optional">
-        <xs:simpleType> 
-          <xs:restriction base="xs:string"> 
-            <xs:enumeration value="before"/>
-            <xs:enumeration value="after"/>
-          </xs:restriction> 
-        </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute ref="xml:base"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="description">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded" minOccurs="0">
-        <xs:element name="p" type="block"/>
-        <xs:element name="ol"/>
-        <xs:element name="ul"/>
-        <xs:element name="img"/>
-        <xs:element name="table"/>
-        <xs:element ref="pre"/>
-        <xs:element ref="code"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="description_summary">
-    <xs:complexType mixed="true">
-      <xs:sequence maxOccurs="unbounded" minOccurs="0">
-        <xs:element name="p" type="block"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="technicaldescription">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded" minOccurs="0">
-        <xs:element name="p" type="block"/>
-        <xs:element name="ol"/>
-        <xs:element name="ul"/>
-        <xs:element name="img"/>
-        <xs:element name="table"/>
-        <xs:element ref="pre"/>
-        <xs:element ref="code"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="generate_offer_signature_box"/>
+  <xs:element name="generate_permission_parties"/>
   <xs:element name="img">
     <xs:complexType>
       <xs:attribute name="height" use="optional" type="xs:integer"/>
       <xs:attribute name="width" use="optional" type="xs:integer"/>
       <xs:attribute name="src" use="required"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="impact">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded" minOccurs="0">
-        <xs:element name="p" type="block"/>
-        <xs:element name="ol"/>
-        <xs:element name="ul"/>
-        <xs:element name="img"/>
-        <xs:element name="table"/>
-        <xs:element ref="pre"/>
-        <xs:element ref="code"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="recommendation">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded" minOccurs="0">
-        <xs:element name="p" type="block"/>
-        <xs:element name="ol"/>
-        <xs:element name="ul"/>
-        <xs:element name="img"/>
-        <xs:element name="table"/>
-        <xs:element ref="pre"/>
-        <xs:element ref="code"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="recommendation_summary">
-    <xs:complexType mixed="true">
-      <xs:sequence maxOccurs="unbounded" minOccurs="0">
-        <xs:element name="p" type="block"/>
-      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="pre">
@@ -440,6 +342,7 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="br"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="i"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="u"/>
+        <xs:group ref="placeholders"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -451,6 +354,7 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="br"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="i"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="u"/>
+        <xs:group ref="placeholders"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -470,7 +374,8 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="br"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="i"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="u"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" ref="monospace"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="monospace"/>
+        <xs:group ref="placeholders"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -481,7 +386,8 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="b"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="br"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="u"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" ref="monospace"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="monospace"/>
+        <xs:group ref="placeholders"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -492,18 +398,50 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="b"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="br"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="i"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" ref="monospace"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="monospace"/>
+        <xs:group ref="placeholders"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
-<xs:element name="monospace">
+  <xs:element name="monospace">
     <xs:complexType mixed="true">
       <xs:choice maxOccurs="unbounded">
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="a"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="b"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="br"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="i"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="u"/>
+        <xs:group ref="placeholders"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
+  
+  <!-- Placeholders -->
+  <xs:group name="placeholders">
+    <xs:choice>
+      <xs:element name="c_long"/>
+      <xs:element name="c_short"/>
+      <xs:element name="c_street"/>
+      <xs:element name="c_city"/>
+      <xs:element name="c_country"/>
+      <xs:element name="c_coc"/>
+      <xs:element name="c_legal_rep"/>
+      <xs:element name="c_waiver_rep"/>
+      <xs:element name="c_poc1"/>
+      <xs:element name="ros_long"/>
+      <xs:element name="ros_short"/>
+      <xs:element name="ros_svc_long"/>
+      <xs:element name="ros_svc_short"/>
+      <xs:element name="ros_legal_rep"/>
+      <xs:element name="ros_poc1"/>
+      <xs:element name="t_app"/>
+      <xs:element name="t_app_producer"/>
+      <xs:element name="p_duration"/>
+      <xs:element name="p_boxtype"/>
+      <xs:element name="p_fee"/>
+      <xs:element name="p_testingduration"/>
+      <xs:element name="p_reportwritingduration"/>
+      <xs:element name="p_reportdue"/>
+    </xs:choice>
+</xs:group>
 </xs:schema>

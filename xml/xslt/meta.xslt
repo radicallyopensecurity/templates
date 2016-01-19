@@ -5,14 +5,6 @@
     version="2.0">
     
       <xsl:template match="meta">
-        <xsl:variable name="latestVersionDate">
-            <xsl:for-each select="version_history/version">
-                <xsl:sort select="xs:dateTime(@date)" order="descending"/>
-                <xsl:if test="position() = 1">
-                    <xsl:value-of select="format-dateTime(@date, '[MNn] [D1o], [Y]', 'en', (), ())"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
         <xsl:variable name="latestVersionNumber">
             <xsl:for-each select="version_history/version">
                 <xsl:sort select="xs:dateTime(@date)" order="descending"/>
@@ -88,7 +80,7 @@
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="td">
                             <fo:block>
-                                <xsl:value-of select="client/full_name"/>
+                                <xsl:value-of select="permission_parties/client/full_name"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>

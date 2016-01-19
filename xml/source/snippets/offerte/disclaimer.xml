@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section>
+    <title>Disclaimer</title>
+      
+<p>It is possible that in the course of the penetration testing, ROS might hinder the 
+operations of the Targets or cause damage to the Targets.
+<c_short/> gives permission for this, to the extent that ROS does not act negligent or 
+reckless. <c_short/> also warrants it has the authority to give such permission.</p>
+
+<p>It is important to understand the limits of ROS' services. ROS does not (and cannot) give 
+guarantees that something is secure. ROS, instead, has an obligation to make reasonable effort
+s (in Dutch: “<i>inspanningsverplichting</i>”) to perform the agreed services.</p>
+
+<p>ROS and <c_short/> agree to take reasonable measures to maintain the confidentiality of 
+information and personal data they gain access to in the course of performing
+ the penetration test within the Targets. Both parties will use the information and data 
+ they receive or gain access to only for the purposes following from the agreement. 
+ ROS warrants that all core-team members, external freelancers, and volunteers they engage 
+ to perform the penetration test have signed a non-disclosure agreement. </p>
+</section>

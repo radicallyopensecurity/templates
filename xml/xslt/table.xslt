@@ -34,11 +34,11 @@
                 <xsl:value-of select="substring-after($cols, ' ')"/>
             </xsl:variable>
             <xsl:choose>
-                <xsl:when test="contains($next-col, 'pt')">
+                <xsl:when test="contains($next-col, 'mm')">
                     <fo:table-column column-width="{$next-col}"/>
                 </xsl:when>
                 <xsl:when test="number($next-col) > 0">
-                    <fo:table-column column-width="{concat($next-col, 'pt')}"/>
+                    <fo:table-column column-width="{concat($next-col, 'mm')}"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <fo:table-column column-width="100%"/>
