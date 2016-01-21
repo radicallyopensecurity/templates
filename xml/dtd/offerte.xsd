@@ -8,6 +8,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="meta"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="generate_index"/>
         <xs:element maxOccurs="unbounded" ref="section"/>
         <xs:element maxOccurs="unbounded" minOccurs="0" ref="annex"/>
         <xs:element maxOccurs="unbounded" minOccurs="1" ref="generate_waivers"/>
@@ -218,6 +219,9 @@
   <xs:element name="br">
     <xs:complexType/>
   </xs:element>
+  <xs:element name="generate_index">
+    <xs:complexType/>
+  </xs:element>
   <xs:element name="section">
     <xs:complexType>
       <xs:sequence>
@@ -236,6 +240,7 @@
           <xs:element ref="generate_offer_signature_box"/>
         </xs:choice>
       </xs:sequence>
+      <xs:attribute name="id" use="optional" type="xs:ID"/>
       <xs:attribute name="break" use="optional">
         <xs:simpleType> 
           <xs:restriction base="xs:string"> 

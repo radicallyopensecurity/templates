@@ -206,7 +206,7 @@
         <xsl:attribute name="break-after">page</xsl:attribute>
     </xsl:attribute-set>
     
-    <xsl:attribute-set name="toc-block" use-attribute-sets="bg-orange">
+    <xsl:attribute-set name="toc-block">
         <xsl:attribute name="text-align-last">justify</xsl:attribute>
         <xsl:attribute name="padding-right">3pt</xsl:attribute>
     </xsl:attribute-set>

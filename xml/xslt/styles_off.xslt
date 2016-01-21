@@ -167,7 +167,7 @@
     <!-- ToC -->
     <xsl:attribute-set name="index" use-attribute-sets="break-after"/>
     
-    <xsl:attribute-set name="toc-block" use-attribute-sets="bg-orange">
+    <xsl:attribute-set name="toc-block">
         <xsl:attribute name="text-align-last">justify</xsl:attribute>
         <xsl:attribute name="padding-right">3pt</xsl:attribute>
     </xsl:attribute-set>
