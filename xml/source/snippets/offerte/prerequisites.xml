@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section>
 		<title>Prerequisites</title>
-		<p>In order to perform this audit, ROS will need access to:</p>
+		<p>In order to perform this audit, <company_short/> will need access to:</p>
 					<!--Example of most common scenario, change if necessary!! :-->
 			  <ul>
 				  <li>test accounts</li>

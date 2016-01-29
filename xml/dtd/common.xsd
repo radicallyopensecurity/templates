@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1"> 
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
+    <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="http://www.w3.org/2001/XInclude/XInclude.xsd"/>
+<xs:element name="company">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="full_name"/>
+        <xs:element ref="short_name"/>
+        <xs:element ref="legal_rep"/>
+        <xs:element ref="poc1"/>
+        <xs:element ref="address"/>
+        <xs:element ref="postal_code"/>
+        <xs:element ref="city"/>
+        <xs:element ref="country"/>
+        <xs:element ref="email"/>
+      </xs:sequence>
+      <xs:attribute ref="xml:base"/>
+    </xs:complexType>
+  </xs:element>
+    
+</xs:schema>

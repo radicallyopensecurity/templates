@@ -20,7 +20,7 @@
       <xs:sequence>
         <xs:element ref="offered_service_long"/>
         <xs:element ref="offered_service_short"/>
-        <xs:element ref="ros"/>
+        <xs:element ref="company"/>
         <xs:element ref="targets"/>
         <xs:element ref="permission_parties"/>
         <xs:element ref="pentestinfo"/>
@@ -45,7 +45,7 @@
   </xs:element>
   <xs:element name="legal_rep" type="xs:string"/>
   <xs:element name="waiver_rep" type="xs:string"/>
-  <xs:element name="ros">
+  <xs:element name="company">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="full_name"/>
@@ -56,6 +56,7 @@
         <xs:element ref="postal_code"/>
         <xs:element ref="city"/>
         <xs:element ref="country"/>
+        <xs:element ref="phone"/>
         <xs:element ref="email"/>
       </xs:sequence>
       <xs:attribute ref="xml:base"/>
@@ -433,12 +434,12 @@
       <xs:element name="c_legal_rep"/>
       <xs:element name="c_waiver_rep"/>
       <xs:element name="c_poc1"/>
-      <xs:element name="ros_long"/>
-      <xs:element name="ros_short"/>
-      <xs:element name="ros_svc_long"/>
-      <xs:element name="ros_svc_short"/>
-      <xs:element name="ros_legal_rep"/>
-      <xs:element name="ros_poc1"/>
+      <xs:element name="company_long"/>
+      <xs:element name="company_short"/>
+      <xs:element name="company_svc_long"/>
+      <xs:element name="company_svc_short"/>
+      <xs:element name="company_legal_rep"/>
+      <xs:element name="company_poc1"/>
       <xs:element name="t_app"/>
       <xs:element name="t_app_producer"/>
       <xs:element name="p_duration"/>

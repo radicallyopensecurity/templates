@@ -57,7 +57,9 @@
             <xsl:value-of select="$small-space"/>
         </xsl:attribute>
     </xsl:attribute-set>
-    
+    <xsl:attribute-set name="toc-block">
+        <xsl:attribute name="background-color">orange</xsl:attribute>
+    </xsl:attribute-set>
     
     
     <!-- colors -->

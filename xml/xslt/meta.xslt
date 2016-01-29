@@ -80,7 +80,7 @@
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="td">
                             <fo:block>
-                                <xsl:value-of select="permission_parties/client/full_name"/>
+                                <xsl:value-of select="client/full_name"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>
@@ -279,7 +279,8 @@
     <xsl:template name="Contact">
         <fo:block xsl:use-attribute-sets="title-4">Contact</fo:block>
         <fo:block xsl:use-attribute-sets="p">For more information about this Document and its
-            contents please contact Radically Open Security BV.</fo:block>
+            contents please contact <xsl:value-of select="company/full_name"/>
+        <xsl:if test="not(company/full_name[ends-with(.,'.')])"><xsl:text>.</xsl:text></xsl:if></fo:block>
         <fo:block break-after="page">
             <fo:table width="100%" table-layout="fixed" xsl:use-attribute-sets="borders">
                 <fo:table-column column-width="proportional-column-width(25)"
@@ -292,7 +293,7 @@
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="td">
                             <fo:block>
-                                <xsl:value-of select="contact/name"/>
+                                <xsl:value-of select="company/poc1"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>
@@ -302,7 +303,13 @@
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="td">
                             <fo:block>
-                                <xsl:apply-templates select="contact/address"/>
+                                <xsl:apply-templates select="company/address"/>
+                            </fo:block>
+                            <fo:block>
+                                <xsl:value-of select="company/postal_code"/>&#160;<xsl:value-of select="company/city"/>
+                            </fo:block>
+                            <fo:block>
+                                <xsl:value-of select="company/country"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>
@@ -312,7 +319,7 @@
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="td">
                             <fo:block>
-                                <xsl:value-of select="contact/phone"/>
+                                <xsl:value-of select="company/phone"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>
@@ -322,7 +329,7 @@
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="td">
                             <fo:block>
-                                <xsl:value-of select="contact/email"/>
+                                <xsl:value-of select="company/email"/>
                             </fo:block>
                         </fo:table-cell>
                     </fo:table-row>

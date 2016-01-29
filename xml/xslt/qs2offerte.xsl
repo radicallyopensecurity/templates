@@ -16,7 +16,7 @@
                 <xsl:comment>if there is a shorter way of saying the same thing, you can type it here (it makes for more dynamic offerte text). If not, just repeat the long name.</xsl:comment>
                 <offered_service_short>penetration test</offered_service_short>
                 <xsl:element name="xi:include">
-                    <xsl:attribute name="href">snippets/ros_info.xml</xsl:attribute>
+                    <xsl:attribute name="href">snippets/company_info.xml</xsl:attribute>
                 </xsl:element>
                 <targets>
                     <xsl:comment>one target element per target</xsl:comment>
@@ -84,8 +84,8 @@
             <section>
                 <title>Introduction</title>
                 <p><c_long/> (hereafter “<b><c_short/></b>”), with its registered office at
-                    <c_street/>, <c_city/>, <c_country/>, has requested <ros_long/> (hereafter
-                        “<b><ros_short/></b>”) to perform <ros_svc_long/>.</p>
+                    <c_street/>, <c_city/>, <c_country/>, has requested <company_long/> (hereafter
+                        “<b><company_short/></b>”) to perform <company_svc_long/>.</p>
                 <xsl:element name="xi:include">
                     <xsl:attribute name="href">snippets/offerte/setoutscope.xml</xsl:attribute>
                 </xsl:element>
@@ -120,7 +120,7 @@
                 </xsl:element>
             <xsl:comment>About ROS section (complete section is in a snippet)</xsl:comment>
             <xsl:element name="xi:include">
-                    <xsl:attribute name="href">snippets/offerte/aboutros.xml</xsl:attribute>
+                    <xsl:attribute name="href">snippets/offerte/aboutus.xml</xsl:attribute>
                 </xsl:element>
             <xsl:comment>Work condition section (complete section is in a snippet)</xsl:comment>
             <xsl:element name="xi:include">

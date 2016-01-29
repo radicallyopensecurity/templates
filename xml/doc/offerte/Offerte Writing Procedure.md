@@ -38,7 +38,7 @@ following elements (mandatory and in the listed order):
 
 -   The offered service, in the `<offered_service>` element
 -   Client information, in the `<client>` element
--   ROS-related information, in the '<ros>' element
+-   ROS-related information, in the '<company>' element
 -   Targets listing, in the `<targets>` element
 -   The document's version history, in the `<version_history>` element
 
@@ -82,7 +82,7 @@ Example:
 
 ### ROS information
 
-The `<ros>` element contains two other elements:
+The `<company>` element contains two other elements:
 
 -   `<full_name>`, in which you should type ROS' official name,
     that is 'Radically Open Security'
@@ -90,7 +90,7 @@ The `<ros>` element contains two other elements:
 
 Example:
 
-    <ros>
+    <company>
         <full_name>Radically Open Security</full_name>
         <legal_rep>Melanie Rieback</legal_rep>
     </client>

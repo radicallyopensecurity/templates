@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section>
     <title>Code Audit</title>
-    <p>ROS will perform a code audit to aid pentesting. During a code audit, we manually examine the code of an application to ensure there are no security vulnerabilities and use our understanding of the code to guide our pentesting. If vulnerabilities are found, we document those and suggest ways to fix them. This is done by highly trained penetration testers who can both review the raw code as well as interpret the findings of the automated scans, putting them into context.</p>
+    <p><company_short/> will perform a code audit to aid pentesting. During a code audit, we manually examine the code of an application to ensure there are no security vulnerabilities and use our understanding of the code to guide our pentesting. If vulnerabilities are found, we document those and suggest ways to fix them. This is done by highly trained penetration testers who can both review the raw code as well as interpret the findings of the automated scans, putting them into context.</p>
 <p>During the code audit portion of penetration tests, we take the following criteria into account:</p>
     <ol>
 <li>Risk Assessment and "Threat Modeling"<br/>

@@ -61,7 +61,7 @@
             <fo:external-graphic xsl:use-attribute-sets="logo"/>
         </fo:block>
         <fo:block xsl:use-attribute-sets="title-0">
-            <xsl:text>RADICALLY OPEN SECURITY</xsl:text>
+            <xsl:value-of select="upper-case(company/full_name)"/>
         </fo:block>
         <fo:block xsl:use-attribute-sets="for">
             <xsl:text>OFFER</xsl:text>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ros>
+<company>
         <full_name>Radically Open Security B.V.</full_name> 
         <short_name>ROS</short_name>
         <legal_rep>Melanie Rieback</legal_rep><!-- ROS legal representative (to sign offerte) -->
@@ -8,5 +8,6 @@
         <postal_code>1111 PP</postal_code>
         <city>Diemen</city>
         <country>The Netherlands</country>
+        <phone>+31 6 10 21 32 40</phone>
         <email>melanie@radicallyopensecurity.com</email>
-</ros>
+</company>

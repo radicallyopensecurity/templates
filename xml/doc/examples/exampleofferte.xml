@@ -6,7 +6,7 @@
     <meta>
         <offered_service_long>penetration testing services</offered_service_long>
         <offered_service_short>penetration test</offered_service_short>
-        <xi:include href="snippets/ros_info.xml"/>
+        <xi:include href="snippets/company_info.xml"/>
         <targets> <!-- one target element per target -->
             <target>fishinabarrel.sittingduck.com</target>
         </targets>
@@ -60,9 +60,9 @@
 </section>
     <section>
         <title>Introduction</title>
-        <p><c_long/> (hereafter “<b><c_short/></b>”), with its registered office at <c_street/>, <c_city/>, <c_country/>, has requested <ros_long/> (hereafter “<b><ros_short/></b>”) to perform <ros_svc_long/>. Motivation for this request is that <c_short/> wishes to get a better insight in the IT security of the web application <t_app/> produced by <t_app_producer/>.
+        <p><c_long/> (hereafter “<b><c_short/></b>”), with its registered office at <c_street/>, <c_city/>, <c_country/>, has requested <company_long/> (hereafter “<b><company_short/></b>”) to perform <company_svc_long/>. Motivation for this request is that <c_short/> wishes to get a better insight in the IT security of the web application <t_app/> produced by <t_app_producer/>.
 </p>
-<p>ROS will perform a <ros_svc_short/> by running the app and peering at the screen in great concentration.</p>
+<p>ROS will perform a <company_svc_short/> by running the app and peering at the screen in great concentration.</p>
 <xi:include href="snippets/offerte/setoutscope.xml"/>
 </section>
     <section><!-- section with some more info on the application (if any) -->
@@ -74,7 +74,7 @@
 <xi:include href="snippets/offerte/projectoverview.xml"/>
     <section>
         <title>Pentest Scope</title>
-        <p>ROS will focus on the web application and the systems that are accessible using the Internet (backend API). A test environment has been set up to use for the pentest on the web application. Given the complexity of the application, ROS will pay specific attention to important things. ROS will review the source code during the <ros_svc_short/>. The mobile applications (iPhone, Android, Windows) are outside the scope of this pentest.</p>
+        <p>ROS will focus on the web application and the systems that are accessible using the Internet (backend API). A test environment has been set up to use for the pentest on the web application. Given the complexity of the application, ROS will pay specific attention to important things. ROS will review the source code during the <company_svc_short/>. The mobile applications (iPhone, Android, Windows) are outside the scope of this pentest.</p>
     </section>
     
     <!-- Prerequisites section (complete section is in a snippet) -->
@@ -94,7 +94,7 @@
 <!-- Planning and payment section (complete section is in a snippet) -->
 <xi:include href="snippets/offerte/planningandpayment.xml"/> 
     <!-- About ROS section (complete section is in a snippet) -->
-<xi:include href="snippets/offerte/aboutros.xml"/>
+<xi:include href="snippets/offerte/aboutus.xml"/>
     
 <!-- Work condition section (complete section is in a snippet) -->
 <xi:include href="snippets/offerte/conditions.xml"/>

@@ -201,7 +201,8 @@
                         </fo:table-row>
                     </xsl:for-each>
                     <xsl:for-each select="/pentest_report/meta/collaborators/pentesters/pentester">
-                        <fo:table-row xsl:use-attribute-sets="borders">
+                        <xsl:if test="not(./name = /pentest_report/meta/collaborators/approver/name)">
+                            <fo:table-row xsl:use-attribute-sets="borders">
                             <fo:table-cell xsl:use-attribute-sets="td">
                                 <fo:block>
                                     <xsl:apply-templates select="name"/>
@@ -213,6 +214,7 @@
                                 </fo:block>
                             </fo:table-cell>
                         </fo:table-row>
+                        </xsl:if>
                     </xsl:for-each>
                 </fo:table-body>
             </fo:table>
@@ -307,12 +309,12 @@
                                     <xsl:choose>
                                         <xsl:when test="/offerte">
 
-                                            <xsl:value-of select="/*/meta/ros/legal_rep"/>
+                                            <xsl:value-of select="/*/meta/company/legal_rep"/>
 
                                         </xsl:when>
                                         <xsl:when test="/quickscope">
 
-                                            <xsl:value-of select="/*/ros/legal_rep"/>
+                                            <xsl:value-of select="/*/company/legal_rep"/>
 
                                         </xsl:when>
                                     </xsl:choose>
@@ -344,12 +346,12 @@
                                     <xsl:choose>
                                         <xsl:when test="/offerte">
 
-                                            <xsl:value-of select="/*/meta/ros/full_name"/>
+                                            <xsl:value-of select="/*/meta/company/full_name"/>
 
                                         </xsl:when>
                                         <xsl:when test="/quickscope">
 
-                                            <xsl:value-of select="/*/ros/full_name"/>
+                                            <xsl:value-of select="/*/company/full_name"/>
 
                                         </xsl:when>
                                     </xsl:choose>
@@ -399,23 +401,23 @@
     <xsl:template match="c_coc">
         <xsl:value-of select="/*/meta/permission_parties/client/coc"/>
     </xsl:template>
-    <xsl:template match="ros_long">
-        <xsl:value-of select="/*/meta/ros/full_name"/>
+    <xsl:template match="company_long">
+        <xsl:value-of select="/*/meta/company/full_name"/>
     </xsl:template>
-    <xsl:template match="ros_short">
-        <xsl:value-of select="/*/meta/ros/short_name"/>
+    <xsl:template match="company_short">
+        <xsl:value-of select="/*/meta/company/short_name"/>
     </xsl:template>
-    <xsl:template match="ros_svc_long">
+    <xsl:template match="company_svc_long">
         <xsl:value-of select="/*/meta/offered_service_long"/>
     </xsl:template>
-    <xsl:template match="ros_svc_short">
+    <xsl:template match="company_svc_short">
         <xsl:value-of select="/*/meta/offered_service_short"/>
     </xsl:template>
-    <xsl:template match="ros_legal_rep">
-        <xsl:value-of select="/*/meta/ros/legal_rep"/>
+    <xsl:template match="company_legal_rep">
+        <xsl:value-of select="/*/meta/company/legal_rep"/>
     </xsl:template>
-    <xsl:template match="ros_poc1">
-        <xsl:value-of select="/*/meta/ros/poc1"/>
+    <xsl:template match="company_poc1">
+        <xsl:value-of select="/*/meta/company/poc1"/>
     </xsl:template>
     <xsl:template match="t_app">
         <xsl:value-of select="/*/meta/pentestinfo/target_application"/>

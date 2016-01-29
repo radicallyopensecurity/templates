@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><pentest_report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" findingCode="SID" xsi:noNamespaceSchemaLocation="../dtd/pentestreport.xsd">
+<?xml version="1.0" encoding="UTF-8"?><pentest_report xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" findingCode="SID" xsi:noNamespaceSchemaLocation="../dtd/pentestreport.xsd">
         <meta>
                 <title>Penetration Test Report</title>
                 <client>
@@ -69,12 +69,7 @@ who is also the co-founder/CEO of Radically Open Security.</bio>
                                 <v_description>Finalizing</v_description>
                         </version>
                 </version_history>
-                <contact>
-                        <name>Melanie Rieback</name>
-                        <address>Radically Open Security BV<br/>Overdiemerweg 28, 1111 PP Diemen</address>
-                        <phone>+31 6 10 21 32 40</phone>
-                        <email>melanie@radicallyopensecurity.com</email>
-                </contact>
+                <xi:include href="snippets/company_info.xml"/>
         </meta>
         
         <generate_index/>
@@ -131,7 +126,7 @@ who is also the co-founder/CEO of Radically Open Security.</bio>
                 </section>
         </section>
         
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="snippets/methodology.xml"/>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="snippets/report/methodology.xml"/>
         
         <section id="recon">
                 <title>Reconnaissance and Fingerprinting</title>

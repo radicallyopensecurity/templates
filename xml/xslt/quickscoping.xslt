@@ -31,7 +31,7 @@
         
         <!-- A4 Text -->
         <!-- SCOPE -->
-        <fo:block xsl:use-attribute-sets="p"><fo:inline xsl:use-attribute-sets="bold">Scope:</fo:inline>&#160;&#8203;<xsl:value-of select="/quickscope/customer/full_name"/>&#160;&#8203;(hereafter “<fo:inline xsl:use-attribute-sets="bold"><xsl:value-of select="/quickscope/customer/short_name"/></fo:inline>”), with its registered offices at <xsl:value-of select="/quickscope/customer/address"/>, <xsl:value-of select="/quickscope/customer/postal_code"/>&#160;&#8203;<xsl:value-of select="/quickscope/customer/city"/>, <xsl:value-of select="/quickscope/customer/country"/>, has requested Radically Open Security B.V. (hereafter “<fo:inline xsl:use-attribute-sets="bold">ROS</fo:inline>”) to <xsl:value-of select="/quickscope/meta/requested_service"/> on the following target<xsl:if test="/quickscope/meta/targets/target[2]">s</xsl:if>:</fo:block>
+        <fo:block xsl:use-attribute-sets="p"><fo:inline xsl:use-attribute-sets="bold">Scope:</fo:inline>&#160;&#8203;<xsl:value-of select="/quickscope/customer/full_name"/>&#160;&#8203;(hereafter “<fo:inline xsl:use-attribute-sets="bold"><xsl:value-of select="/quickscope/customer/short_name"/></fo:inline>”), with its registered offices at <xsl:value-of select="/quickscope/customer/address"/>, <xsl:value-of select="/quickscope/customer/postal_code"/>&#160;&#8203;<xsl:value-of select="/quickscope/customer/city"/>, <xsl:value-of select="/quickscope/customer/country"/>, has requested <xsl:value-of select="/quickscope/company/full_name"/> (hereafter “<fo:inline xsl:use-attribute-sets="bold"><xsl:value-of select="/quickscope/company/short_name"/></fo:inline>”) to <xsl:value-of select="/quickscope/meta/requested_service"/> on the following target<xsl:if test="/quickscope/meta/targets/target[2]">s</xsl:if>:</fo:block>
         
         <!-- TARGETS -->
         <xsl:call-template name="generate_targets_xslt"></xsl:call-template>
@@ -40,7 +40,7 @@
         <fo:block xsl:use-attribute-sets="p last">The ARBIT 2014 Terms and Conditions are applicable to this assignment.</fo:block>
         
         <!-- PLANNING & PAYMENT -->
-        <fo:block xsl:use-attribute-sets="p"><fo:inline xsl:use-attribute-sets="bold">Planning &amp; Payment:</fo:inline>&#160;&#8203;ROS shall perform a <xsl:value-of select="/quickscope/pentest_info/days"/>-day (<xsl:value-of select="/quickscope/pentest_info/days * 6"/> consulting hours), <xsl:value-of select="/quickscope/pentest_info/nature"/>, <xsl:value-of select="/quickscope/pentest_info/type"/> penetration test on the target<xsl:if test="/quickscope/meta/targets/target[2]">s</xsl:if> mentioned above.</fo:block>
+        <fo:block xsl:use-attribute-sets="p"><fo:inline xsl:use-attribute-sets="bold">Planning &amp; Payment:</fo:inline>&#160;&#8203;<xsl:value-of select="/quickscope/company/short_name"/> shall perform a <xsl:value-of select="/quickscope/pentest_info/days"/>-day (<xsl:value-of select="/quickscope/pentest_info/days * 6"/> consulting hours), <xsl:value-of select="/quickscope/pentest_info/nature"/>, <xsl:value-of select="/quickscope/pentest_info/type"/> penetration test on the target<xsl:if test="/quickscope/meta/targets/target[2]">s</xsl:if> mentioned above.</fo:block>
         <fo:list-block xsl:use-attribute-sets="indented-list last">
       <fo:list-item xsl:use-attribute-sets="li">
             <fo:list-item-label end-indent="label-end()">
@@ -65,8 +65,8 @@
         </fo:list-block>
         
         <!-- FEE -->
-        <fo:block xsl:use-attribute-sets="p">Our fixed-fee price quote for the above described penetration testing services is €<xsl:number value="$fee" grouping-separator="," grouping-size="3"/>, excl. VAT and out-of-pocket expenses incurred by ROS, including but not limited to travel and accommodation. This reflects our fixed hourly rate of €<xsl:number value="$rate" grouping-separator="," grouping-size="3"/> for <xsl:value-of select="/quickscope/pentest_info/days"/> work days. ROS will send an invoice after the completion of this assignment. <xsl:value-of select="/quickscope/customer/short_name"/> will pay the agreed amount within 30 days after the invoice date.</fo:block>
-        <fo:block xsl:use-attribute-sets="p">Any additional services provided by ROS will be billed separately. An hourly rate for additional services will be agreed upon before work begins.</fo:block>
+        <fo:block xsl:use-attribute-sets="p">Our fixed-fee price quote for the above described penetration testing services is €<xsl:number value="$fee" grouping-separator="," grouping-size="3"/>, excl. VAT and out-of-pocket expenses incurred by <xsl:value-of select="/quickscope/company/short_name"/>, including but not limited to travel and accommodation. This reflects our fixed hourly rate of €<xsl:number value="$rate" grouping-separator="," grouping-size="3"/> for <xsl:value-of select="/quickscope/pentest_info/days"/> work days. <xsl:value-of select="/quickscope/company/short_name"/> will send an invoice after the completion of this assignment. <xsl:value-of select="/quickscope/customer/short_name"/> will pay the agreed amount within 30 days after the invoice date.</fo:block>
+        <fo:block xsl:use-attribute-sets="p">Any additional services provided by <xsl:value-of select="/quickscope/company/short_name"/> will be billed separately. An hourly rate for additional services will be agreed upon before work begins.</fo:block>
         
         <!-- EXAMPLE & FAQ -->
         <fo:block xsl:use-attribute-sets="p" keep-with-next.within-page="always">A <fo:inline xsl:use-attribute-sets="bold">sample Pentest report</fo:inline>&#160;&#8203;can be found here:<fo:list-block xsl:use-attribute-sets="indented-list">
@@ -101,12 +101,12 @@ report/REP_SittingDuck-pentestreport-v10.pdf</fo:basic-link>
         <fo:block xsl:use-attribute-sets="p" keep-with-next.within-page="always">In order to agree to this offer, please sign this letter in duplicate and return it to:</fo:block>
         
         <fo:block xsl:use-attribute-sets="p indent">
-            <fo:block><xsl:value-of select="/quickscope/ros/legal_rep"/></fo:block>
-            <fo:block><xsl:value-of select="/quickscope/ros/full_name"/></fo:block>
-            <fo:block><xsl:value-of select="/quickscope/ros/address"/></fo:block>
-            <fo:block><xsl:value-of select="/quickscope/ros/postal_code"/>&#160;<xsl:value-of select="/quickscope/ros/city"/></fo:block>
-            <fo:block><xsl:value-of select="/quickscope/ros/country"/></fo:block>
-            <fo:block><fo:basic-link color="blue"><xsl:attribute name="external-destination">mailto:<xsl:value-of select="/quickscope/ros/email"/></xsl:attribute><xsl:value-of select="/quickscope/ros/email"/></fo:basic-link></fo:block>
+            <fo:block><xsl:value-of select="/quickscope/company/legal_rep"/></fo:block>
+            <fo:block><xsl:value-of select="/quickscope/company/full_name"/></fo:block>
+            <fo:block><xsl:value-of select="/quickscope/company/address"/></fo:block>
+            <fo:block><xsl:value-of select="/quickscope/company/postal_code"/>&#160;<xsl:value-of select="/quickscope/company/city"/></fo:block>
+            <fo:block><xsl:value-of select="/quickscope/company/country"/></fo:block>
+            <fo:block><fo:basic-link color="blue"><xsl:attribute name="external-destination">mailto:<xsl:value-of select="/quickscope/company/email"/></xsl:attribute><xsl:value-of select="/quickscope/company/email"/></fo:basic-link></fo:block>
         </fo:block>
         
 

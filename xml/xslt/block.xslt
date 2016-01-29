@@ -18,7 +18,7 @@
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="contact/address">
+    <xsl:template match="company/address">
         <xsl:apply-templates/>
     </xsl:template>
     
