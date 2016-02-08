@@ -18,6 +18,11 @@
         <xsl:attribute name="keep-together">always</xsl:attribute>
     </xsl:attribute-set>
     
+    <!-- Common settings -->
+    <xsl:attribute-set name="root-common">
+        <xsl:attribute name="line-height-shift-adjustment">disregard-shifts</xsl:attribute>
+    </xsl:attribute-set>
+    
     <!-- Text -->
     <xsl:attribute-set name="DefaultFont">
         <xsl:attribute name="font-family">LiberationSansNarrow</xsl:attribute>
@@ -78,6 +83,10 @@
         <xsl:attribute name="padding-right">3pt</xsl:attribute>
         <!-- this is cheating, need to check if toc page numbers can be rendered in a better way -->
     </xsl:attribute-set>
+    <xsl:attribute-set name="img-title">
+        <xsl:attribute name="font-style">italic</xsl:attribute>
+        <xsl:attribute name="text-align">center</xsl:attribute>
+    </xsl:attribute-set>
     <xsl:attribute-set name="section">
         <xsl:attribute name="margin-bottom">
             <xsl:value-of select="$very-large-space"/>
@@ -96,6 +105,14 @@
         <xsl:attribute name="font-family">LiberationMono</xsl:attribute>
         <xsl:attribute name="font-size">9pt</xsl:attribute>
         <xsl:attribute name="background-color">#eeeeee</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="sup" use-attribute-sets="DefaultFont">
+		<xsl:attribute name="font-size">60%</xsl:attribute>
+		<xsl:attribute name="vertical-align">super</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="sub" use-attribute-sets="DefaultFont">
+		<xsl:attribute name="font-size">60%</xsl:attribute>
+		<xsl:attribute name="vertical-align">sub</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="p">
         <xsl:attribute name="margin-bottom">

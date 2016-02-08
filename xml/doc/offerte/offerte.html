@@ -46,7 +46,7 @@
     &lt;waiver_rep&gt;William Wonder&lt;/waiver_rep&gt;
 &lt;/client&gt;</code></pre>
 <p><strong>If all names are known, no need to do anything here, the entity takes care of this. If the waiver rep is not known, delete the <code>waiver_rep</code> element.</strong></p>
-<h3 id="company-information">ROS information</h3>
+<h3 id="ros-information">ROS information</h3>
 <p>The <code>&lt;company&gt;</code> element contains two other elements:</p>
 <ul>
 <li><code>&lt;full_name&gt;</code>, in which you should type ROS' official name, that is 'Radically Open Security'</li>
@@ -288,6 +288,8 @@ This is not a haiku.&lt;/pre&gt;
 <p>If you set both, only the width will be interpreted.</p>
 <p>If you do not set any height or width, the image will be displayed at full page width (i.e. 17 cm wide)</p>
 <p>Example: <code>&lt;img src=&quot;../graphics/xmlsignatureexclusion.png&quot; width=&quot;5&quot;/&gt;</code></p>
+<p>Optionally, you can set an image caption by adding some text in the <code>title</code> attribute.</p>
+<p>Example: <code>&lt;img src=&quot;../graphics/xmlsignatureexclusion.png&quot; width=&quot;5&quot; title=&quot;This is a funny picture LOL&quot;/&gt;</code></p>
 <h3 id="inline-elements">Inline elements</h3>
 <p>Inline elements are elements that modify the text inside e.g. a paragraph or a list item, for styling or linking purposes. You have the following options available to you:</p>
 <p><strong>Bold</strong></p>
@@ -306,6 +308,14 @@ This is not a haiku.&lt;/pre&gt;
 <p>To have inline text in a monospace font, wrap it in <code>&lt;monospace&gt;</code> tags.</p>
 <p>Example:</p>
 <p><code>&lt;p&gt;&lt;monospace&gt;This text is monospace&lt;/monospace&gt; and this text is not.&lt;/p&gt;</code></p>
+<p><strong>Superscript</strong></p>
+<p>To have inline text in superscript, wrap it in <code>&lt;sup&gt;</code> tags.</p>
+<p>Example:</p>
+<p><code>&lt;p&gt;&lt;sup&gt;This text is in superscript&lt;/sup&gt; and this text is not.&lt;/p&gt;</code></p>
+<p><strong>Subscript</strong></p>
+<p>To have inline text in subscript, wrap it in <code>&lt;sub&gt;</code> tags.</p>
+<p>Example:</p>
+<p><code>&lt;p&gt;&lt;sub&gt;This text is in subscript&lt;/sub&gt; and this text is not.&lt;/p&gt;</code></p>
 <p><strong>Links</strong></p>
 <p>Link to web pages using the <code>&lt;a&gt;</code> element.</p>
 <p>In the <code>href</code> attribute of the <code>&lt;a&gt;</code> element, type the url of the website you're linking to.</p>

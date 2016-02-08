@@ -794,6 +794,10 @@ full page width (i.e. 17 cm wide)
 
 Example: `<img src="../graphics/xmlsignatureexclusion.png" width="5"/>`
 
+Optionally, you can set an image caption by adding some text in the `title` attribute.
+
+Example: `<img src="../graphics/xmlsignatureexclusion.png" width="5" title="This is a funny picture LOL"/>`
+
 ### Inline elements
 
 Inline elements are elements that modify the text inside e.g. a
@@ -831,6 +835,22 @@ To have inline text in a monospace font, wrap it in `<monospace>` tags.
 Example:
 
 `<p><monospace>This text is monospace</monospace> and this text is not.</p>`
+
+**Superscript**
+
+To have inline text in superscript, wrap it in `<sup>` tags.
+
+Example:
+
+`<p><sup>This text is in superscript</sup> and this text is not.</p>`
+
+**Subscript**
+
+To have inline text in subscript, wrap it in `<sub>` tags.
+
+Example:
+
+`<p><sub>This text is in subscript</sub> and this text is not.</p>`
 
 **Links**
 

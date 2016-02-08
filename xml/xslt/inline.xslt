@@ -109,4 +109,12 @@
         <fo:inline xsl:use-attribute-sets="monospace"><xsl:apply-templates/></fo:inline>
     </xsl:template>
     
+    <xsl:template match="sup">
+        <fo:inline xsl:use-attribute-sets="sup"><xsl:apply-templates/></fo:inline>
+    </xsl:template>
+    
+    <xsl:template match="sub">
+        <fo:inline xsl:use-attribute-sets="sub"><xsl:apply-templates/></fo:inline>
+    </xsl:template>
+    
 </xsl:stylesheet>

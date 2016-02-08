@@ -43,7 +43,7 @@
 <!-- ROOT -->
     <xsl:template match="/">
 
-        <fo:root>
+        <fo:root xsl:use-attribute-sets="root-common">
 
             <xsl:call-template name="layout-master-set"/>
             <xsl:call-template name="Content"/>

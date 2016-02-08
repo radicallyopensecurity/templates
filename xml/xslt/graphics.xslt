@@ -7,7 +7,7 @@
     <xsl:template match="img">
         <fo:block xsl:use-attribute-sets="graphics-block">
             <xsl:call-template name="checkIfLast"/>
-            <fo:external-graphic src="{@src}">
+            <fo:block><fo:external-graphic src="{@src}">
                 <xsl:choose>
                     <xsl:when test="@width">
                         <xsl:attribute name="width">
@@ -44,7 +44,8 @@
                 </xsl:choose>
                 <xsl:attribute name="content-width">scale-to-fit</xsl:attribute>
                 <xsl:attribute name="content-height">scale-to-fit</xsl:attribute>
-            </fo:external-graphic>
+            </fo:external-graphic></fo:block>
+            <fo:block xsl:use-attribute-sets="img-title"><xsl:value-of select="@title"/></fo:block>
         </fo:block>
     </xsl:template>
     
