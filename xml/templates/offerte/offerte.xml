@@ -27,15 +27,12 @@
     
     <!-- US -->
     
-    <!-- <c_long/>          long client name;                   value taken from /offerte/meta/client/full_name -->
-    <!-- <c_short/>         short client name;                  value taken from /offerte/meta/client/short_name -->
-    <!-- <c_coc/>           Chamber of Commerce number;         value taken from /offerte/meta/client/coc -->
-    <!-- <c_street/>        client street & number;             value taken from /offerte/meta/client/address -->
-    <!-- <c_city/>          client city;                        value taken from /offerte/meta/client/city -->
-    <!-- <c_country/>       client country;                     value taken from /offerte/meta/client/country -->
-    <!-- <c_legal_rep/>     client legal representative;        value taken from /offerte/meta/client/legal_rep -->
-    <!-- <c_waiver_rep/>    client legal representative;        value taken from /offerte/meta/client/waiver_rep -->
-    <!-- <c_poc1/>          first point of contact for client;  value taken from /offerte/meta/client/poc1 -->
+    <!-- <company_long/>          long company name;                   value taken from /offerte/meta/company/full_name -->
+    <!-- <company_short/>         short company name;                  value taken from /offerte/meta/company/short_name -->
+    <!-- <company_legal_rep/>     company legal representative;        value taken from /offerte/meta/company/legal_rep -->
+    <!-- <company_poc1/>          first point of contact for company;  value taken from /offerte/meta/company/poc1 -->
+    <!-- <company_svc_long/>      service offered in this offerte;     value taken from /offerte/meta/offered_service_long -->
+    <!-- <company_svc_short/>     service offered, shorter descr.;     value taken from /offerte/meta/offered_service_short - NOTE: basically used to have more 'natural' language in snippets -->
     
     <!-- APP -->
     <!--  Is there an app to be tested? Put it here so included app snippets can use it -->
