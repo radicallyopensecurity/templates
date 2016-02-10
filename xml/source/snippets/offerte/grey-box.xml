@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- snippet --><p>Our penetration tests are run a bit like a Capture The Flag (CTF) competition: <company_long/> has a geographically distributed team, and we use online infrastructure (IRC, git, etc..) to coordinate our work. <!-- snippet/template (choose) -->This is a blessing for <p_boxtype/> pentesting, as ... <!-- end of template -->Naturally, we extend this invitation to <c_short/> as well.</p>
+<p>
+  Crystal Box vs. Black Box pentesting refers to the amount of information
+  regarding the target environment, architecture, and/or applications that is
+  initially shared by the customer with the pentesters. With Black Box testing,
+  pentesters are given no information whatsoever about the target(s). With Crystal
+  Box testing, pentesters are given all information requested about the target(s),
+  including source-code (when relevant), access to developers or system management, etc. <company_short/> will conduct Gray Box testing, which means that partial information is
+  given on the target.
+</p>

@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- snippet --><p>Our penetration tests are run a bit like a Capture The Flag (CTF) competition: <company_long/> has a geographically distributed team, and we use online infrastructure (IRC, git, etc..) to coordinate our work. <!-- snippet/template (choose) -->This is a blessing for <p_boxtype/> pentesting, as it enables us to invite the customer to send several technical people from their organization to join our pentest team on a volunteer basis! <!-- end of template -->Naturally, we extend this invitation to <c_short/> as well.</p>
+<p>
+  Crystal Box vs. Black Box pentesting refers to the amount of information regarding the
+  target environment, architecture, and/or applications that is initially shared by the
+  customer with the pentesters.  With Black Box testing, pentesters are given no information
+  whatsoever about the target(s). With Crystal Box testing, pentesters are given all information
+  requested about the target(s), including source-code (when relevant), access 
+  to developers or system management, etc. <company_short/> will conduct Crystal Box pentesting, which is the preferred method. Unlike real-world
+  attackers, who have all of the time in the world, penetration testing tends to happen within
+  a limited time frame. Crystal Box pentesting allows us to make the most efficient use of the
+  time allotted, thus maximizing the number of vulnerabilities that can be found. Additionally
+  Crystal Box pentesting fits naturally hand-in-hand with the "Peek Over Our Shoulder"
+  option that <company_short/> offers to <c_short/>.
+</p>
