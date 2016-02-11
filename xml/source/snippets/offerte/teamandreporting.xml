@@ -4,36 +4,49 @@
 
         <section>
                 <title>Team</title>
-                <p><company_short/> may perform the activities with its core-team members, external freelancers,
-                        and/or volunteers.</p>
+                <p><company_short/> may perform the activities with its core-team 
+                members, external freelancers, and/or volunteers.</p>
                 <p>First point of contact for this assignment shall be:</p>
                 <ul>
                         <li><company_poc1/> (<company_short/>)</li>
                         <li><c_poc1/> (<c_short/>)</li>
                 </ul>
-                <p>Our penetration tests are run a bit like a Capture The Flag (CTF) competition:
-                        <company_long/> has a geographically distributed team and we use
-                        online infrastructure (IRC, git, etc.) to coordinate our work. This enables
-                        us to invite the customer to send several technical people from their
-                        organization to join our pentest team on a volunteer basis. Naturally, we
-                        extend this invitation to <c_short/> as well.</p>
-                <p>Throughout the course of the audit, we intend to actively brainstorm with
-                        <c_short/> about both the pentest and the process. This is a continuous
-                        learning experience for both us and you. Also, in our experience, a tight
-                        feedback loop with the customer greatly improves both the quality and focus
-                        of the engagement.</p>
+                <p>Our penetration tests are run a bit like a Capture The Flag 
+                (CTF) competition:
+                
+				<company_long/> has a geographically distributed team 
+				and we use online infrastructure (RocketChat, GitLabs, etc.)  
+				to coordinate our work. This enables us to invite the 
+				customer to send several technical people from their
+				organization to join our pentest team on a volunteer basis  
+				Naturally, we extend this invitation to <c_short/> as well.</p>
+				
+                <p>Throughout the course of the audit, we intend to actively 
+                brainstorm with <c_short/> about both the pentest and the process. 
+                This is a continuous learning experience for both us and you. 
+                Also, in our experience, a tight feedback loop with the customer 
+                greatly improves both the quality and focus of the engagement.</p>
 
         </section>
         <section>
                 <title>Reporting</title>
-                <p><company_short/> will report to <c_short/> on the penetration test. This report will
-                        include the steps it has taken during the test and the vulnerabilities it
-                        has found. It will include recommendations but not comprehensive solutions
-                        on how to address these vulnerabilities.</p>
+                <p><company_short/> will report to <c_short/> on the penetration 
+                test. This report will include the steps it has taken during the 
+                test and the vulnerabilities it has found. It will include 
+                recommendations but not comprehensive solutions on how to address 
+                these vulnerabilities.</p>
+                
                 <p>A sample Pentest report can be found here</p>
-<ul><li><a href="https://github.com/radicallyopensecurity/templates/blob/master/sample-report/REP_SittingDuck-
-pentestreport-v10.pdf">https://github.com/radicallyopensecurity/templates/blob/master/sample-report/REP_SittingDuck-
-pentestreport-v10.pdf</a></li></ul>
-<p>One of <company_short/>'s Core Principles is the Teach To Fish principle – otherwise known as the 'Peek over our Shoulder' (PooS) principle. We strive to structure our services so they can also serve as a teaching or training opportunity for our customers.</p>
+					<ul>
+						<li><a href="https://github.com/radicallyopensecurity/templates/blob/master/sample-report/REP_SittingDuck-
+					pentestreport-v10.pdf">https://github.com/radicallyopensecurity/templates/blob/master/sample-report/REP_SittingDuck-
+					pentestreport-v10.pdf</a></li>
+					</ul>
+					
+				<p>One of <company_short/>'s Core Principles is the Teach 
+				To Fish principle – otherwise known as the 'Peek over our 
+				Shoulder' (PooS) principle. We strive to structure our 
+				services so they can also serve as a teaching or training 
+				opportunity for our customers.</p>
         </section>
 </section>
