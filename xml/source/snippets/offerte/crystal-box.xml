@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--snippet -->
 <p>
-  Crystal Box vs. Black Box pentesting refers to the amount of information regarding the
-  target environment, architecture, and/or applications that is initially shared by the
-  customer with the pentesters.  With Black Box testing, pentesters are given no information
-  whatsoever about the target(s). With Crystal Box testing, pentesters are given all information
+  Crystal-Box vs. Black-Box pentesting refers to the amount of information about the
+  target environment, architecture, and/or applications that the customer initially 
+  shares with the pentesters. With Black-Box testing, pentesters are given no information
+  whatsoever about the target(s). With Crystal-Box testing, pentesters are given all information
   requested about the target(s), including source-code (when relevant), access 
-  to developers or system management, etc. <company_short/> will conduct Crystal Box pentesting, which is the preferred method. Unlike real-world
-  attackers, who have all of the time in the world, penetration testing tends to happen within
-  a limited time frame. Crystal Box pentesting allows us to make the most efficient use of the
-  time allotted, thus maximizing the number of vulnerabilities that can be found. Additionally
-  Crystal Box pentesting fits naturally hand-in-hand with the "Peek Over Our Shoulder"
+  to developers or system management, etc..
+<br />
+<br />
+  <company_short/> will conduct Crystal-Box pentesting, which is the preferred 
+  method. Unlike real-world attackers who have all of the time in the world, 
+  penetration testing tends to happen within a limited time frame. Crystal-Box 
+  pentesting allows us to make the most efficient use of the time allotted, thus 
+  maximizing the number of vulnerabilities that can be found. Additionally
+  Crystal-Box pentesting fits naturally hand-in-hand with the "Peek Over Our Shoulder"
   option that <company_short/> offers to <c_short/>.
 </p>
+<!-- end of template -->
