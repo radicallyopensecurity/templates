@@ -92,18 +92,22 @@
     </meta>
     <section>
         <title>Introduction</title>
-        <p><c_long/> (hereafter “<b><c_short/></b>”), with its registered office at <c_street/>,
-            <c_city/>, <c_country/>, has requested <company_long/> (hereafter “<b><company_short/></b>”) to
-            perform <company_svc_long/>. Motivation for this request is that <c_short/> wishes to get a
-            better insight in ...</p>
+        <p><c_long/> (hereafter “<b><c_short/></b>”), with its registered office 
+        at <c_street/>, <c_city/>, <c_country/>, has requested <company_long/> 
+        (hereafter “<b><company_short/></b>”) to perform <company_svc_long/>. 
+        Motivation for this request is that <c_short/> wishes to get a better 
+        insight in ...</p>
+        
         <xi:include href="snippets/offerte/setoutscope.xml"/>
     </section>
+    
     <section>
         <!-- section with some more info on the application (if any) -->
         <title>The &t_app; Application</title>
         <p>&t_app; is a ...</p>
         <p>...</p>
     </section>
+    
     <section>
         <!-- section with some more info on the target infrastructure-->
         <title>The &c_short; Infrastructure</title>
@@ -136,8 +140,10 @@
 
     <!-- About ROS section (complete section is in a snippet) -->
     <xi:include href="snippets/offerte/aboutus.xml"/>
+    
     <!-- Work condition section (complete section is in a snippet) -->
     <xi:include href="snippets/offerte/conditions.xml"/>
+    
     <!-- General terms and conditions section (complete section is in a snippet) -->
     <xi:include href="snippets/offerte/generaltermsandconditions.xml"/>
     <generate_waivers/>

@@ -6,22 +6,22 @@
         <p>Our general approach during this penetration test was as follows:</p>
         <ol>
             <li><b>Reconnaissance</b><br/>We attempted to gather as much information as possible about the
-                target. Reconnaissance can take two forms i.e. active and passive. A
+                target. Reconnaissance can take two forms: active and passive. A
                 passive attack is always the best starting point as this would normally defeat
-                intrusion detection systems and other forms of protection etc. afforded to the
+                intrusion detection systems and other forms of protection, etc., afforded to the
                 network. This would usually involve trying to discover publicly available
                 information by utilizing a web browser and visiting newsgroups etc. An active form
                 would be more intrusive and may show up in audit logs and may take the form of a
                 social engineering type of attack.</li>
             <li><b>Enumeration</b><br/>We used varied operating system fingerprinting tools to determine
                 what hosts are alive on the network and more importantly what services and operating
-                systems they are running. Research into these services would then be carried out to
+                systems they are running. Research into these services would be carried out to
                 tailor the test to the discovered services.</li>
-            <li><b>Scanning</b><br/>By use of vulnerability scanners all discovered hosts would be tested
-                for vulnerabilities. The result would then be analyzed to determine if there any
+            <li><b>Scanning</b><br/>Through the use of vulnerability scanners, all discovered hosts would be tested
+                for vulnerabilities. The result would be analyzed to determine if there any
                 vulnerabilities that could be exploited to gain access to a target host on a
                 network.</li>
-            <li><b>Obtaining Access</b><br/>By use of published exploits or weaknesses found in
+            <li><b>Obtaining Access</b><br/>Through the use of published exploits or weaknesses found in
                 applications, operating system and services access would then be attempted. This may
                 be done surreptitiously or by more brute force methods.</li>
         </ol>
