@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section>
+        <title>Over ons <company_long/></title>
+	<p><company_long/> is 's werelds eerste non-profit computer security consultancy bedrijf.
+	Wij opereren aan de hand van een innovatief nieuw business model, waarbij gebruik gemaakt wordt van
+	de fiscale entiteit "Fiscaal Fondswervende Instelling" om als commerciele front-end 90% van onze winsten
+	belastingvrij te doneren aan een non-profit organisatie, stichting NLnet. Stichting NLnet ondersteunt open-source,
+	digitale rechten en Internet onderzoek al bijna 20 jaar.</p>
+
+	<p>In tegenstelling tot andere organisaties, baten onze winsten geen aandeelhouders,
+	investeerders of eigenaren. Onze winsten baten de maatschappij. Omdat wij geen winstoogmerk hebben
+	rekruteren wij de beste etische veiligheidsexperts en vinden wij gelijkgestemde klanten die hun
+	IT veiligheidsbudget willen gebruiken als "stem" om sociaal verantwoord ondernemen te ondersteunen.
+	Het hoge tempo waarmee wij groeien weerspiegelt de positieve respons die de markt heeft op
+	onze idealistische filosofie en ons innovatieve business model.</p>
+
+ <p><company_long/> heeft een aantal waarden die wij beschrijven als onze
+ "Kernwaarden." Deze zijn:</p>
+    <ul>
+      <li><b>Geen "sketchy" zaken</b><br/> 
+      Wij bouwen geen toezichtssystemen, helpen geen hacking activisten, verkopen geen exploits
+      aan geheime diensten of iets in die richting. Als een opdracht in de buurt komt van
+      moreel twijfelachtig zijn, zullen wij deze niet aannemen.</li>
+      <li><b>Open-Source</b><br/>
+      Wij geven ALLE tools en frameworks, die wij open-source bouwen, vrij op onze website.</li>
+      <li><b>Leer een man vissen...</b><br/>
+      Tijdens onze samenwerken delen wij niet alleen de resultaten met uw bedrijf,
+      maar geven wij ook een stapsgewijze beschrijving waarmee u de procedure kunt
+      reproduceren. Wij willen ontraadselen wat we doen. Het is geen hogere wiskunde
+      en wij willen uw bedrijf helpen om de houding ten opzichte van veiligheid te verbeteren, ook
+      als het ons meer werk kost.</li>
+      <li><b>Gratis IoCs</b><br/>
+      Wij geven ALLE verzamelde bedreigingen ("Indicators of Compromise") vrij in
+      een open-source database die iederen gratis kan gebruiken. (Opgeschoond in
+      overeenstemming met klanten.)</li>
+      <li><b>Nuldagen (Zero days)</b><br/>
+      Wij verkopen geen Nuldagen (of: "Zero days") - wij brengen ze verantwoord aan het licht!</li>
+          </ul> 
+<p>Voor meer informatie over <company_long/> verwijzen wij u door naar onze website: 
+<a href="http://www.radicallyopensecurity.com">www.radicallyopensecurity.com</a>.</p>
+</section>
