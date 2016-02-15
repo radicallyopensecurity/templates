@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section>
-    <title>Broncode Audit</title>
-    <p><company_short/> zal een broncode audit uitvoeren ter ondersteuning van pentesting. 
-    Gedurende een code audit onderzoeken wij handmatig de broncode van een applicatie 
+    <title>Code Audit</title>
+    <p><company_short/> zal een code audit uitvoeren ter ondersteuning van pentesting. 
+    Gedurende een code audit onderzoeken wij handmatig de code van een applicatie 
     om te verzekeren dat er geen kwetsbaarheden in de beveiliging zitten en gebruiken wij 
     ons begrip van de code om het pentesten te leiden. Als er kwetsbaarheden gevonden worden 
     documenteren wij deze en komen met suggesties om deze op te lossen. Dit wordt gedaan 
