@@ -7,15 +7,15 @@
         toegang krijgen tot deze systemen, proberen kwetsbaarheden op te sporen en trachten 
         verdere toegang te krijgen door de gevonden kwetsbaarheden uit te buiten.</p>
         
-        <!-- snippet --><p><company_short/> zal de volgende doelwitten testen 
-        (de “<b>Doelwitten</b>”):</p>
+        <!-- snippet --><p><company_short/> zal de volgende objectieven testen 
+        (de “<b>objectieven</b>”):</p>
         
         <generate_targets/>
         
         <!-- snippet --><p><company_short/> zal testen op de aanwezigheid van de 
         meest voorkomende kwetsbaarheden, gebruik makend van zowel publiek beschikbare
          scanning tools, als door handmatig testen. <company_short/> zal een 
-        <p_duration/>-daagse, <p_boxtype/>, indringende test uitvoeren, via internet.</p>
+        <p_duration/>-daagse, <p_boxtype/>, grondige test uitvoeren, via internet.</p>
         
 		<!-- snippet --> <!--Not Needed if Disclaimer is Included; Duplicate Text-->
 		<!--p>It is possible that in the course of the penetration 
