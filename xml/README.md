@@ -1,3 +1,33 @@
+
+**PROJECT INFO:**
+
+The Project Manager will edit this information as it becomes available.
+
+**scope:** 
+
+**planning:**
+
+**duration:** 
+
+**contact persons:** 
+
+**focus:**
+
+**accounts:**
+
+**Brief notes from email:** 
+
+
+**Pentesters + Availability:**
+
+
+**Writers**
+
+
+-----
+
+
+
 This is an XML framework for generating Pentest Reports and Offers for clients. You download the whole framework whenever you need to write a new document (so every document exists in its own framework).
 
 Directory overview:
