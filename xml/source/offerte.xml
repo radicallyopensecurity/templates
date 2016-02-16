@@ -41,7 +41,7 @@
     <!-- <t_app_producer/>  name of the company producing the app -->
 
 <offerte xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../dtd/offerte.xsd">
+    xsi:noNamespaceSchemaLocation="../dtd/offerte.xsd" xmlns:xi="http://www.w3.org/2003/XInclude">
 
     <!-- document meta information; to be filled in by the offerte writer  -->
 
@@ -103,14 +103,14 @@
     
     <section>
         <!-- section with some more info on the application (if any) -->
-        <title>The &t_app; Application</title>
-        <p>&t_app; is a ...</p>
+        <title>The <t_app/>; Application</title>
+        <p><t_app/> is a ...</p>
         <p>...</p>
     </section>
     
     <section>
         <!-- section with some more info on the target infrastructure-->
-        <title>The &c_short; Infrastructure</title>
+        <title>The <c_short/> Infrastructure</title>
         <p>...</p>
     </section>
 
