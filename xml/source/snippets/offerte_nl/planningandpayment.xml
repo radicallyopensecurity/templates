@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section>
+        <title>Planning en Betaling</title>
+
+<ul>
+	<li><p_testingduration/>: <company_short/> voert een <company_svc_short/> uit op het doelwit</li>
+	<li><p_reportwritingduration/>: <company_short/> maakt een concept rapport over de tests</li>
+	<li><p_reportdue/>: <company_short/> levert het definitieve rapport.</li>
+</ul>
+
+<!-- snippet --><p>Ons vaste tarief voor de bovenstaand beschreven
+penetratie test diensten is €<p_fee/>,- excl. BTW en bijkomende kosten. 
+<company_short/> zal een factuur sturen na afronding van deze opdracht. 
+<c_short/> zal het afgesproken bedrag binnen 30 dagen na de factureringsdatum overmaken.</p>
+<!-- snippet --><p>Eventuele extra werkzaamheden zullen apart worden verrekend. 
+Een uurtarief zal hieraan voorafgaand worden besproken.</p>
+
+</section>
