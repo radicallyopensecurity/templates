@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE offerte []>
 
 <!-- variable placeholders that can be used by the report writer throughout the offerte -->
     <!-- NOTE: values are taken from <meta> section below! -->
@@ -41,7 +40,7 @@
     <!-- <t_app_producer/>  name of the company producing the app -->
 
 <offerte xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../dtd/offerte.xsd" xmlns:xi="http://www.w3.org/2003/XInclude">
+    xsi:noNamespaceSchemaLocation="../dtd/offerte.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <!-- document meta information; to be filled in by the offerte writer  -->
 
