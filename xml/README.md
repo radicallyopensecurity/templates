@@ -3,6 +3,8 @@
 
 The Project Manager will edit this information as it becomes available.
 
+**summary**
+
 **scope:** 
 
 **planning:**
@@ -26,7 +28,7 @@ The Project Manager will edit this information as it becomes available.
 
 -----
 
-
+-----
 
 This is an XML framework for generating Pentest Reports and Offers for clients. You download the whole framework whenever you need to write a new document (so every document exists in its own framework).
 
