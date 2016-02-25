@@ -234,7 +234,7 @@
                             <fo:table-cell xsl:use-attribute-sets="td">
                                 <fo:block>
                                     <xsl:value-of
-                                        select="format-dateTime(@date, '[MNn] [D1], [Y]', 'en', (), ())"
+                                        select="format-dateTime(@date, '[MNn] [D1o], [Y]', 'en', (), ())"
                                     />
                                 </fo:block>
                             </fo:table-cell>

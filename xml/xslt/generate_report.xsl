@@ -35,7 +35,7 @@
             <xsl:for-each select="/*/meta/version_history/version">
                 <xsl:sort select="xs:dateTime(@date)" order="descending"/>
                 <xsl:if test="position() = 1">
-                    <xsl:value-of select="format-dateTime(@date, '[MNn] [D1], [Y]', 'en', (), ())"/>
+                    <xsl:value-of select="format-dateTime(@date, '[MNn] [D1o], [Y]', 'en', (), ())"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
