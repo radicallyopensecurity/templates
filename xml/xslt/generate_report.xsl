@@ -29,7 +29,7 @@
 
     <xsl:key name="rosid" match="section|finding|appendix|non-finding" use="@id"/>
     
-    <xsl:variable name="CLASSES" select="document('../xslt/styles_REP.xslt')/*/xsl:attribute-set"/>
+    <xsl:variable name="CLASSES" select="document('../xslt/styles_rep.xslt')/*/xsl:attribute-set"/>
     
     <xsl:variable name="latestVersionDate">
             <xsl:for-each select="/*/meta/version_history/version">
