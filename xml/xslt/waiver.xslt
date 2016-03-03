@@ -48,10 +48,10 @@
             <xsl:if test="coc">, registered at the <xsl:value-of select="coc/@nationality"/> Chamber of Commerce under no. <xsl:value-of select="coc"/></xsl:if>
          and duly represented by <xsl:choose>
             <xsl:when test="waiver_rep">
-                                    <xsl:value-of select="waiver_rep"/>
+                                    <xsl:value-of select="waiver_rep"/><xsl:text>.</xsl:text>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:text>__________________________________</xsl:text>
+                                    <xsl:text>__________________________________.</xsl:text>
                                 </xsl:otherwise>
          </xsl:choose>
                             </fo:block>
