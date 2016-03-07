@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<section id="greyboxing">
+<title>The Grey-Box Pentesting Method</title>
 <p>
   <!--snippet -->Crystal-Box vs. Black-Box pentesting refers to the amount of information
   regarding the target environment, architecture, and/or applications that is
@@ -11,3 +14,4 @@
   <company_short/> will conduct Gray-Box testing, which means that partial information is
   given on the target.
 </p>
+</section>
