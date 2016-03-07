@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--snippet -->
 <p>
-  <!--snippet -->Crystal-Box vs. Black-Box pentesting refers to the amount of information
-  about the target environment, architecture, and/or applications that the customer 
-  initially shares with the pentesters. With Black-Box testing, pentesters
-  are given no information whatsoever about the target(s). With Crystal-Box testing,
-  pentesters are given all information requested about the target(s), including 
-  source code (when relevant), access to developers or system management, etc..
-<br />
-<br />
-  In this case <company_short/> will conduct a Black-Box test.
+  Crystal-box vs. black-box pentesting refers to the amount of information about the target environment, architecture, and/or applications the customer initially shares with the pentesters. With black-box testing, pentesters are given no information whatsoever about the target(s). With crystal-box testing, pentesters are given all information requested about the target(s), including source-code (when relevant), access to developers or system management, etc.
+</p>
+<p>
+
+  In this case <company_short/> will conduct a black-box test.
 </p>
 <!-- end of template -->
