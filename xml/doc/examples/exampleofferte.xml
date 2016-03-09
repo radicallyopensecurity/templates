@@ -35,6 +35,7 @@
             <test_planning>January 1st until January 12th, 2015</test_planning> <!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
             <report_writing>January 15th until January 20th, 2015</report_writing> <!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
             <report_due>January 23rd, 2015</report_due> <!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <nature>time-boxed</nature>
             <type>black-box</type><!-- please choose one of the following: black-box, grey-box, crystal-box -->
             <fee>50000</fee><!-- euro is added automatically in the document -->
             <target_application>FishInABarrel</target_application><!-- name of application to be tested (if any; if none, delete target_application element) -->
