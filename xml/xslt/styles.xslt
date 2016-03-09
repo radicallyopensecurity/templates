@@ -45,6 +45,11 @@
         <xsl:attribute name="keep-with-next.within-page">always</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
     </xsl:attribute-set>-->
+    <xsl:attribute-set name="errortext">
+        <xsl:attribute name="color">red</xsl:attribute>
+        <xsl:attribute name="background-color">black</xsl:attribute>
+        <xsl:attribute name="font-weight">bold</xsl:attribute>
+    </xsl:attribute-set>
     <xsl:attribute-set name="title-0" use-attribute-sets="title">
         <xsl:attribute name="text-align">center</xsl:attribute>
         <xsl:attribute name="font-size">16pt</xsl:attribute>
@@ -73,6 +78,7 @@
     <xsl:attribute-set name="title-client" use-attribute-sets="title-0">
         <xsl:attribute name="background-color">silver</xsl:attribute>
         <xsl:attribute name="margin-bottom">6cm</xsl:attribute>
+        <xsl:attribute name="text-transform">capitalize</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="for">
         <xsl:attribute name="text-align">center</xsl:attribute>

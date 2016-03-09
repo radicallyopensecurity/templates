@@ -46,11 +46,12 @@ following elements (mandatory and in the listed order):
 -   The document title, in the `<title>` element
 -   Client information, in the `<client>` element
 -   Targets listing, in the `<targets>` element
+-   (Optionally) Pentest-related information, in the `<pentestinfo>` element
 -   People who worked on the pentest and/or report, in the
     `<collaborators>` element
 -   Document classification, in the `<classification>` element
 -   The document's version history, in the `<version_history>` element
--   ROS Contact information, in the `<contact>` element
+-   Your company contact information, in the `<company>` element
 
 For more details, see the sections below.
 
@@ -94,6 +95,23 @@ Example:
         <target>hackthis.sittingduck.com</target>
         <target>Sitting Duck's support staff</target>
     <targets>
+
+### Pentest Info
+
+The `<pentestinfo>` element contains some data about the pentest itself. This element is optional, but may be useful as you can refer to its content using placeholders, allowing e.g. for standard referrals to the tested application name, pentest type or pentest duration.
+
+Example:
+
+    <pentestinfo>
+            <duration>10</duration><!-- duration of pentest, in working days -->
+            <test_planning>January 1st until January 12th, 2015</test_planning> <!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <report_writing>January 15th until January 20th, 2015</report_writing> <!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <report_due>January 23rd, 2015</report_due> <!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <nature>time-boxed</nature>
+            <type>black-box</type><!-- please choose one of the following: black-box, grey-box, crystal-box -->
+            <target_application>FishInABarrel</target_application><!-- name of application to be tested (if any) -->
+            <target_application_producer>H4ckers 'R' Us</target_application_producer>
+        </pentestinfo>
 
 ### Collaborators
 

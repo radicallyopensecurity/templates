@@ -18,7 +18,7 @@
 <ul>
 <li>The offered service, in the <code>&lt;offered_service&gt;</code> element</li>
 <li>Client information, in the <code>&lt;client&gt;</code> element</li>
-<li>ROS-related information, in the '<company>' element</li>
+<li>Your-company-related information, in the '<company>' element</li>
 <li>Targets listing, in the <code>&lt;targets&gt;</code> element</li>
 <li>The document's version history, in the <code>&lt;version_history&gt;</code> element</li>
 </ul>
@@ -46,18 +46,17 @@
     &lt;waiver_rep&gt;William Wonder&lt;/waiver_rep&gt;
 &lt;/client&gt;</code></pre>
 <p><strong>If all names are known, no need to do anything here, the entity takes care of this. If the waiver rep is not known, delete the <code>waiver_rep</code> element.</strong></p>
-<h3 id="ros-information">ROS information</h3>
+<h3 id="company-information">Company information</h3>
 <p>The <code>&lt;company&gt;</code> element contains two other elements:</p>
 <ul>
-<li><code>&lt;full_name&gt;</code>, in which you should type ROS' official name, that is 'Radically Open Security'</li>
-<li><code>&lt;legal_rep&gt;</code>, in which you should type the name of ROS' legal rep, that is 'Melanie Rieback'</li>
+<li><code>&lt;full_name&gt;</code>, in which you should type your company's official name</li>
+<li><code>&lt;legal_rep&gt;</code>, in which you should type the name of your legal rep</li>
 </ul>
 <p>Example:</p>
 <pre><code>&lt;company&gt;
-    &lt;full_name&gt;Radically Open Security&lt;/full_name&gt;
-    &lt;legal_rep&gt;Melanie Rieback&lt;/legal_rep&gt;
-&lt;/client&gt;</code></pre>
-<p><strong>No need to do anything here, the entity takes care of this</strong></p>
+    &lt;full_name&gt;Shining Armour B.V.&lt;/full_name&gt;
+    &lt;legal_rep&gt;Sir Lancelot&lt;/legal_rep&gt;
+&lt;/company&gt;</code></pre>
 <h3 id="targets">Targets</h3>
 <p>The <code>&lt;targets&gt;</code> element contains one or more <code>&lt;target&gt;</code> elements, one for each target specified for the pentest. Put every target of the pentest in its own <code>&lt;target&gt;</code> element. If there is only one target, you'll end up with a <code>&lt;targets&gt;</code> element containing only one <code>&lt;target&gt;</code> element. This is ok.</p>
 <p>Example:</p>
@@ -66,6 +65,20 @@
     &lt;target&gt;hackthis.sittingduck.com&lt;/target&gt;
     &lt;target&gt;Sitting Duck&#39;s support staff&lt;/target&gt;
 &lt;targets&gt;</code></pre>
+<h3 id="pentest-info">Pentest Info</h3>
+<p>The <code>&lt;pentestinfo&gt;</code> element contains some data about the pentest itself. This element is useful as you can refer to its content using placeholders, allowing e.g. for standard referrals to the tested application name, pentest type or pentest duration.</p>
+<p>Example:</p>
+<pre><code>&lt;pentestinfo&gt;
+        &lt;duration&gt;10&lt;/duration&gt;&lt;!-- duration of pentest, in working days --&gt;
+        &lt;test_planning&gt;January 1st until January 12th, 2015&lt;/test_planning&gt; &lt;!-- date or date range in text, e.g. May 18th until May 25th, 2015 --&gt;
+        &lt;report_writing&gt;January 15th until January 20th, 2015&lt;/report_writing&gt; &lt;!-- date or date range in text, e.g. May 18th until May 25th, 2015 --&gt;
+        &lt;report_due&gt;January 23rd, 2015&lt;/report_due&gt; &lt;!-- date or date range in text, e.g. May 18th until May 25th, 2015 --&gt;
+        &lt;nature&gt;time-boxed&lt;/nature&gt;
+        &lt;type&gt;black-box&lt;/type&gt;&lt;!-- please choose one of the following: black-box, grey-box, crystal-box --&gt;
+        &lt;fee&gt;50000&lt;/fee&gt;&lt;!-- euro is added automatically in the document --&gt;
+        &lt;target_application&gt;FishInABarrel&lt;/target_application&gt;&lt;!-- name of application to be tested (if any) --&gt;
+        &lt;target_application_producer&gt;H4ckers &#39;R&#39; Us&lt;/target_application_producer&gt;
+    &lt;/pentestinfo&gt;</code></pre>
 <h3 id="version-history">Version History</h3>
 <p>The <code>&lt;version_history&gt;</code> element contains one or more <code>&lt;version&gt;</code> elements, one for each version of the document you create. Whenever you start a new version, add a <code>&lt;version&gt;</code> element to the list.</p>
 <p>The <code>&lt;version&gt;</code> element should contain the following:</p>

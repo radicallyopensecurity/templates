@@ -38,7 +38,7 @@ following elements (mandatory and in the listed order):
 
 -   The offered service, in the `<offered_service>` element
 -   Client information, in the `<client>` element
--   ROS-related information, in the '<company>' element
+-   Your-company-related information, in the '<company>' element
 -   Targets listing, in the `<targets>` element
 -   The document's version history, in the `<version_history>` element
 
@@ -80,22 +80,19 @@ Example:
 
 **If all names are known, no need to do anything here, the entity takes care of this. If the waiver rep is not known, delete the `waiver_rep` element.**
 
-### ROS information
+### Company information
 
 The `<company>` element contains two other elements:
 
--   `<full_name>`, in which you should type ROS' official name,
-    that is 'Radically Open Security'
--   `<legal_rep>`, in which you should type the name of ROS' legal rep, that is 'Melanie Rieback'
+-   `<full_name>`, in which you should type your company's official name
+-   `<legal_rep>`, in which you should type the name of your legal rep
 
 Example:
 
     <company>
-        <full_name>Radically Open Security</full_name>
-        <legal_rep>Melanie Rieback</legal_rep>
-    </client>
-
-**No need to do anything here, the entity takes care of this**
+        <full_name>Shining Armour B.V.</full_name>
+        <legal_rep>Sir Lancelot</legal_rep>
+    </company>
 
 
 ### Targets
@@ -114,6 +111,23 @@ Example:
         <target>Sitting Duck's support staff</target>
     <targets>
 
+### Pentest Info
+
+The `<pentestinfo>` element contains some data about the pentest itself. This element is useful as you can refer to its content using placeholders, allowing e.g. for standard referrals to the tested application name, pentest type or pentest duration.
+
+Example:
+
+    <pentestinfo>
+            <duration>10</duration><!-- duration of pentest, in working days -->
+            <test_planning>January 1st until January 12th, 2015</test_planning> <!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <report_writing>January 15th until January 20th, 2015</report_writing> <!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <report_due>January 23rd, 2015</report_due> <!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <nature>time-boxed</nature>
+            <type>black-box</type><!-- please choose one of the following: black-box, grey-box, crystal-box -->
+            <fee>50000</fee><!-- euro is added automatically in the document -->
+            <target_application>FishInABarrel</target_application><!-- name of application to be tested (if any) -->
+            <target_application_producer>H4ckers 'R' Us</target_application_producer>
+        </pentestinfo>
 
 ### Version History
 

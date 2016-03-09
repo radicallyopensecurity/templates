@@ -26,7 +26,14 @@
   <xs:element name="short_name" type="xs:string"/>
   <xs:element name="poc1" type="xs:string"/>
   <xs:element name="legal_rep" type="xs:string"/>
-  <!-- address is not common because of placeholders in offerte -->
+<xs:element name="address">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="br"/>
+        <xs:group ref="placeholders"></xs:group>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="postal_code" type="xs:string"/>
   <xs:element name="city" type="xs:string"/>
   <xs:element name="country" type="xs:string"/>
@@ -43,6 +50,23 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="waiver_rep" type="xs:string"/>
+  
+  <xs:element name="duration" type="xs:nonNegativeInteger"/>
+  <xs:element name="test_planning" type="xs:string"/>
+  <xs:element name="report_writing" type="xs:string"/>
+  <xs:element name="report_due" type="xs:string"/>
+  <xs:element name="nature" type="xs:string"/>
+  <xs:element name="type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="black-box"/>
+            <xs:enumeration value="crystal-box"/>
+            <xs:enumeration value="grey-box"/>
+          </xs:restriction>
+        </xs:simpleType>
+  </xs:element>
+  <xs:element name="target_application" type="xs:string"/>
+  <xs:element name="target_application_producer" type="xs:string"/>
   
   <xs:element name="br">
     <xs:complexType/>
@@ -64,8 +88,15 @@
       </xs:choice>
     </xs:complexType>
   </xs:element>
-  <!-- td is not common because of placeholders in offerte -->
   <xs:element name="th" type="xs:string"/>
+  <xs:element name="td">
+    <xs:complexType mixed="true">
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="inline-all"/>
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ul">
     <xs:complexType>
       <xs:sequence>
@@ -90,7 +121,17 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-  <!-- li and blocks are not common because of placeholders in offerte -->
+  
+  <xs:complexType name="li" mixed="true">
+    <xs:choice maxOccurs="unbounded">
+      <xs:group ref="inline-all"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ul"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ol"/>
+        <xs:group ref="placeholders"/>
+    </xs:choice>
+  </xs:complexType>
+  
+  
   <xs:element name="img">
     <xs:complexType>
       <xs:attribute name="height" use="optional" type="xs:integer"/>
@@ -134,6 +175,100 @@
   <xs:element name="generate_targets">
     <xs:complexType/>
   </xs:element>
+  
+    <xs:element name="pre">
+    <xs:complexType mixed="true">
+      <xs:choice>
+        <xs:group ref="inline-except-monospace"/>
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="code">
+    <xs:complexType mixed="true">
+      <xs:choice>
+        <xs:group ref="inline-except-monospace"/>
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- Inline elements -->
+  <xs:element name="a">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="href" use="required" type="xs:anyURI"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="b">
+    <xs:complexType mixed="true">
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="inline-except-b"/>
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="i">
+    <xs:complexType mixed="true">
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="inline-except-i"/>
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="u">
+    <xs:complexType mixed="true">
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="inline-except-u"/>
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="monospace">
+    <xs:complexType mixed="true">
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="inline-except-monospace"/>
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sup">
+    <xs:complexType mixed="true">
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="inline-except-sup"/>
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sub">
+    <xs:complexType mixed="true">
+      <xs:choice maxOccurs="unbounded">
+        <xs:group ref="inline-except-sub"/>
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="name">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="placeholders"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- attributes -->
+  <xs:attribute name="break">
+    <xs:simpleType> 
+          <xs:restriction base="xs:string"> 
+            <xs:enumeration value="before"/>
+            <xs:enumeration value="after"/>
+          </xs:restriction> 
+        </xs:simpleType>
+  </xs:attribute>
   
     <!-- Inline groups -->
   <xs:group name="inline-all">
@@ -214,4 +349,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="sub"/>
     </xs:choice>
 </xs:group>
+  
+
 </xs:schema>

@@ -5,6 +5,7 @@
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
   <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="http://www.w3.org/2001/XInclude/XInclude.xsd"/>
   <xs:include schemaLocation="common.xsd"/>
+  
   <xs:element name="offerte">
     <xs:complexType>
       <xs:sequence>
@@ -16,6 +17,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  
   <xs:element name="meta">
     <xs:complexType>
       <xs:sequence>
@@ -29,6 +31,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  
   <xs:element name="offered_service_long" type="xs:string"/>
   <xs:element name="offered_service_short" type="xs:string"/>
   
@@ -69,6 +72,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  
   <xs:element name="pentestinfo">
     <xs:complexType>
       <xs:sequence>
@@ -84,33 +88,8 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="duration" type="xs:nonNegativeInteger"/>
-  <xs:element name="test_planning" type="xs:string"/>
-  <xs:element name="report_writing" type="xs:string"/>
-  <xs:element name="report_due" type="xs:string"/>
-  <xs:element name="nature" type="xs:string"/>
-  <xs:element name="type">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="black-box"/>
-            <xs:enumeration value="crystal-box"/>
-            <xs:enumeration value="grey-box"/>
-          </xs:restriction>
-        </xs:simpleType>
-  </xs:element>
+  
   <xs:element name="fee" type="xs:string"/>
-  <xs:element name="target_application" type="xs:string"/>
-  <xs:element name="target_application_producer" type="xs:string"/>
-  
-  
-  <xs:element name="address">
-    <xs:complexType mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element ref="br"/>
-        <xs:group ref="placeholders"></xs:group>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
   
   <xs:element name="annex">
     <xs:complexType>
@@ -132,6 +111,7 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="generate_waivers"/>
+  
   <xs:element name="title">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -140,13 +120,15 @@
       </xs:choice>
     </xs:complexType>
   </xs:element>
-  <xs:element name="name">
-    <xs:complexType mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:group ref="placeholders"></xs:group>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
+  
+  <xs:complexType name="block" mixed="true">
+    <xs:choice maxOccurs="unbounded">
+      <xs:group ref="inline-all"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="generate_permission_parties"/>
+      <xs:group ref="placeholders"/>
+    </xs:choice>
+    <xs:attribute ref="xml:base"/>
+  </xs:complexType>
   
   <xs:element name="section">
     <xs:complexType>
@@ -166,122 +148,16 @@
         </xs:choice>
       </xs:sequence>
       <xs:attribute name="id" use="optional" type="xs:ID"/>
-      <xs:attribute name="break" use="optional">
-        <xs:simpleType> 
-          <xs:restriction base="xs:string"> 
-            <xs:enumeration value="before"/>
-            <xs:enumeration value="after"/>
-          </xs:restriction> 
-        </xs:simpleType>
-      </xs:attribute>
+      <xs:attribute ref="break" use="optional"/>
       <xs:attribute ref="xml:base"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="td">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded">
-        <xs:group ref="inline-all"/>
-        <xs:group ref="placeholders"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="block" mixed="true">
-    <xs:choice maxOccurs="unbounded">
-      <xs:group ref="inline-all"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" ref="generate_permission_parties"/>
-      <xs:group ref="placeholders"/>
-    </xs:choice>
-    <xs:attribute ref="xml:base"/>
-  </xs:complexType>
-  <xs:complexType name="li" mixed="true">
-    <xs:choice maxOccurs="unbounded">
-      <xs:group ref="inline-all"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ul"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" ref="ol"/>
-        <xs:group ref="placeholders"/>
-    </xs:choice>
-  </xs:complexType>
+  
   <xs:element name="generate_offer_signature_box"/>
   <xs:element name="generate_permission_parties"/>
   
-  <xs:element name="pre">
-    <xs:complexType mixed="true">
-      <xs:choice>
-        <xs:group ref="inline-except-monospace"/>
-        <xs:group ref="placeholders"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="code">
-    <xs:complexType mixed="true">
-      <xs:choice>
-        <xs:group ref="inline-except-monospace"/>
-        <xs:group ref="placeholders"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  
-  <!-- Inline elements -->
-  <xs:element name="a">
-    <xs:complexType>
-      <xs:simpleContent>
-        <xs:extension base="xs:string">
-          <xs:attribute name="href" use="required" type="xs:anyURI"/>
-        </xs:extension>
-      </xs:simpleContent>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="b">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded">
-        <xs:group ref="inline-except-b"/>
-        <xs:group ref="placeholders"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="i">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded">
-        <xs:group ref="inline-except-i"/>
-        <xs:group ref="placeholders"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="u">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded">
-        <xs:group ref="inline-except-u"/>
-        <xs:group ref="placeholders"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="monospace">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded">
-        <xs:group ref="inline-except-monospace"/>
-        <xs:group ref="placeholders"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="sup">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded">
-        <xs:group ref="inline-except-sup"/>
-        <xs:group ref="placeholders"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="sub">
-    <xs:complexType mixed="true">
-      <xs:choice maxOccurs="unbounded">
-        <xs:group ref="inline-except-sub"/>
-        <xs:group ref="placeholders"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  
 
-  <!-- Placeholders -->
+    <!-- Placeholders -->
   <xs:group name="placeholders">
     <xs:choice>
       <xs:element name="c_long"/>
@@ -309,4 +185,6 @@
       <xs:element name="p_reportdue"/>
     </xs:choice>
 </xs:group>
+
+  
 </xs:schema>
