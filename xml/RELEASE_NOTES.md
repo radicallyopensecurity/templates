@@ -29,7 +29,22 @@ Uppercase is now forced on titles that should be in uppercase (i.e. report and o
 
 Forcing title case for pentest report titles is unfortunately not possible from a style point of view as xsl-fo can only capitalize every word, which is not really what we want. But Peter Mosmans's validation script has your back on this.
 
-Todo
-X schema
-X xslt
-- docs
+### Finally, we have a `<div>` element!
+
+#### What does `<div>` do?
+
+Nothing. `<div>` just *is*.
+
+#### Sigh. Ok, why *is* `<div>`?
+
+You can use `<div>` as a container for other block elements. This is basically only (but very) useful for snippets, as snippets need to be well-formed XML documentlets and can therefore only have one root element. If the snippet is a complete section, this is not a problem. If the snippet is a bunch of paragraphs or something, you're out of luck. Or rather, you used to be out of luck, because there was no `<div>`. But now there is `<div>`. So your snippet can be `<div>` (root element), containing everything you want. Well, everything that's allowed, anyway.
+
+#### So what's allowed in `<div>`?
+
+All block elements: p, ul, ol, table, img, pre, code
+
+#### And what elements can *contain* `<div>`?
+
+Sections, Annexes and Appendices. NOTHING ELSE. DON'T EVEN TRY.
+
+

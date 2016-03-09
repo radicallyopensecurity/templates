@@ -141,6 +141,21 @@
     </xs:complexType>
   </xs:element>
   
+  <xs:element name="div">
+    <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="pre"/>
+          <xs:element ref="code"/>
+          <xs:element name="p" type="block"/>
+          <xs:element ref="table"/>
+          <xs:element ref="ul"/>
+          <xs:element ref="ol"/>
+          <xs:element ref="img"/>
+        </xs:choice>
+      <xs:attribute ref="xml:base"/>
+    </xs:complexType>
+  </xs:element>
+  
   <xs:element name="version_history">
     <xs:complexType>
       <xs:sequence>

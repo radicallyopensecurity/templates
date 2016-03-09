@@ -299,6 +299,7 @@ As said, after the title, anything goes (well, almost):
     -   lists (ordered `<ol>` or unordered `<ul>`)
     -   tables (`<table>`)
     -   command input/output boxes (`<pre>`)
+    -   div containers (`<div>`)
 -   A section can contain any number of findings (`<finding>`)
 -   A section can contain any number of non-findings (`<non-finding>`)
 -   A section can contain any number of finding or recommendation
@@ -672,6 +673,25 @@ Example:
 #### Help! The code in my pre element contains \< characters and it messes with my xml!
 
 You can escape the \< character by replacing it with its entity `&lt;`.
+
+
+### Div containers
+
+#### What does `<div>` do?
+
+Nothing. `<div>` just *is*.
+
+#### Sigh. Ok, why *is* `<div>`?
+
+You can use `<div>` as a container for other block elements. This is basically only (but very) useful for snippets, as snippets need to be well-formed XML documentlets and can therefore only have one root element. If the snippet is a complete section, this is not a problem. If the snippet is a bunch of paragraphs or something, your snippet can be `<div>` (root element), containing everything you want. Well, everything that's allowed, anyway.
+
+#### So what's allowed in `<div>`?
+
+All block elements: `<p>`, `<ul>`, `<ol>`, `<table>`, `<img>`, `<pre>`, `<code>`
+
+#### And what elements can *contain* `<div>`?
+
+`<section>` and `<appendix>`.
 
 ### Tables
 

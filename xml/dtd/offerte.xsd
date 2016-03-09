@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0" vc:maxVersion="1.1">
-  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
+§  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
   <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="http://www.w3.org/2001/XInclude/XInclude.xsd"/>
   <xs:include schemaLocation="common.xsd"/>
   
@@ -103,6 +103,7 @@
           <xs:element ref="ol"/>
           <xs:element ref="ul"/>
           <xs:element ref="img"/>
+          <xs:element ref="div"/>
           <xs:element ref="section"/>
           <xs:element ref="generate_targets"/>
         </xs:choice>
@@ -143,6 +144,7 @@
           <xs:element ref="ul"/>
           <xs:element ref="ol"/>
           <xs:element ref="img"/>
+          <xs:element ref="div"/>
           <xs:element ref="generate_targets"/>
           <xs:element ref="generate_offer_signature_box"/>
         </xs:choice>

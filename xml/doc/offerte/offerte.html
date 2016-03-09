@@ -120,6 +120,7 @@
 <li>tables (<code>&lt;table&gt;</code>)</li>
 <li>command input/output boxes (<code>&lt;pre&gt;</code>)</li>
 <li>code (<code>&lt;code&gt;</code>)</li>
+<li>div containers (<code>&lt;div&gt;</code>)</li>
 </ul></li>
 <li>A section can contain a signing box for the offerte itself (<code>&lt;generate_offer_signature_box/&gt;</code>)</li>
 <li>A section can contain a listing of targets, taken from the <code>&lt;targets&gt;</code> element in the meta section (<code>&lt;generate_targets/&gt;</code>)</li>
@@ -198,6 +199,15 @@ This is not a haiku.&lt;/pre&gt;
 &lt;/section&gt;</code></pre>
 <h4 id="help-the-code-in-my-pre-element-contains-characters-and-it-messes-with-my-xml">Help! The code in my pre element contains &lt; characters and it messes with my xml!</h4>
 <p>You can escape the &lt; character by replacing it with its entity <code>&amp;lt;</code>.</p>
+<h3 id="div-containers">Div containers</h3>
+<h4 id="what-does-div-do">What does <code>&lt;div&gt;</code> do?</h4>
+<p>Nothing. <code>&lt;div&gt;</code> just <em>is</em>.</p>
+<h4 id="sigh.-ok-why-is-div">Sigh. Ok, why <em>is</em> <code>&lt;div&gt;</code>?</h4>
+<p>You can use <code>&lt;div&gt;</code> as a container for other block elements. This is basically only (but very) useful for snippets, as snippets need to be well-formed XML documentlets and can therefore only have one root element. If the snippet is a complete section, this is not a problem. If the snippet is a bunch of paragraphs or something, your snippet can be <code>&lt;div&gt;</code> (root element), containing everything you want. Well, everything that's allowed, anyway.</p>
+<h4 id="so-whats-allowed-in-div">So what's allowed in <code>&lt;div&gt;</code>?</h4>
+<p>All block elements: <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;code&gt;</code></p>
+<h4 id="and-what-elements-can-contain-div">And what elements can <em>contain</em> <code>&lt;div&gt;</code>?</h4>
+<p><code>&lt;section&gt;</code> and <code>&lt;annex&gt;</code>.</p>
 <h3 id="tables">Tables</h3>
 <p><strong>Rows</strong></p>
 <p>Tables consist of a <code>&lt;table&gt;</code> element containing one or more rows (<code>&lt;tr&gt;</code>).</p>

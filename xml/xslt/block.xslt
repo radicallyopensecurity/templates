@@ -9,8 +9,8 @@
         <xsl:if
             test="(parent::section and not(following-sibling::*)) or 
             (parent::appendix and not(following-sibling::*)) or 
-            (ancestor::section and not(following-sibling::*) and not(parent::*/following-sibling::*)) or 
-            (ancestor::appendix and not(following-sibling::*) and not(parent::*/following-sibling::*)) or 
+            (ancestor::section and not(following-sibling::*) and not(parent::*/following-sibling::*) and not(parent::div)) or 
+            (ancestor::appendix and not(following-sibling::*) and not(parent::*/following-sibling::*) and not(parent::div)) or 
             (not(self::title) and following-sibling::*[1][self::section]) or
             (not(self::title) and following-sibling::*[1][self::finding]) or
             (not(self::title) and following-sibling::*[1][self::non-finding])">
@@ -46,6 +46,13 @@
     
     <xsl:template match="code">
         <fo:block xsl:use-attribute-sets="code">
+            <xsl:call-template name="checkIfLast"/>
+            <xsl:apply-templates/>
+        </fo:block>
+    </xsl:template>
+    
+    <xsl:template match="div"><!-- div doesn't do anything, it's just there to make snippets more flexible -->
+        <fo:block>
             <xsl:call-template name="checkIfLast"/>
             <xsl:apply-templates/>
         </fo:block>
