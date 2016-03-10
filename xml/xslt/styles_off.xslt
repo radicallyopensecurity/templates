@@ -19,7 +19,7 @@
         <xsl:attribute name="text-align">center</xsl:attribute>
         <xsl:attribute name="color">white</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
-        <xsl:attribute name="text-transform">capitalize</xsl:attribute>
+        <xsl:attribute name="text-transform">uppercase</xsl:attribute>
         <!-- letter spacing is dodgy in fop when there are certain characters in the string (e.g. a 'V'); commenting this out until that is fixed -->
         <!-- it's also dodgy in combination with centered text, btw -->
         <!--<xsl:attribute name="letter-spacing.precedence">0</xsl:attribute>
@@ -31,20 +31,20 @@
         <xsl:attribute name="font-size">18pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">1cm</xsl:attribute>
         <xsl:attribute name="background-color">#FF5C00</xsl:attribute>
-        <xsl:attribute name="text-transform">capitalize</xsl:attribute>
+        <xsl:attribute name="text-transform">uppercase</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="title-1" use-attribute-sets="title">
         <xsl:attribute name="font-size">18pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">1cm</xsl:attribute>
         <xsl:attribute name="background-color">#FF5C00</xsl:attribute>
-        <xsl:attribute name="text-transform">capitalize</xsl:attribute>
+        <xsl:attribute name="text-transform">uppercase</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="title-2" use-attribute-sets="title">
         <xsl:attribute name="font-style">italic</xsl:attribute>
         <xsl:attribute name="font-size">14pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">0.8cm</xsl:attribute>
         <xsl:attribute name="background-color">#999999</xsl:attribute>
-        <xsl:attribute name="text-transform">capitalize</xsl:attribute>
+        <xsl:attribute name="text-transform">uppercase</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="title-3" use-attribute-sets="title">
         <xsl:attribute name="font-size">14pt</xsl:attribute>
@@ -56,7 +56,7 @@
     </xsl:attribute-set>
     <xsl:attribute-set name="title-client" use-attribute-sets="title-0">
         <xsl:attribute name="background-color">#999999</xsl:attribute>
-        <xsl:attribute name="text-transform">capitalize</xsl:attribute>
+        <xsl:attribute name="text-transform">uppercase</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="for">
         <xsl:attribute name="font-size">16pt</xsl:attribute>
