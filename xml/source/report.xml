@@ -2,10 +2,7 @@
 <pentest_report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" findingCode="???" xsi:noNamespaceSchemaLocation="../dtd/pentestreport.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
 <meta>
 	<title>Penetration Test Report</title>
-	<client>
-		<full_name>Full Client Name</full_name>
-		<short_name>Short Client Name</short_name>
-	</client>
+	<xi:include href="client_info.xml"/>
 	<targets>
 		<target>Target</target>
 	</targets>
@@ -21,7 +18,7 @@
 		<pentesters>
 		<pentester>
 			<name>FirstName LastName</name>
-		<bio>Info</bio>
+			<bio>Info</bio>
 		</pentester>
 		</pentesters>
 	</collaborators>

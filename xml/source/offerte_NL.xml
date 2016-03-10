@@ -53,17 +53,7 @@
             <target>...</target>
         </targets>
         <permission_parties>
-            <client><!-- mandatory; please add client information -->
-                <full_name>...</full_name><!-- long client name, e.g. Sitting Duck B.V. -->
-                <short_name>...</short_name><!-- short client name, e.g. Sitting Duck; if no short name: same as long name -->
-                <legal_rep>...</legal_rep><!-- customer legal representative (to sign offer) -->
-                <waiver_rep>...</waiver_rep><!-- customer legal representative (to sign waiver; can be same person as legal_rep) -->
-                <poc1>...</poc1><!-- first point of contact for customer (during pentest); can be same person as above -->
-                <address>...</address><!-- street name and number -->
-                <city>...</city>
-                <country>...</country>
-                <coc nationality="Dutch">...</coc><!-- chamber of commerce number; ONLY THE NUMBER, no 'kvk' or whatever. If no chamber of commerce number, please delete the whole element -->
-            </client>
+            <xi:include href="client_info.xml"/>
             <party><!-- optional; if no other party needs to give permission, please remove whole party element -->
                 <full_name>...</full_name>
                 <short_name>...</short_name><!-- short party name; if no short name: same as long name -->
@@ -78,8 +68,9 @@
             <test_planning>...</test_planning><!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
             <report_writing>...</report_writing><!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
             <report_due>...</report_due><!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <nature></nature>
             <type>...</type><!-- please choose one of the following: black-box, grey-box, crystal-box -->
-            <fee>...</fee><!-- euro is added automatically in the document -->
+            <fee denomination="euro">...</fee><!-- euro|dollar -->
             <target_application>...</target_application><!-- name of application to be tested (if any; if none, delete target_application element) -->
             <target_application_producer>...</target_application_producer><!-- name of application to be tested (if any; if none, delete target_application_producer element) -->
         </pentestinfo>

@@ -4,29 +4,46 @@
     vc:minVersion="1.0" vc:maxVersion="1.1"> 
     <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
     <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="http://www.w3.org/2001/XInclude/XInclude.xsd"/>
+  
+  <!-- company -->
 <xs:element name="company">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="full_name"/>
-        <xs:element ref="short_name"/>
+        <xs:group ref="name-group"/>
         <xs:element ref="legal_rep"/>
         <xs:element ref="poc1"/>
-        <xs:element ref="address"/>
-        <xs:element ref="postal_code"/>
-        <xs:element ref="city"/>
-        <xs:element ref="country"/>
+        <xs:group ref="address-group"/>
         <xs:element ref="phone"/>
         <xs:element ref="email"/>
+        <xs:element ref="website"/>
+        <xs:element ref="coc"/>
+        <xs:element ref="vat_no"/>
+        <xs:element ref="iban"/>
       </xs:sequence>
       <xs:attribute ref="xml:base"/>
     </xs:complexType>
   </xs:element>
   
+  <xs:group name="name-group">
+    <xs:sequence>
+        <xs:element ref="full_name"/>
+        <xs:element ref="short_name"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="address-group">
+    <xs:sequence>
+        <xs:element ref="address"/>
+        <xs:element ref="postal_code"/>
+        <xs:element ref="city"/>
+        <xs:element ref="country"/>
+    </xs:sequence>
+  </xs:group>
+  
   <xs:element name="full_name" type="xs:string"/>
   <xs:element name="short_name" type="xs:string"/>
   <xs:element name="poc1" type="xs:string"/>
   <xs:element name="legal_rep" type="xs:string"/>
-<xs:element name="address">
+  <xs:element name="address">
     <xs:complexType mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="br"/>
@@ -39,6 +56,9 @@
   <xs:element name="country" type="xs:string"/>
   <xs:element name="phone" type="xs:string"/>
   <xs:element name="email" type="xs:string"/>
+  <xs:element name="website" type="xs:string"/>
+  <xs:element name="vat_no" type="xs:string"/>
+  <xs:element name="iban" type="xs:string"/>
   
   <xs:element name="coc">
     <xs:complexType>
@@ -49,7 +69,29 @@
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
+  
   <xs:element name="waiver_rep" type="xs:string"/>
+  
+  <!-- client -->
+  
+  <xs:element name="client">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="name-group"/>
+        <xs:element ref="legal_rep"/>
+        <xs:element ref="waiver_rep"/>
+        <xs:element ref="poc1"/>
+        <xs:group ref="address-group"/>
+        <xs:element ref="coc"/>
+        <xs:element ref="invoice_rep"/>
+        <xs:element ref="invoice_mail"/>
+      </xs:sequence>
+      <xs:attribute ref="xml:base"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="invoice_rep" type="xs:string"/>
+  <xs:element name="invoice_mail" type="xs:string"/>
   
   <xs:element name="duration" type="xs:nonNegativeInteger"/>
   <xs:element name="test_planning" type="xs:string"/>

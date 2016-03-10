@@ -192,7 +192,7 @@
     <xsl:attribute-set name="logo">
         <xsl:attribute name="padding-top">2cm</xsl:attribute>
         <xsl:attribute name="padding-bottom">3cm</xsl:attribute>
-        <xsl:attribute name="src">url(./graphics/logo.png)</xsl:attribute>
+        <xsl:attribute name="src">url(../graphics/logo.png)</xsl:attribute>
         <xsl:attribute name="width">70mm</xsl:attribute>
         <xsl:attribute name="content-width">scale-to-fit</xsl:attribute>
         <xsl:attribute name="content-height">scale-to-fit</xsl:attribute>
@@ -244,5 +244,16 @@
     <!-- Signature boxes -->
     <xsl:attribute-set name="signaturebox">
         <xsl:attribute name="margin-top" select="$very-large-space"/>
+    </xsl:attribute-set>
+    
+    <!-- Misc (invoice) -->
+    <xsl:attribute-set name="orange-text">
+        <xsl:attribute name="color">#FF5C00</xsl:attribute>
+    </xsl:attribute-set>
+     <xsl:attribute-set name="align-right">
+        <xsl:attribute name="text-align">right</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="big-space-below">
+        <xsl:attribute name="margin-bottom">1cm</xsl:attribute>
     </xsl:attribute-set>
 </xsl:stylesheet>

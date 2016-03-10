@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><pentest_report xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" findingCode="SID" xsi:noNamespaceSchemaLocation="../dtd/pentestreport.xsd">
         <meta>
                 <title>Penetration Test Report</title>
-                <client>
-                        <full_name>Sitting Duck BV</full_name>
-                        <short_name>Sitting Duck</short_name>
-                </client>
+                <xi:include href="client_info.xml"/>
                 <targets>
                         <target>fishinabarrel.sittingduck.com</target>
                 </targets>

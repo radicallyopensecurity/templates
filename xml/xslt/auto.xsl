@@ -3,6 +3,12 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs"
     xmlns:fo="http://www.w3.org/1999/XSL/Format" version="2.0">
     
+    <xsl:variable name="denomination">
+        <xsl:choose>
+            <xsl:when test="/offerte/meta/pentestinfo/fee/@denomination = 'euro'">€</xsl:when>
+            <xsl:when test="/offerte/meta/pentestinfo/fee/@denomination = 'dollar'">$</xsl:when>
+        </xsl:choose>
+    </xsl:variable>
 
     <xsl:template match="generate_targets">
         <xsl:call-template name="generate_targets_xslt"/>
@@ -491,6 +497,7 @@
     </xsl:template>
     <xsl:template match="p_fee">
         <xsl:param name="placeholderElement" select="/offerte/meta/pentestinfo/fee"/>
+        <xsl:value-of select="$denomination"/><xsl:text>&#160;</xsl:text>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
@@ -518,7 +525,15 @@
         <xsl:param name="placeholderElement" select="/"/>
         <xsl:choose>
             <xsl:when test="normalize-space($placeholderElement)"><!-- placeholder exists and contains text -->
-                <xsl:value-of select="$placeholderElement"/>
+                <xsl:choose>
+                    <xsl:when test="self::p_fee"><!-- pretty numbering for fee -->
+                        <xsl:variable name="fee" select="$placeholderElement * 1"/>
+                        <xsl:number value="$fee" grouping-separator="," grouping-size="3"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="$placeholderElement"/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
                 <fo:inline xsl:use-attribute-sets="errortext">XXXXXX</fo:inline>
