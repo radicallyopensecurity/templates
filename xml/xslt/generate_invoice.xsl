@@ -110,7 +110,7 @@
         
         <fo:block>Kind regards,</fo:block>
         <fo:block>your dedicated team at</fo:block>
-        <fo:block><xsl:value-of select="/*/meta/company/full_name"/></fo:block>
+        <fo:block font-style="italic"><xsl:value-of select="/*/meta/company/full_name"/></fo:block>
     </xsl:template>
 
 
