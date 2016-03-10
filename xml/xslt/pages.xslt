@@ -104,7 +104,7 @@
                 <fo:table-column column-width="proportional-column-width(40)"/>
                 <fo:table-body>
                     <fo:table-row>
-                        <fo:table-cell text-align="right" display-align="after">
+                        <fo:table-cell text-align="right" display-align="after" padding-bottom="5mm">
                             <fo:block xsl:use-attribute-sets="TinyFont">
                                 <fo:block xsl:use-attribute-sets="bold orange-text"><xsl:value-of select="/*/meta/company/full_name"/></fo:block>
                                 <fo:block><xsl:value-of select="/*/meta/company/address"/></fo:block>
@@ -115,7 +115,7 @@
                         <fo:table-cell text-align="center">
                             <fo:block><fo:external-graphic xsl:use-attribute-sets="logo"/></fo:block>
                         </fo:table-cell>
-                        <fo:table-cell display-align="after">
+                        <fo:table-cell display-align="after" padding-bottom="5mm">
                             <fo:block xsl:use-attribute-sets="TinyFont">
                                 <fo:block xsl:use-attribute-sets="bold orange-text"><xsl:value-of select="/*/meta/company/website"/></fo:block>
                                 <fo:block><xsl:value-of select="/*/meta/company/email"/></fo:block>
