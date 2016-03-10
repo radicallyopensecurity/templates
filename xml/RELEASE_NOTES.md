@@ -19,7 +19,7 @@ Note that there are some new fields in the client section, `<invoice_rep>` and `
 
 w00t. You can now generate a pdf invoice directly from offerte.xml. Use:
 
-`java  -jar saxon9he.jar -s:/path/to/offerte/source/offerte.xml -xsl:/path/to/offerte/xslt/generate_invoice.xsl -o:/path/to/report/target/invoice.fo -xi` 
+`java  -jar saxon9he.jar -s:/path/to/offerte/source/offerte.xml -xsl:/path/to/offerte/xslt/generate_invoice.xsl -o:/path/to/report/target/invoice.fo INVOICE_NO=[invoice number] -xi` 
 
 And then:
 
