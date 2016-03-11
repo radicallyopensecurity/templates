@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invoice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../dtd/invoice.xsd" xmlns:xi="http://www.w3.org/2001/XInclude" invoice_no="999/99" date="2016-03-11">
+    <meta>
+        <xi:include href="snippets/company_info.xml"/>
+        <xi:include href="client_info.xml"/>
+    </meta>
+    <servicesdelivered>
+        <service>Bla1</service><fee denomination="euro" vat="0">1000</fee>
+        <service>Bla2</service><fee denomination="euro">1000</fee>
+        <service>Bla3</service><fee denomination="euro">1000</fee>
+    </servicesdelivered>
+    <additionalcosts>
+        <costentry>Blu1</costentry><fee denomination="euro">1000</fee>
+    </additionalcosts>
+</invoice>

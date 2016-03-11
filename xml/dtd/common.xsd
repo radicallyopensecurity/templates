@@ -250,6 +250,7 @@
     </xs:complexType>
   </xs:element>
   
+  
   <!-- Inline elements -->
   <xs:element name="a">
     <xs:complexType>
