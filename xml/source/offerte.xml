@@ -71,7 +71,7 @@
             <report_due>...</report_due><!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
             <nature>...</nature>
             <type>...</type><!-- please choose one of the following: black-box, grey-box, crystal-box -->
-            <fee>...</fee><!-- euro is added automatically in the document -->
+            <fee denomination="euro">...</fee><!-- euro is added automatically in the document -->
             <target_application>...</target_application><!-- name of application to be tested (if any; if none, delete target_application element) -->
             <target_app_producer>...</target_app_producer><!-- name of application to be tested (if any; if none, delete target_application_producer element) -->
         </pentestinfo>
