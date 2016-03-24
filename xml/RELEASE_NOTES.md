@@ -1,6 +1,28 @@
 RELEASE NOTES
 =============
 
+March 24, 2016
+--------------
+### More elaborate invoicing
+
+Instead of generating an invoice straight from the offerte, as described in the release notes of March 10, you can now also take the roundabout route and customize the invoice.
+
+So instead of:
+
+1. offerte.xml --> invoice.pdf (using generate_inv.xsl + fop)
+
+You can do:
+
+1. offerte.xml --> invoice.xml (using off2inv.xsl)
+2. edit invoice.xml (add some extra costs, most likely)
+3. invoice.xml --> invoice.pdf (using generate_inv.xsl + fop)
+
+More often than not, the simple route will do just fine, though.
+
+### Added client VAT element
+
+When billing EU customers, you do not need to charge VAT (but you do need to have the client's VAT number on the invoice). So the `<client>` element now has an optional `<vat_no>` child.
+
 March 10, 2016
 -------------
 ### Fee denomination
