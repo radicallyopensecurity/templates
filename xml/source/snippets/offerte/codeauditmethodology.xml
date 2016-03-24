@@ -26,7 +26,7 @@
 		<li>Complexity<br/>
 		The complexity of the system is in the frameworks that support the web 
 		application. We'd ignore those and focus only on the custom code and 
-		backend code, which we understand is based on .NET/ C#. We would also 
+		backend code. We would also 
 		focus on implementation mistakes and known flaws in the systems. For 
 		example, we'd ensure you're using the latest versions of software, 
 		but we wouldn't delve into the framework itself. Since we assume the 
