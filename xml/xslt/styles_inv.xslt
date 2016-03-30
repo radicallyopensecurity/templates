@@ -25,7 +25,7 @@
     
     <xsl:attribute-set name="PortraitPage">
         <xsl:attribute name="margin-top">0.5cm</xsl:attribute>
-        <xsl:attribute name="margin-bottom">1.8cm</xsl:attribute>
+        <xsl:attribute name="margin-bottom">1.5cm</xsl:attribute>
         <xsl:attribute name="margin-left">1.5cm</xsl:attribute>
         <xsl:attribute name="margin-right">1.5cm</xsl:attribute>
         <xsl:attribute name="page-height">29.7cm</xsl:attribute>
@@ -84,6 +84,9 @@
         <xsl:attribute name="border-collapse">separate</xsl:attribute>
         <xsl:attribute name="border-spacing">5mm</xsl:attribute>
         <xsl:attribute name="padding-top">2pt</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="padding-top">
+        <xsl:attribute name="padding-top">5pt</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="table-shading">
         <xsl:attribute name="background-color">#EEEEEE</xsl:attribute>

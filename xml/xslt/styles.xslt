@@ -254,6 +254,6 @@
         <xsl:attribute name="text-align">right</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="big-space-below">
-        <xsl:attribute name="margin-bottom">1cm</xsl:attribute>
+        <xsl:attribute name="margin-bottom">8mm</xsl:attribute>
     </xsl:attribute-set>
 </xsl:stylesheet>
