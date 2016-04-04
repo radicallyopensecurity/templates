@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section>
   <title>Planning and Payment</title>
-
   <p><company_short/> will uphold the following dates for the planning of the services:</p>
+<<<<<<< HEAD
   <ul>
       <li><p_testingduration/>: <company_short/> performs a <company_svc_short/> on the target</li>
       <li><p_reportwritingduration/>: <company_short/> drafts the report on the tests</li>
@@ -10,10 +10,20 @@
   </ul>
   
 
+=======
+  <p>
+    <ul>
+        <li><p_testingduration/>: <company_short/> performs a <company_svc_short/> on the target</li>
+        <li><p_reportwritingduration/>: <company_short/> drafts the report on the tests</li>
+        <li><p_reportdue/>: <company_short/> delivers the final report.</li>
+    </ul>
+  </p>
+>>>>>>> origin/master
   <!-- snippet --><p>Our fixed-fee price quote for the above described penetration 
-  testing services is <p_fee/>.- excl. VAT and out-of-pocket expenses. 
+  testing services is €<p_fee/>,- excl. VAT and out-of-pocket expenses. 
   <company_short/> will send an invoice after completion of this assignment. 
   <c_short/> will pay the agreed amount within 30 days of the invoice date.</p>
   <!-- snippet --><p>Any additional work will be charged separately. An hourly 
   rate for additional work will be agreed upon before starting this work.</p>
+
 </section>
