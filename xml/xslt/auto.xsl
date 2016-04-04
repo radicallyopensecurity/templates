@@ -15,7 +15,7 @@
     </xsl:template>
 
     <xsl:template name="generate_targets_xslt">
-        <xsl:variable name="Ref" select="@Ref"/>
+        <xsl:param name="Ref" select="@Ref"/>
         <fo:list-block xsl:use-attribute-sets="list"  provisional-distance-between-starts="0.75cm"
             provisional-label-separation="2.5mm" space-after="12pt" start-indent="1cm">
             <xsl:for-each select="/*/meta/targets/target[@Ref=$Ref] | /*/meta/targets/target[not(@Ref)]">
