@@ -1,6 +1,20 @@
 RELEASE NOTES
 =============
 
+April 4, 2016
+-------------
+
+### Associating targets with parties
+
+You can now associate certain targets with certain parties. The `<client>` and <`party`> element now have an optional `id` attribute. Each `target` element now has an optional `Ref` attribute.
+
+In waivers, only the targets associated with the party/client that needs to sign the waiver will be shown.
+
+`<generate_targets/>` also has an optional `Ref` attribute for when you only want to generate a list of targets for one client/party.
+
+If a target has no Ref attribute, it will appear in all the lists (both in the waivers and when using `<generate_targets/>`).
+
+
 March 24, 2016
 --------------
 ### More elaborate invoicing

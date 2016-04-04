@@ -88,6 +88,7 @@
         <xs:element ref="vat_no"/>
       </xs:sequence>
       <xs:attribute ref="xml:base"/>
+      <xs:attribute name="id" type="xs:ID"/>
     </xs:complexType>
   </xs:element>
   
@@ -225,13 +226,24 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="target" type="xs:string"/>
+  <xs:element name="target">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="Ref" use="optional" type="xs:IDREFS"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
   
   <xs:element name="generate_index">
     <xs:complexType/>
   </xs:element>
+  
   <xs:element name="generate_targets">
-    <xs:complexType/>
+    <xs:complexType>
+        <xs:attribute name="Ref" use="optional" type="xs:IDREFS"/>
+    </xs:complexType>
   </xs:element>
   
     <xs:element name="pre">

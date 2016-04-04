@@ -7,11 +7,14 @@
         <offered_service_short>penetration test</offered_service_short>
         <xi:include href="snippets/company_info.xml"/>
         <targets> <!-- one target element per target -->
-            <target>fishinabarrel.sittingduck.com</target>
+            <target Ref="client">fishinabarrel1.sittingduck.com</target>
+            <target>fishinabarrel2.sittingduck.com</target>
+            <target Ref="client">fishinabarrel3.sittingduck.com</target>
+            <target Ref="hackrus">HackMe App</target>
         </targets>
         <permission_parties>
             <xi:include href="client_info.xml"/>
-            <party><!-- optional; if no other party needs to give permission, please remove whole party element -->
+            <party id="hackrus"><!-- optional; if no other party needs to give permission, please remove whole party element -->
                 <full_name>h4ck'R'Us</full_name>
                 <short_name>h4ck'R'Us</short_name> <!-- short party name; if no short name: same as long name -->
                 <waiver_rep>Evil Hacker</waiver_rep> 
