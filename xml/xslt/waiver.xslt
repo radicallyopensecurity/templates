@@ -61,7 +61,9 @@
 <fo:block xsl:use-attribute-sets="p">C. <xsl:value-of select="short_name"/> is willing to give such permission to <xsl:value-of select="/offerte/meta/company/short_name"/>, the Consultants and any other person <xsl:value-of select="/offerte/meta/company/short_name"/> might employ or engage for the assignment.</fo:block>
 <fo:block xsl:use-attribute-sets="p"><fo:inline xsl:use-attribute-sets="bold">DECLARES AS FOLLOWS:</fo:inline></fo:block>
 <fo:block xsl:use-attribute-sets="p">1. <xsl:value-of select="short_name"/> is aware that <xsl:value-of select="/offerte/meta/company/short_name"/> will perform penetration testing services of the following systems of <xsl:value-of select="short_name"/>, as described below. The services are intended to gain insight in the security of these systems. To do so, <xsl:value-of select="/offerte/meta/company/short_name"/> will access these systems, attempt to find vulnerabilities and gain further access and elevated privileges by exploiting any vulnerabilities found. <xsl:value-of select="/offerte/meta/company/short_name"/> will test the following targets (the “<fo:inline xsl:use-attribute-sets="bold">Targets</fo:inline>”):</fo:block>
-<xsl:call-template name="generate_targets_xslt"></xsl:call-template>
+<xsl:call-template name="generate_targets_xslt">
+    <xsl:with-param name="Ref" select="@Ref"/>
+</xsl:call-template>
 <fo:block xsl:use-attribute-sets="p">2. <xsl:value-of select="short_name"/> hereby grants <xsl:value-of select="/offerte/meta/company/short_name"/> and the Consultants on a date to be confirmed by email the broadest permission
 possible to perform the assignment, including the permission to:</fo:block>
 <fo:block xsl:use-attribute-sets="p">a. enter and use the Targets;</fo:block>

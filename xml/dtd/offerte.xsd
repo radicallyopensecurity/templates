@@ -55,6 +55,7 @@
         <xs:element ref="country"/>
         <xs:element minOccurs="0" ref="coc"/>
       </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
     </xs:complexType>
   </xs:element>
   
