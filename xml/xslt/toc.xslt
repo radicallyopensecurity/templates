@@ -46,7 +46,7 @@
             <xsl:apply-templates select=".." mode="number"/>
             <xsl:text> &#8212; </xsl:text>
         </xsl:if>
-        <xsl:apply-templates select="text()"/>
+        <xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template name="tocContent_Numbering">

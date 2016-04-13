@@ -115,15 +115,6 @@
   </xs:element>
   <xs:element name="generate_waivers"/>
   
-  <xs:element name="title">
-    <xs:complexType mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element ref="br"/>
-        <xs:group ref="placeholders"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  
   <xs:complexType name="block" mixed="true">
     <xs:choice maxOccurs="unbounded">
       <xs:group ref="inline-all"/>

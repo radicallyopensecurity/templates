@@ -112,6 +112,15 @@
   <xs:element name="target_application" type="xs:string"/>
   <xs:element name="target_application_producer" type="xs:string"/>
   
+  <!-- doc -->
+  <xs:element name="title">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="placeholders"/>
+        <xs:group ref="inline-all"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="br">
     <xs:complexType/>
   </xs:element>
