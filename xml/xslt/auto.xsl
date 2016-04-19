@@ -419,19 +419,19 @@
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="c_waiver_rep">
-        <xsl:param name="placeholderElement" select="/offerte/meta/permission_parties/client/waiver_rep"/>
+        <xsl:param name="placeholderElement" select="/*/meta/permission_parties/client/waiver_rep"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="c_poc1">
-        <xsl:param name="placeholderElement" select="/offerte/meta/permission_parties/client/poc1"/>
+        <xsl:param name="placeholderElement" select="/*/meta/permission_parties/client/poc1"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="c_coc">
-        <xsl:param name="placeholderElement" select="/offerte/meta/permission_parties/client/coc"/>
+        <xsl:param name="placeholderElement" select="/*/meta/permission_parties/client/coc"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
@@ -449,25 +449,25 @@
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="company_svc_long">
-        <xsl:param name="placeholderElement" select="/offerte/meta/offered_service_long"/>
+        <xsl:param name="placeholderElement" select="/*/meta/offered_service_long"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="company_svc_short">
-        <xsl:param name="placeholderElement" select="/offerte/meta/offered_service_short"/>
+        <xsl:param name="placeholderElement" select="/*/meta/offered_service_short"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="company_legal_rep">
-        <xsl:param name="placeholderElement" select="/offerte/meta/company/legal_rep"/>
+        <xsl:param name="placeholderElement" select="/*/meta/company/legal_rep"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="company_poc1">
-        <xsl:param name="placeholderElement" select="/offerte/meta/company/poc1"/>
+        <xsl:param name="placeholderElement" select="/*/meta/company/poc1"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
@@ -497,7 +497,7 @@
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="p_fee">
-        <xsl:param name="placeholderElement" select="/offerte/meta/pentestinfo/fee"/>
+        <xsl:param name="placeholderElement" select="/*/meta/pentestinfo/fee"/>
         <xsl:value-of select="$denomination"/><xsl:text>&#160;</xsl:text>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
