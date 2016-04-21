@@ -18,7 +18,7 @@
 				and we use online infrastructure (RocketChat, GitLabs, etc.)  
 				to coordinate our work. This enables us to invite the 
 				customer to send several technical people from their
-				organization to join our pentest team on a volunteer basis.  
+				organization to join our pentest team on a volunteer basis  
 				Naturally, we extend this invitation to <c_short/> as well.</p>
 				
                 <p>Throughout the course of the audit, we intend to actively 
@@ -38,9 +38,7 @@
                 
                 <p>A sample Pentest report can be found here</p>
 					<ul>
-						<li><a href="https://github.com/radicallyopensecurity/templates/blob/master/sample-report/REP_SittingDuck-
-					pentestreport-v10.pdf">https://github.com/radicallyopensecurity/templates/blob/master/sample-report/REP_SittingDuck-
-					pentestreport-v10.pdf</a></li>
+						<li><a href="https://github.com/radicallyopensecurity/templates/blob/master/sample-report/REP_SittingDuck-pentestreport-v10.pdf">https://github.com/radicallyopensecurity/templates/blob/master/sample-report/REP_SittingDuck-pentestreport-v10.pdf</a></li>
 					</ul>
 					
 				<p>One of <company_short/>'s Core Principles is the Teach 
