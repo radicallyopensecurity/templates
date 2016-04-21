@@ -1,6 +1,17 @@
 RELEASE NOTES
 =============
 
+April 21, 2016
+-------------
+
+### Generic Documents
+
+We now have a generic document type, which can be used for (drumroll) generic documents (whitepapers, training notes, presentation notes, whatever).
+
+It is a super-simple template: it contains a a sparse meta section, an optional ToC and then any number of sections and elements. All the general text elements (tables, lists, pre, code, a, etc etc) can be used. It's so simple I'm not even going to document it. Check the example doc in `doc/examples` if you're lost, but if you've ever written an offer or a pentest report using this system it should be a piece of cake. :)
+
+Usage: `genericdocument.xml --> genericdocument.pdf (using generate_doc.xsl + fop)`
+
 April 4, 2016
 -------------
 
