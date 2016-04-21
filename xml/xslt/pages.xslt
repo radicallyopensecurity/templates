@@ -74,7 +74,7 @@
             <xsl:call-template name="page_footer"/>
             <fo:flow flow-name="region-body" xsl:use-attribute-sets="DefaultFont">
                 <fo:block>
-                    <xsl:apply-templates select="pentest_report|offerte|quickscope"/>
+                    <xsl:apply-templates select="pentest_report|offerte|quickscope|generic_document"/>
                 </fo:block>
                 <fo:block id="EndOfDoc"/>
             </fo:flow>
