@@ -16,7 +16,7 @@
 		Threat Modeling is a specific, structured approach to risk analysis that 
 		enables us to identify, qualify, and address the security risks, thus 
 		dovetailing with the Code Review process. For example, user data is 
-		sacred. We focus on encrypted storage, discover if <c_short/> employees 
+		sacred. We focus on encrypted storage, discover if <client_short/> employees 
 		have a backdoor into data, and cut loose stolen devices by wiping them 
 		remotely and revoking accounts.</li>
 		<li>Purpose and Context<br/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section>
         <title>Algemene voorwaarden</title>
-        <!-- snippet --><p><company_short/> zal alleen de <company_svc_short/> 
+        <!-- snippet --><p><company_short/> zal alleen de <company_svclient_short/> 
         uitvoeren als het de toestemming heeft gekregen van <generate_permission_parties/> 
         zoals uiteengezet in de penetration test verklaring, bijgevoegd als <b>Annex 2</b>, 
         of verschafd als los document.</p>
@@ -9,7 +9,7 @@
         <p><company_short/> voert deze opdracht uit op basis van de algemene voorwaarden,
         die bijgevoegd zijn als Annex 1. 
         <company_short/> weigert alle algemene voorwaarden die gebruikt worden door 
-        <c_short/>.</p>
+        <client_short/>.</p>
         <p>Om akkoord te gaan met dit aanbod, tekent u deze brief in tweevoud en retourneert
         deze naar:</p>
         <contact>

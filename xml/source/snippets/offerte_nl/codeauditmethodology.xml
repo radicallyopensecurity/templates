@@ -16,7 +16,7 @@
 		analyse dat ons in staat stelt om beveiligingsrisico's te identificeren, 
 		kwalificeren en te addresseren. Dit is de reden voor de vervlechting met 
 		het proces van Code Herziening. Bijvoorbeeld: Gebruiksgegevens zijn heilig. 
-		Wij focussen op versleutelde opslag, ontdekken of <c_short/> werknemers 
+		Wij focussen op versleutelde opslag, ontdekken of <client_short/> werknemers 
 		een "backdoor" in hun data hebben en snijden gestolen toestellen af 
 		door deze op afstand te wissen en accounts in te trekken.</li>
 		<li>Doel en Context<br/>

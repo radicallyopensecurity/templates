@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section>
         <title>Project Overview</title><!-- section with an overview of ROS activities -->
-        <!-- snippet --><p><company_short/> will perform <company_svc_long/> 
-        for <c_short/> of the systems described below. The services are intended 
+        <!-- snippet --><p><company_short/> will perform <company_svclient_long/> 
+        for <client_short/> of the systems described below. The services are intended 
         to gain insight into the security of these systems. To do so, <company_short/> 
         will access these systems, attempt to find vulnerabilities, and gain 
         further access and elevated privileges by exploiting any vulnerabilities 
@@ -21,9 +21,9 @@
 		<!-- snippet --> <!--Not Needed if Disclaimer is Included; Duplicate Text-->
 		<!--p>It is possible that in the course of the penetration 
 		testing, <company_short/> might hinder the operations of the Targets or 
-		cause damage to the Targets. <c_short/> gives permission for this, to 
+		cause damage to the Targets. <client_short/> gives permission for this, to 
 		the extent that <company_short/> does not act negligently or 
-		recklessly. <c_short/> also warrants it has the authority to give such 
+		recklessly. <client_short/> also warrants it has the authority to give such 
 		permission.</p-->
         
 		<!-- snippet --><!--Not Needed if Disclaimer is Included; Duplicate Text-->

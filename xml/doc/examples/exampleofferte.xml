@@ -51,9 +51,9 @@
 </section>
     <section>
         <title>Introduction</title>
-        <p><c_long/> (hereafter “<b><c_short/></b>”), with its registered office at <c_street/>, <c_city/>, <c_country/>, has requested <company_long/> (hereafter “<b><company_short/></b>”) to perform <company_svc_long/>. Motivation for this request is that <c_short/> wishes to get a better insight in the IT security of the web application <t_app/> produced by <t_app_producer/>.
+        <p><client_long/> (hereafter “<b><client_short/></b>”), with its registered office at <client_street/>, <client_city/>, <client_country/>, has requested <company_long/> (hereafter “<b><company_short/></b>”) to perform <company_svclient_long/>. Motivation for this request is that <client_short/> wishes to get a better insight in the IT security of the web application <t_app/> produced by <t_app_producer/>.
 </p>
-<p>ROS will perform a <company_svc_short/> by running the app and peering at the screen in great concentration.</p>
+<p>ROS will perform a <company_svclient_short/> by running the app and peering at the screen in great concentration.</p>
 <xi:include href="snippets/offerte/setoutscope.xml"/>
 </section>
     <section><!-- section with some more info on the application (if any) -->
@@ -65,7 +65,7 @@
 <xi:include href="snippets/offerte/projectoverview.xml"/>
     <section>
         <title>Pentest Scope</title>
-        <p>ROS will focus on the web application and the systems that are accessible using the Internet (backend API). A test environment has been set up to use for the pentest on the web application. Given the complexity of the application, ROS will pay specific attention to important things. ROS will review the source code during the <company_svc_short/>. The mobile applications (iPhone, Android, Windows) are outside the scope of this pentest.</p>
+        <p>ROS will focus on the web application and the systems that are accessible using the Internet (backend API). A test environment has been set up to use for the pentest on the web application. Given the complexity of the application, ROS will pay specific attention to important things. ROS will review the source code during the <company_svclient_short/>. The mobile applications (iPhone, Android, Windows) are outside the scope of this pentest.</p>
     </section>
     
     <!-- Prerequisites section (complete section is in a snippet) -->

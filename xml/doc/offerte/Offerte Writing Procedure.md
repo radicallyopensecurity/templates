@@ -23,7 +23,7 @@ Entity listing
 --------------
 When you have your scoping information, fill in all the fields. They are commented in the template, so what to fill in should be pretty self-explanatory.
 
-You should be able to fill all fields. The only exception is `c_waiver_rep`, as it is not always known in advance who this will be.
+You should be able to fill all fields. The only exception is `client_waiver_rep`, as it is not always known in advance who this will be.
 
 Document information / metadata
 -------------------------------

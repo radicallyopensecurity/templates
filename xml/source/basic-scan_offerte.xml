@@ -6,15 +6,15 @@
         
     <!-- CUSTOMER -->
     
-    <!-- <c_long/>          long client name;                   value taken from /offerte/meta/client/full_name -->
-    <!-- <c_short/>         short client name;                  value taken from /offerte/meta/client/short_name -->
-    <!-- <c_coc/>           Chamber of Commerce number;         value taken from /offerte/meta/client/coc -->
-    <!-- <c_street/>        client street & number;             value taken from /offerte/meta/client/address -->
-    <!-- <c_city/>          client city;                        value taken from /offerte/meta/client/city -->
-    <!-- <c_country/>       client country;                     value taken from /offerte/meta/client/country -->
-    <!-- <c_legal_rep/>     client legal representative;        value taken from /offerte/meta/client/legal_rep -->
-    <!-- <c_waiver_rep/>    client legal representative;        value taken from /offerte/meta/client/waiver_rep -->
-    <!-- <c_poc1/>          first point of contact for client;  value taken from /offerte/meta/client/poc1 -->
+    <!-- <client_long/>          long client name;                   value taken from /offerte/meta/client/full_name -->
+    <!-- <client_short/>         short client name;                  value taken from /offerte/meta/client/short_name -->
+    <!-- <client_coc/>           Chamber of Commerce number;         value taken from /offerte/meta/client/coc -->
+    <!-- <client_street/>        client street & number;             value taken from /offerte/meta/client/address -->
+    <!-- <client_city/>          client city;                        value taken from /offerte/meta/client/city -->
+    <!-- <client_country/>       client country;                     value taken from /offerte/meta/client/country -->
+    <!-- <client_legal_rep/>     client legal representative;        value taken from /offerte/meta/client/legal_rep -->
+    <!-- <client_waiver_rep/>    client legal representative;        value taken from /offerte/meta/client/waiver_rep -->
+    <!-- <client_poc1/>          first point of contact for client;  value taken from /offerte/meta/client/poc1 -->
     
     <!-- PROJECT -->
     
@@ -31,8 +31,8 @@
     <!-- <company_short/>         short company name;                  value taken from /offerte/meta/company/short_name -->
     <!-- <company_legal_rep/>     company legal representative;        value taken from /offerte/meta/company/legal_rep -->
     <!-- <company_poc1/>          first point of contact for company;  value taken from /offerte/meta/company/poc1 -->
-    <!-- <company_svc_long/>      service offered in this offerte;     value taken from /offerte/meta/offered_service_long -->
-    <!-- <company_svc_short/>     service offered, shorter descr.;     value taken from /offerte/meta/offered_service_short - NOTE: basically used to have more 'natural' language in snippets -->
+    <!-- <company_svclient_long/>      service offered in this offerte;     value taken from /offerte/meta/offered_service_long -->
+    <!-- <company_svclient_short/>     service offered, shorter descr.;     value taken from /offerte/meta/offered_service_short - NOTE: basically used to have more 'natural' language in snippets -->
     
     <!-- APP -->
     <!--  Is there an app to be tested? Put it here so included app snippets can use it -->
@@ -84,9 +84,9 @@
     </meta>
     <section>
        <title>Introductie</title>
-        <p><c_long/> (hierna “<b><c_short/></b>”), met haar kantoren te <c_street/>, 
-        <c_city/>, <c_country/>, heeft <company_long/> (hierna “<b><company_short/></b>”) 
-        verzocht om <company_svc_long/> te leveren. 
+        <p><client_long/> (hierna “<b><client_short/></b>”), met haar kantoren te <client_street/>, 
+        <client_city/>, <client_country/>, heeft <company_long/> (hierna “<b><company_short/></b>”) 
+        verzocht om <company_svclient_long/> te leveren. 
         De reden voor dit verzoek is dat ...
         </p>
         
@@ -94,7 +94,7 @@
     </section>
     
     <section>
-    <title>Over <c_short/></title>
+    <title>Over <client_short/></title>
     <p>...
       <!--img src="../graphics/screenshot.png"/-->
     </p>
@@ -110,7 +110,7 @@
     <xi:include href="snippets/offerte_nl/projectoverview.xml"/>
 
     <section>
-      <title>Reikwijdte <company_svc_short/></title>
+      <title>Reikwijdte <company_svclient_short/></title>
       <p>...
       </p>
     </section>
