@@ -1,6 +1,15 @@
 RELEASE NOTES
 =============
 
+April 25, 2016
+-------------
+
+### Hidden elements
+
+It is now possible to hide `section`, `appendix` and `annex` elements from the generated report, offerte or generic document. To do so, add the optional attribute `visibility="hidden"` to whatever it is you want to hide in the generated PDF.
+
+Links to 
+
 April 21, 2016
 -------------
 

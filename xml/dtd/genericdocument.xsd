@@ -79,6 +79,7 @@
       </xs:sequence>
       <xs:attribute name="id" use="required" type="xs:ID"/>
       <xs:attribute ref="break" use="optional"/>
+      <xs:attribute ref="visibility" use="optional"/>
       <xs:attribute ref="xml:base"/>
     </xs:complexType>
   </xs:element>
@@ -100,6 +101,7 @@
         </xs:choice>
       </xs:sequence>
       <xs:attribute name="id" use="required" type="xs:ID"/>
+      <xs:attribute ref="visibility" use="optional"/>
     </xs:complexType>
   </xs:element>
     

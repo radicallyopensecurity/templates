@@ -350,6 +350,14 @@
         </xs:simpleType>
   </xs:attribute>
   
+  <xs:attribute name="visibility">
+    <xs:simpleType> 
+          <xs:restriction base="xs:string"> 
+            <xs:enumeration value="hidden"/>
+          </xs:restriction> 
+        </xs:simpleType>
+  </xs:attribute>
+  
     <!-- Inline groups -->
   <xs:group name="inline-all">
     <xs:choice>

@@ -11,10 +11,10 @@
         </fo:block>
     </xsl:template>
     
-    <xsl:template match="meta" mode="toc"/>
-    <!-- meta is not indexed -->
+    <xsl:template match="meta|*[@visibility='hidden']|*[../@visibilitiy='hidden']" mode="toc"/>
+    <!-- meta, hidden things and children of hidden things not indexed -->
     
-    <xsl:template match="section|finding|appendix|non-finding" mode="toc">
+    <xsl:template match="section[not(@visibility='hidden')]|finding|appendix[not(@visibility='hidden')]|non-finding" mode="toc">
         <xsl:call-template name="ToC"/>
     </xsl:template>
     
@@ -27,7 +27,7 @@
             <xsl:text>&#160;</xsl:text>
             <fo:page-number-citation ref-id="{@id}"/>
         </fo:block>
-        <xsl:apply-templates select="section|finding|non-finding" mode="toc"/>
+        <xsl:apply-templates select="section[not(@visibility='hidden')][not(../@visibility='hidden')]|finding[not(../@visibility='hidden')]|non-finding[not(../@visibility='hidden')]" mode="toc"/>
     </xsl:template>
     
     <xsl:template name="tocContent">
@@ -46,25 +46,26 @@
             <xsl:apply-templates select=".." mode="number"/>
             <xsl:text> &#8212; </xsl:text>
         </xsl:if>
+        <!--<xsl:apply-templates select="text()|*/text()"/>-->
         <xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template name="tocContent_Numbering">
         <xsl:choose>
-            <xsl:when test="self::appendix">
-                <fo:inline> Appendix&#160;<xsl:number count="appendix" level="multiple"
+            <xsl:when test="self::appendix[not(@visibility='hidden')]">
+                <fo:inline> Appendix&#160;<xsl:number count="appendix[not(@visibility='hidden')]" level="multiple"
                     format="{$AUTO_NUMBERING_FORMAT}"/>
                 </fo:inline>
             </xsl:when>
-            <xsl:when test="ancestor::appendix">
-                <fo:inline> App&#160;<xsl:number count="appendix" level="multiple"
-                    format="{$AUTO_NUMBERING_FORMAT}"/>.<xsl:number count="section[ancestor::appendix]" level="multiple"
+            <xsl:when test="ancestor::appendix[not(@visibility='hidden')]">
+                <fo:inline> App&#160;<xsl:number count="appendix[not(@visibility='hidden')]" level="multiple"
+                    format="{$AUTO_NUMBERING_FORMAT}"/>.<xsl:number count="section[not(@visibility='hidden')][ancestor::appendix[not(@visibility='hidden')]]" level="multiple"
                         format="{$AUTO_NUMBERING_FORMAT}"/>
                 </fo:inline>
             </xsl:when>
             <xsl:otherwise>
                 <fo:inline>
-                    <xsl:number count="section|finding|non-finding" level="multiple"
+                    <xsl:number count="section[not(@visibility='hidden')]|finding|non-finding" level="multiple"
                         format="{$AUTO_NUMBERING_FORMAT}"/>
                 </fo:inline>
             </xsl:otherwise>

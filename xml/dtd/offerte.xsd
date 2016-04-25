@@ -111,6 +111,7 @@
         </xs:choice>
       </xs:sequence>
       <xs:attribute ref="xml:base"/>
+      <xs:attribute ref="visibility" use="optional"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="generate_waivers"/>

@@ -22,22 +22,22 @@
         />
     </xsl:template>
     
-    <xsl:template match="section|appendix|non-finding" mode="number">
+    <xsl:template match="section[not(@visibility='hidden')]|appendix[not(@visibility='hidden')]|non-finding" mode="number">
         <xsl:choose>
             <xsl:when test="self::appendix">
-                <fo:inline> Appendix&#160;<xsl:number count="appendix" level="multiple"
+                <fo:inline> Appendix&#160;<xsl:number count="appendix[not(@visibility='hidden')]" level="multiple"
                     format="{$AUTO_NUMBERING_FORMAT}"/>
                 </fo:inline>
             </xsl:when>
             <xsl:when test="ancestor::appendix">
                 <fo:inline> App&#160;<xsl:number count="appendix" level="multiple"
-                    format="{$AUTO_NUMBERING_FORMAT}"/>.<xsl:number count="section[ancestor::appendix]" level="multiple"
+                    format="{$AUTO_NUMBERING_FORMAT}"/>.<xsl:number count="section[ancestor::appendix][not(@visibility='hidden')]" level="multiple"
                         format="{$AUTO_NUMBERING_FORMAT}"/>
                 </fo:inline>
             </xsl:when>
             <xsl:otherwise>
                 <fo:inline>
-                    <xsl:number count="section|finding|non-finding" level="multiple"
+                    <xsl:number count="section[not(@visibility='hidden')]|finding|non-finding" level="multiple"
                         format="{$AUTO_NUMBERING_FORMAT}"/>
                 </fo:inline>
             </xsl:otherwise>
