@@ -109,12 +109,12 @@
     </xsl:attribute-set>
     <xsl:attribute-set name="monospace" use-attribute-sets="DefaultFont">
         <xsl:attribute name="font-family">LiberationMono</xsl:attribute>
-        <xsl:attribute name="font-size">80%</xsl:attribute>
+        <xsl:attribute name="font-size">90%</xsl:attribute>
         <xsl:attribute name="background-color">#eeeeee</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="monospace-title" use-attribute-sets="DefaultFont">
         <xsl:attribute name="font-family">LiberationMono</xsl:attribute>
-        <xsl:attribute name="font-size">80%</xsl:attribute>
+        <xsl:attribute name="font-size">90%</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="sup" use-attribute-sets="DefaultFont">
 		<xsl:attribute name="font-size">60%</xsl:attribute>
