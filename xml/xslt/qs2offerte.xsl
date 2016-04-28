@@ -85,9 +85,9 @@
             <!-- INTRODUCTION -->
             <section>
                 <title>Introduction</title>
-                <p><c_long/> (hereafter “<b><c_short/></b>”), with its registered office at
-                    <c_street/>, <c_city/>, <c_country/>, has requested <company_long/> (hereafter
-                        “<b><company_short/></b>”) to perform <company_svc_long/>.</p>
+                <p><client_long/> (hereafter “<b><client_short/></b>”), with its registered office at
+                    <client_street/>, <client_city/>, <client_country/>, has requested <company_long/> (hereafter
+                        “<b><company_short/></b>”) to perform <company_svclient_long/>.</p>
                 <xsl:element name="xi:include">
                     <xsl:attribute name="href">snippets/offerte/setoutscope.xml</xsl:attribute>
                 </xsl:element>

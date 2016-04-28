@@ -15,7 +15,15 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <fo:basic-link color="blue">
+        <xsl:choose>
+            <xsl:when test="starts-with(@href, '#') and not(//*[@id=$destination])">
+                <fo:inline xsl:use-attribute-sets="errortext">WARNING: LINK TARGET NOT FOUND IN DOCUMENT</fo:inline>
+            </xsl:when>
+            <xsl:when test="starts-with(@href, '#') and //*[@id=$destination][ancestor-or-self::*[@visibility='hidden']]">
+                <fo:inline xsl:use-attribute-sets="errortext">WARNING: LINK TARGET IS HIDDEN</fo:inline>
+            </xsl:when>
+            <xsl:otherwise>
+                <fo:basic-link color="blue">
             <xsl:choose>
                 <xsl:when test="starts-with(@href, '#')">
                     <xsl:attribute name="internal-destination">
@@ -49,6 +57,8 @@
             <fo:page-number-citation ref-id="{substring(@href, 2)}"/>
             <xsl:text>)</xsl:text>
         </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="a" mode="summarytable">
@@ -106,7 +116,14 @@
     </xsl:template>
     
     <xsl:template match="monospace">
-        <fo:inline xsl:use-attribute-sets="monospace"><xsl:apply-templates/></fo:inline>
+        <xsl:choose>
+            <xsl:when test="parent::title">
+                <fo:inline xsl:use-attribute-sets="monospace-title"><xsl:apply-templates/></fo:inline>
+            </xsl:when>
+            <xsl:otherwise>
+                <fo:inline xsl:use-attribute-sets="monospace"><xsl:apply-templates/></fo:inline>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="sup">

@@ -9,7 +9,7 @@
                 <p>Het eerste contactpersoon voor deze opdracht zal zijn:</p>
                 <ul>
                         <li><company_poc1/> (<company_short/>)</li>
-                        <li><c_poc1/> (<c_short/>)</li>
+                        <li><client_poc1/> (<client_short/>)</li>
                 </ul>
                 <p>Onze penetratie tests lijken een beetje op een "verover de vlag competitie":
                 
@@ -18,10 +18,10 @@
 				om ons werk te coördineren. Dit geeft ons de mogelijkheid om 
                 om verscheidene technische mensen uit de organisatie van de klant
                 uit te nodigen om op vrijwillige basis samen te werken met ons pentest team.
-				Natuurlijk geldt deze uitnodiging ook voor <c_short/>.</p>
+				Natuurlijk geldt deze uitnodiging ook voor <client_short/>.</p>
 				
                 <p>In de loop van het project hebben wij de insteek om actief te 
-                brainstormen met <c_short/> over zowel de pentest, als het proces.
+                brainstormen met <client_short/> over zowel de pentest, als het proces.
                 Dit is een doorlopende leerervaring voor zowel u, als voor onszelf.
                 Daarnaast hebben wij ervaren dat een directe lijn voor feedback naar de klant 
                 de kwaliteit en de focus van het dienstverband enorm verbeteren.</p>
@@ -29,7 +29,7 @@
         </section>
         <section>
                 <title>Rapportage</title>
-                <p><company_short/> zal rapporteren aan <c_short/> betreffende de 
+                <p><company_short/> zal rapporteren aan <client_short/> betreffende de 
                 penetratie test. Dit rapport zal de genomen stappen bevatten die benodigd waren 
                 gedurende de test en daarnaast de bevonden kwetsbaarheden. Daarnaast zal het 
                 aanbevelingen bevatten, maar geen uitgebreide oplossingen om deze 

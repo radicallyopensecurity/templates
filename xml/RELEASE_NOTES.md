@@ -1,6 +1,19 @@
 RELEASE NOTES
 =============
 
+April 25, 2016
+-------------
+
+### Hidden elements
+
+It is now possible to hide `section`, `appendix` and `annex` elements from the generated report, offerte or generic document. To do so, add the optional attribute `visibility="hidden"` to whatever it is you want to hide in the generated PDF.
+
+Links to hidden targets will give an error (in the document), as will links to non-existing targets in general.
+
+### Client Placeholder renaming
+
+All placeholders that used to start with `c_*` (c_short, c_poc1, etc) now start with `client_`.
+
 April 21, 2016
 -------------
 

@@ -382,55 +382,55 @@
     </xsl:template>
 
     <!-- PLACEHOLDERS -->
-    <xsl:template match="c_long">
+    <xsl:template match="client_long">
         <xsl:param name="placeholderElement" select="/*/meta//client/full_name"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="c_short">
+    <xsl:template match="client_short">
         <xsl:param name="placeholderElement" select="/*/meta//client/short_name"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="c_street">
+    <xsl:template match="client_street">
         <xsl:param name="placeholderElement" select="/*/meta//client/address"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="c_city">
+    <xsl:template match="client_city">
         <xsl:param name="placeholderElement" select="/*/meta//client/city"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="c_country">
+    <xsl:template match="client_country">
         <xsl:param name="placeholderElement" select="/*/meta//client/country"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="c_legal_rep">
+    <xsl:template match="client_legal_rep">
         <xsl:param name="placeholderElement" select="/offerte/meta/permission_parties/client/legal_rep"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="c_waiver_rep">
+    <xsl:template match="client_waiver_rep">
         <xsl:param name="placeholderElement" select="/*/meta/permission_parties/client/waiver_rep"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="c_poc1">
+    <xsl:template match="client_poc1">
         <xsl:param name="placeholderElement" select="/*/meta/permission_parties/client/poc1"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="c_coc">
+    <xsl:template match="client_coc">
         <xsl:param name="placeholderElement" select="/*/meta/permission_parties/client/coc"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
@@ -448,13 +448,13 @@
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="company_svc_long">
+    <xsl:template match="company_svclient_long">
         <xsl:param name="placeholderElement" select="/*/meta/offered_service_long"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="company_svc_short">
+    <xsl:template match="company_svclient_short">
         <xsl:param name="placeholderElement" select="/*/meta/offered_service_short"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>

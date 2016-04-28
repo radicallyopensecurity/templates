@@ -5,12 +5,14 @@
     version="2.0">
     
     <xsl:template match="section|appendix|finding|non-finding|annex">
-        <fo:block xsl:use-attribute-sets="section">
+        <xsl:if test="not(@visibility='hidden')">
+            <fo:block xsl:use-attribute-sets="section">
             <xsl:if test="self::appendix or self::annex">
                 <xsl:attribute name="break-before">page</xsl:attribute>
             </xsl:if>
             <xsl:apply-templates select="@*|node()"/>
         </fo:block>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="title">
@@ -27,19 +29,19 @@
             </xsl:call-template>
             <xsl:choose>
                 <xsl:when test="self::title[parent::appendix]">
-                    <fo:inline> Appendix&#160;<xsl:number count="appendix" level="multiple"
+                    <fo:inline> Appendix&#160;<xsl:number count="appendix[not(@visibility='hidden')]" level="multiple"
                         format="{$AUTO_NUMBERING_FORMAT}"/>
                     </fo:inline>
                 </xsl:when>
                 <xsl:when test="ancestor::appendix and not(self::title[parent::appendix])">
-                    <fo:inline> App&#160;<xsl:number count="appendix" level="multiple"
-                        format="{$AUTO_NUMBERING_FORMAT}"/>.<xsl:number count="section[ancestor::appendix]" level="multiple"
+                    <fo:inline> App&#160;<xsl:number count="appendix[not(@visibility='hidden')]" level="multiple"
+                        format="{$AUTO_NUMBERING_FORMAT}"/>.<xsl:number count="section[ancestor::appendix][not(@visibility='hidden')]" level="multiple"
                             format="{$AUTO_NUMBERING_FORMAT}"/>
                     </fo:inline>
                 </xsl:when>
                 <xsl:otherwise>
                     <fo:inline>
-                        <xsl:number count="section|finding|non-finding" level="multiple"
+                        <xsl:number count="section[not(@visibility='hidden')]|finding|non-finding" level="multiple"
                             format="{$AUTO_NUMBERING_FORMAT}"/>
                     </fo:inline>
                 </xsl:otherwise>

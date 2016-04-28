@@ -4,8 +4,8 @@
       
 		<p>It is possible that in the course of the penetration testing, <company_short/> 
 		might hinder the operations of the Targets or cause damage to the Targets.
-		<c_short/> gives permission for this, to the extent that <company_short/> 
-		does not act negligent or recklessly. <c_short/> also warrants it has the 
+		<client_short/> gives permission for this, to the extent that <company_short/> 
+		does not act negligent or recklessly. <client_short/> also warrants it has the 
 		authority to give such permission.</p>
 		
 		<p>It is important to understand the limits of <company_short/>'s services. 
@@ -14,7 +14,7 @@
 		efforts (in Dutch: “<i>inspanningsverplichting</i>”) to perform the 
 		agreed services.</p>
 		
-		<p><company_short/> and <c_short/> agree to take reasonable measures to 
+		<p><company_short/> and <client_short/> agree to take reasonable measures to 
 		maintain the confidentiality of information and personal data they gain 
 		access to in the course of performing the penetration test within the 
 		Targets. Both parties will use the information and data they receive or 
