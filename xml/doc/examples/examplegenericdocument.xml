@@ -47,7 +47,7 @@ who is also the co-founder/CEO of Radically Open Security.</bio>
         <generate_index/>
         
         <section id="info">
-                <title>This is a general document</title>
+                <title>This is a generic document</title>
                 <section id="introduction">
                         <title>This is a subsection</title>
                         <p>In this document we describe anything that is not an offer, invoice or pentest.</p>

@@ -67,7 +67,7 @@
                     <xsl:comment>date or date range in text, e.g. May 18th until May 25th, 2015</xsl:comment>
                     <nature><xsl:value-of select="/*/pentest_info/nature"/></nature>
                     <type><xsl:value-of select="/*/pentest_info/type"/></type><xsl:comment>please choose one of the following: black-box, grey-box, crystal-box</xsl:comment>
-                    <fee><xsl:value-of select="/*/pentest_info/rate"/></fee><xsl:comment>euro is added automatically in the document</xsl:comment>
+                    <fee denomination="euro"><xsl:value-of select="/*/pentest_info/rate"/></fee><xsl:comment>euro is added automatically in the document</xsl:comment>
                     <target_application>FishInABarrel</target_application><xsl:comment>name of application/serice to be tested (if any; if none, delete target_application element)</xsl:comment>
                 </pentestinfo>
                 <version_history><xsl:comment>needed for date on frontpage and in signature boxes; it is possible to add a new &lt;version> after each review; in that case, make sure to update the date/time</xsl:comment>
