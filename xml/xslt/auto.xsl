@@ -448,13 +448,13 @@
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="company_svclient_long">
+    <xsl:template match="company_svc_long">
         <xsl:param name="placeholderElement" select="/*/meta/offered_service_long"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
         </xsl:call-template>
     </xsl:template>
-    <xsl:template match="company_svclient_short">
+    <xsl:template match="company_svc_short">
         <xsl:param name="placeholderElement" select="/*/meta/offered_service_short"/>
         <xsl:call-template name="checkPlaceholder">
             <xsl:with-param name="placeholderElement" select="$placeholderElement"/>
