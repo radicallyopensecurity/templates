@@ -30,8 +30,8 @@
     <!-- <company_short/>         short company name;                  value taken from /offerte/meta/company/short_name -->
     <!-- <company_legal_rep/>     company legal representative;        value taken from /offerte/meta/company/legal_rep -->
     <!-- <company_poc1/>          first point of contact for company;  value taken from /offerte/meta/company/poc1 -->
-    <!-- <company_svclient_long/>      service offered in this offerte;     value taken from /offerte/meta/offered_service_long -->
-    <!-- <company_svclient_short/>     service offered, shorter descr.;     value taken from /offerte/meta/offered_service_short - NOTE: basically used to have more 'natural' language in snippets -->
+    <!-- <company_svc_long/>      service offered in this offerte;     value taken from /offerte/meta/offered_service_long -->
+    <!-- <company_svc_short/>     service offered, shorter descr.;     value taken from /offerte/meta/offered_service_short - NOTE: basically used to have more 'natural' language in snippets -->
     
     <!-- APP -->
     <!--  Is there an app to be tested? Put it here so included app snippets can use it -->
@@ -86,7 +86,7 @@
         <title>Introduction</title>
         <p><client_long/> (hereafter “<b><client_short/></b>”), with its registered office 
         at <client_street/>, <client_city/>, <client_country/>, has requested <company_long/> 
-        (hereafter “<b><company_short/></b>”) to perform <company_svclient_long/>. 
+        (hereafter “<b><company_short/></b>”) to perform <company_svc_long/>. 
         Motivation for this request is that <client_short/> wishes to get a better 
         insight in ...</p>
         

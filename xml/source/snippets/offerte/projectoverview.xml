@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section>
         <title>Project Overview</title><!-- section with an overview of ROS activities -->
-        <!-- snippet --><p><company_short/> will perform <company_svclient_long/> 
+        <!-- snippet --><p><company_short/> will perform <company_svc_long/> 
         for <client_short/> of the systems described below. The services are intended 
         to gain insight into the security of these systems. To do so, <company_short/> 
         will access these systems, attempt to find vulnerabilities, and gain 

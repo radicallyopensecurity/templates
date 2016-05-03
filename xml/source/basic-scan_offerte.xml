@@ -31,8 +31,8 @@
     <!-- <company_short/>         short company name;                  value taken from /offerte/meta/company/short_name -->
     <!-- <company_legal_rep/>     company legal representative;        value taken from /offerte/meta/company/legal_rep -->
     <!-- <company_poc1/>          first point of contact for company;  value taken from /offerte/meta/company/poc1 -->
-    <!-- <company_svclient_long/>      service offered in this offerte;     value taken from /offerte/meta/offered_service_long -->
-    <!-- <company_svclient_short/>     service offered, shorter descr.;     value taken from /offerte/meta/offered_service_short - NOTE: basically used to have more 'natural' language in snippets -->
+    <!-- <company_svc_long/>      service offered in this offerte;     value taken from /offerte/meta/offered_service_long -->
+    <!-- <company_svc_short/>     service offered, shorter descr.;     value taken from /offerte/meta/offered_service_short - NOTE: basically used to have more 'natural' language in snippets -->
     
     <!-- APP -->
     <!--  Is there an app to be tested? Put it here so included app snippets can use it -->
@@ -86,7 +86,7 @@
        <title>Introductie</title>
         <p><client_long/> (hierna “<b><client_short/></b>”), met haar kantoren te <client_street/>, 
         <client_city/>, <client_country/>, heeft <company_long/> (hierna “<b><company_short/></b>”) 
-        verzocht om <company_svclient_long/> te leveren. 
+        verzocht om <company_svc_long/> te leveren. 
         De reden voor dit verzoek is dat ...
         </p>
         
@@ -110,7 +110,7 @@
     <xi:include href="snippets/offerte_nl/projectoverview.xml"/>
 
     <section>
-      <title>Reikwijdte <company_svclient_short/></title>
+      <title>Reikwijdte <company_svc_short/></title>
       <p>...
       </p>
     </section>
