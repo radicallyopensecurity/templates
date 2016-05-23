@@ -103,7 +103,16 @@
 		<title>Findings</title>
 	
 		<p>We have identified the following issues:</p>
-	<!-- Listing of Findings (written by pentesters) -->
+	        <!-- Listing of Findings (written by pentesters) -->
+                <!-- Extreme -->
+
+                <!-- High -->
+
+                <!-- Moderate -->
+
+                <!-- Elevated -->
+
+                <!-- Low -->
 	</section>
 		
 	<section id="nonFindings">
