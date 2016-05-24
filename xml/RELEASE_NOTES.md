@@ -1,6 +1,22 @@
 RELEASE NOTES
 =============
 
+May 23, 2016
+------------
+
+### Offerte --> Pentest-report
+
+Last step in the document chain has been completed: you can now generate a (bare bones) Pentest report from any offerte the client has accepted, using the following command:
+
+`java -jar saxon9he.jar -s:source/offerte.xml -xsl:xslt/off2rep.xsl -o:source/report.xml`
+
+This makes the document workflow as follows:
+
+1. Fill in quickscope.xml
+2. Create offerte.xml from quickscope.xml using qs2offerte.xsl
+3. If client accepts offerte, create report.xml from offerte.xml using off2rep.xsl
+4. After pentest has concluded, create invoice from offerte using either the direct route or the roundabout one (see March 24 in the release notes for more info)
+
 April 25, 2016
 -------------
 
