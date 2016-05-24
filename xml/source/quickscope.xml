@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<quickscope>
+<quickscope xmlns:xi="http://www.w3.org/2001/XInclude">
     <!-- Today's date -->
     <version date="2015-01-01"/><!-- YYYY-MM-DD -->
     <!-- COMPANY INFO -->
-    <customer>
-        <!-- Full company name (long) -->
-        <full_name></full_name>
-        <!-- Shorter company name (short) (if no short name, repeat long) -->
-        <short_name></short_name>
-
-        <!-- Address of registered offices -->
-        <!-- Street -->
-        <address></address>
-        <!-- Postal Code -->
-        <postal_code></postal_code>
-        <!-- City -->
-        <city></city>
-        <!-- Country -->
-        <country></country>
-
-        <!-- Name of the person who will need to sign the OFFER -->
-        <legal_rep></legal_rep>
-        <!-- Name of the person who will need to sign the WAIVER -->
-        <waiver_rep></waiver_rep>
-        <!-- First point of contact for customer (during pentest) - most likely a technical person -->
-        <poc1></poc1>
-        
-        <!-- Chamber of Commerce number -->
-        <coc_no></coc_no>
-        <!-- Chamber of Commerce 'nationality' -->
-        <coc_nat>Dutch</coc_nat>
-    </customer>
+    <xi:include href="client_info.xml"/>
 
     <!-- SERVICE INFO -->
     <meta>

@@ -27,7 +27,7 @@
                     </xsl:for-each>
                 </targets>
                 <permission_parties>
-                    <client><xsl:comment>mandatory; please add client information</xsl:comment>
+                    <!--<client><xsl:comment>mandatory; please add client information</xsl:comment>
                         <full_name><xsl:value-of select="/*/customer/full_name"/></full_name><xsl:comment>long client name, e.g. Sitting Duck B.V.</xsl:comment>
                         <short_name><xsl:value-of select="/*/customer/short_name"/></short_name>
                         <xsl:comment>short client name, e.g. Sitting Duck; if no short name: same as long name</xsl:comment>
@@ -42,7 +42,10 @@
                                     select="/*/customer/coc_nat"/></xsl:attribute>
                             <xsl:value-of select="/*/customer/coc_no"/>
                         </coc><xsl:comment>chamber of commerce number; if no chamber of commerce number, please delete the whole element</xsl:comment>
-                    </client>
+                    </client>-->
+                    <xsl:element name="xi:include">
+                    <xsl:attribute name="href">client_info.xml</xsl:attribute>
+                </xsl:element>
                     <xsl:if test="/*/third_party">
                         <party>
                             <full_name><xsl:value-of select="/*/third_party/full_name"/></full_name>
@@ -68,7 +71,7 @@
                     <nature><xsl:value-of select="/*/pentest_info/nature"/></nature>
                     <type><xsl:value-of select="/*/pentest_info/type"/></type><xsl:comment>please choose one of the following: black-box, grey-box, crystal-box</xsl:comment>
                     <fee denomination="euro"><xsl:value-of select="/*/pentest_info/rate"/></fee><xsl:comment>euro is added automatically in the document</xsl:comment>
-                    <target_application>FishInABarrel</target_application><xsl:comment>name of application/serice to be tested (if any; if none, delete target_application element)</xsl:comment>
+                    <target_application>FishInABarrel</target_application><xsl:comment>name of application/service to be tested (if any; if none, delete target_application element)</xsl:comment>
                 </pentestinfo>
                 <version_history><xsl:comment>needed for date on frontpage and in signature boxes; it is possible to add a new &lt;version> after each review; in that case, make sure to update the date/time</xsl:comment>
                     <version number="auto">
