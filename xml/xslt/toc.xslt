@@ -22,7 +22,12 @@
 
     <xsl:template name="ToC">
         <fo:block xsl:use-attribute-sets="toc-block">
+            <fo:basic-link>
+                <xsl:attribute name="internal-destination">
+                    <xsl:value-of select="@id"/>
+                </xsl:attribute>
             <xsl:call-template name="tocContent"/>
+            </fo:basic-link>
             <xsl:text> </xsl:text>
             <fo:leader leader-pattern="dots" leader-alignment="reference-area"
                 leader-length.maximum="21cm"/>
