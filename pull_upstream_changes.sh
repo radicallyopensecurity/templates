@@ -2,7 +2,7 @@
 
 # pull_upstream_changes - Updates repo and applies upstream changes
 #
-# Copyright (C) 2016 Peter Mosmans
+# Copyright (C) 2016 Peter Mosmans [Radically Open Security]
 #                    <support AT go-forward.net>
 #
 # This program is free software: you can redistribute it and/or modify
@@ -10,26 +10,32 @@
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 
-# File which has to be available in target directory to qualify as target
+
+# File which has to exist in the target directory to qualify as target
 FINGERPRINT="dtd"
-# List of files that need to be updated
-SOURCEFILES=""
-# List of directories that need to be updated
-SOURCEDIRECTORIES="dtd xslt"
+# List of files and directories that need to be updated
+SOURCEFILES="dtd xslt"
 # Root directory within source repo
 SOURCEROOT="xml"
-VERSION=0.1
+
+
+## Don't change anything below this line
+VERSION=0.5
 
 source=$(dirname $(readlink -f $0))
 target=$1
 
-if [ -z "$1" ]; then
-    echo "Usage: pull_upstream_changes TARGET"
-    exit
+if [ -z "$target" ]; then
+    target=$(readlink -f .)
+    if [ "${target}" == "${source}" ]; then
+        echo "Usage: pull_upstream_changes [TARGET]"
+        echo "       or run from within target directory"
+        exit
+    fi
 fi
 
 # Check if the target actually contains the repository
-if [ ! -d $target/dtd ]; then
+if [ ! -z ${FINGERPRINT} ] && [ ! -d $target/dtd ]; then
    echo "[-] ${target} does not contain the correct repository"
    exit
 fi
@@ -41,9 +47,11 @@ pushd "$source" >/dev/null && git pull && popd >/dev/null
 # Only update newer files
 echo "[*] Applying changes (if any)..."
 for sourcefile in ${SOURCEFILES}; do
-    cp -uv ${source}/${SOURCEROOT}/${sourcefile} $target/
-done
-for sourcedirectory in ${SOURCEDIRECTORIES}; do
-    cp -uvr ${source}/${SOURCEROOT}/${sourcedirectory} $target/
+    if [ -d "${source}/${SOURCEROOT}/${sourcefile}" ]; then
+       cp -pruv ${source}/${SOURCEROOT}/${sourcefile} $target/
+    else
+        cp -puv ${source}/${SOURCEROOT}/${sourcefile} $target/${sourcefile}
+    fi
 done
 echo "[+] Done"
+
