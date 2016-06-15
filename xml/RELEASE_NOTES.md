@@ -1,6 +1,55 @@
 RELEASE NOTES
 =============
 
+June 15, 2016
+-------------
+
+Giant update to celebrate these xml templates having been elevated to OWASP project status. Because how better to do that than through introducing a load of bugs. :) 
+
+### Multilingual workflow
+
+You can now set the desired language in quickscope, using the offer_language element. This will generate the proper offer with the proper language snippets.
+
+Note: language stuff is defined in two places:
+
+1. in source/snippets/offerte (language directories for all snippets)
+2. in source/snippets/localisationstrings.xml (these are strings used in xslt; e.g. when generating an offer from quickscope)
+
+### Offer types
+
+You can now set the desired offer type in quickscope, using the offer_type element. This will generate the proper offer with the proper snippets.
+
+Note: system looks for snippets with the type suffix first, and uses the standard snippet if none is found.
+
+#### Example
+
+Offer type is 'basic-scan'.
+
+When generating an xml offer from quickscope, the xslt will first look for the file:
+
+`methodology_basic-scan.xml`
+
+If it cannot find this file, it will instead use
+
+`methodology.xml`
+
+### Customizable waivers
+
+Yes, the stories you heard are true (and we'll get that snitch one day!) - waivers are no longer hard-coded but are now normal, customizable snippets. Well, not completely normal. It goes like this:
+
+When generating waivers for client + third parties, the xslt will use the contents of the `<standard_waiver>` element in `<waivers>` in the `waiver.xml` snippet.
+
+UNLESS: you have added an optional `<alternative_waiver>` element below `<standard_waiver>` (still in `<waivers>`) and have given it a `Ref` attribute that refers to the `id` of the client/party for which this alternative waiver needs to be used (just add an `id` if the client or party doesn't have one yet).
+
+So to summarize:
+
+1. xslt checks if an alternative waiver has been defined for a specific client or party in the offer,
+2. if not, it uses the standard waiver
+
+Now isn't that simple!
+
+Note: to support this functionality, a bunch of waiver-only placeholders have been introduced, to wit: `<signee_long>`, `<signee_short>`, `<signee_street>`, `<signee_city>`, `<signee_country>`, `<signee_waiver_rep>`. Don't use them anywhere else though (they will fail and anyway it wouldn't make sense). 
+
 May 23, 2016
 ------------
 
@@ -15,7 +64,7 @@ This makes the document workflow as follows:
 1. Fill in quickscope.xml
 2. Create offerte.xml from quickscope.xml using qs2offerte.xsl
 3. If client accepts offerte, create report.xml from offerte.xml using off2rep.xsl
-4. After pentest has concluded, create invoice from offerte using either the direct route or the roundabout one (see March 24 in the release notes for more info)
+4. After pentest has concluded, create invoice from offerte using either the direct route or the roundabout one (see March 24, 2016 in the release notes for more info)
 
 April 25, 2016
 -------------
