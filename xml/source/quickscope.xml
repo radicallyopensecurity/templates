@@ -8,6 +8,12 @@
 
     <!-- SERVICE INFO -->
     <meta>
+        <!-- Language the offer should be in (en|nl) -->
+        <offer_language>en</offer_language>
+        <!-- Offer type (pentest|basic-scan|load-test|other) -->
+        <offer_type>pentest</offer_type>
+        <!-- Required service -->
+        <!-- Note: is only used when type is 'other', if offer_type is a specific type, service name will be taken from the localisation strings -->
     <!-- What service would you like to receive from Radically Open Security? -->
     <requested_service>penetration testing services</requested_service>
     <!-- Which targets will need to be tested? 
