@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0" vc:maxVersion="1.1">
-  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
-  <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="http://www.w3.org/2001/XInclude/XInclude.xsd"/>
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0" vc:maxVersion="1.1">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+    schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+  <xs:import namespace="http://www.w3.org/2001/XInclude"
+    schemaLocation="http://www.w3.org/2001/XInclude/XInclude.xsd"/>
   <xs:include schemaLocation="common.xsd"/>
-  
+
   <xs:element name="offerte">
     <xs:complexType>
       <xs:sequence>
@@ -13,11 +15,12 @@
         <xs:element maxOccurs="unbounded" minOccurs="0" ref="generate_index"/>
         <xs:element maxOccurs="unbounded" ref="section"/>
         <xs:element maxOccurs="unbounded" minOccurs="0" ref="annex"/>
-        <xs:element maxOccurs="unbounded" minOccurs="1" ref="generate_waivers"/>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="waivers"/>
       </xs:sequence>
+      <xs:attribute ref="xml:lang"/>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="meta">
     <xs:complexType>
       <xs:sequence>
@@ -31,11 +34,11 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="offered_service_long" type="xs:string"/>
   <xs:element name="offered_service_short" type="xs:string"/>
-  
-  
+
+
   <xs:element name="permission_parties">
     <xs:complexType>
       <xs:sequence>
@@ -58,8 +61,8 @@
       <xs:attribute name="id" type="xs:ID"/>
     </xs:complexType>
   </xs:element>
-  
-  
+
+
   <xs:element name="pentestinfo">
     <xs:complexType>
       <xs:sequence>
@@ -75,24 +78,24 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="fee">
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:integer">
-          <xs:attribute name="denomination" use="optional" default="euro"> 
-        <xs:simpleType> 
-          <xs:restriction base="xs:string"> 
-            <xs:enumeration value="euro"/>
-            <xs:enumeration value="dollar"/>
-          </xs:restriction> 
-        </xs:simpleType> 
-      </xs:attribute>
+          <xs:attribute name="denomination" use="optional" default="euro">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="euro"/>
+                <xs:enumeration value="dollar"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="annex">
     <xs:complexType>
       <xs:sequence>
@@ -114,8 +117,50 @@
       <xs:attribute ref="visibility" use="optional"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="generate_waivers"/>
-  
+
+  <xs:element name="waivers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="standard_waiver"/>
+        <xs:choice>
+          <xs:element ref="alternative_waiver"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute ref="xml:base"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="standard_waiver">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="p" type="block"/>
+          <xs:element ref="ul"/>
+          <xs:element ref="generate_targets"/>
+        </xs:choice>
+        <xs:element ref="generate_waiver_signature_box"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="alternative_waiver">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="p" type="block"/>
+          <xs:element ref="ul"/>
+          <xs:element ref="generate_targets"/>
+        </xs:choice>
+        <xs:element ref="generate_waiver_signature_box"/>
+      </xs:sequence>
+      <xs:attribute name="Ref" use="optional" type="xs:IDREFS"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="generate_waiver_signature_box"/>
+
   <xs:complexType name="block" mixed="true">
     <xs:choice maxOccurs="unbounded">
       <xs:group ref="inline-all"/>
@@ -124,7 +169,7 @@
     </xs:choice>
     <xs:attribute ref="xml:base"/>
   </xs:complexType>
-  
+
   <xs:element name="section">
     <xs:complexType>
       <xs:sequence>
@@ -149,7 +194,7 @@
       <xs:attribute ref="xml:base"/>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="contact">
     <xs:complexType>
       <xs:sequence>
@@ -161,9 +206,9 @@
   </xs:element>
   <xs:element name="generate_offer_signature_box"/>
   <xs:element name="generate_permission_parties"/>
-  
 
-    <!-- Placeholders -->
+
+  <!-- Placeholders -->
   <xs:group name="placeholders">
     <xs:choice>
       <xs:element name="client_long"/>
@@ -189,8 +234,14 @@
       <xs:element name="p_testingduration"/>
       <xs:element name="p_reportwritingduration"/>
       <xs:element name="p_reportdue"/>
+      <xs:element name="signee_long"/>
+      <xs:element name="signee_short"/>
+      <xs:element name="signee_street"/>
+      <xs:element name="signee_city"/>
+      <xs:element name="signee_country"/>
+      <xs:element name="signee_waiver_rep"/>
     </xs:choice>
-</xs:group>
+  </xs:group>
 
-  
+
 </xs:schema>

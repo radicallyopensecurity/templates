@@ -41,7 +41,7 @@
     <!-- <t_app_producer/>  name of the company producing the app -->
 
 <offerte xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../dtd/offerte.xsd" xmlns:xi="http://www.w3.org/2001/XInclude">
+    xsi:noNamespaceSchemaLocation="../dtd/offerte.xsd" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="nl">
 
     <!-- document meta information; to be filled in by the offerte writer  -->
 
@@ -81,16 +81,7 @@
             </version>
         </version_history>
     </meta>
-    <section>
-        <title>Introduction</title>
-        <p><client_long/> (hereafter “<b><client_short/></b>”), with its registered office 
-        at <client_street/>, <client_city/>, <client_country/>, has requested <company_long/> 
-        (hereafter “<b><company_short/></b>”) to perform <company_svc_long/>. 
-        Motivation for this request is that <client_short/> wishes to get a better 
-        insight in ...</p>
-        
-        <xi:include href="snippets/offerte_nl/setoutscope.xml"/>
-    </section>
+    
     
     <section>
         <!-- section with some more info on the application (if any) -->
@@ -106,7 +97,7 @@
     </section>
 
     <!-- Project overview section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/projectoverview.xml"/>
+    <xi:include href="snippets/offerte/nl/projectoverview.xml"/>
 
     <section>
         <title>Pentest Scope</title>
@@ -114,28 +105,28 @@
     </section>
 
     <!-- Prerequisites section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/prerequisites.xml"/>
+    <xi:include href="snippets/offerte/nl/prerequisites.xml"/>
 
     <!-- Disclaimer section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/disclaimer.xml"/>
+    <xi:include href="snippets/offerte/nl/disclaimer.xml"/>
 
     <!-- Pentest Methodology section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/pentestmethodology.xml"/>
-    <xi:include href="snippets/offerte_nl/codeauditmethodology.xml"/>
+    <xi:include href="snippets/offerte/nl/pentestmethodology.xml"/>
+    <xi:include href="snippets/offerte/nl/codeauditmethodology.xml"/>
 
     <!-- Team and Reporting section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/teamandreporting.xml"/>
+    <xi:include href="snippets/offerte/nl/teamandreporting.xml"/>
 
     <!-- Planning and payment section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/planningandpayment.xml"/>
+    <xi:include href="snippets/offerte/nl/planningandpayment.xml"/>
 
     <!-- About ROS section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/aboutus.xml"/>
+    <xi:include href="snippets/offerte/nl/aboutus.xml"/>
     
     <!-- Work condition section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/conditions.xml"/>
+    <xi:include href="snippets/offerte/nl/conditions.xml"/>
     
     <!-- General terms and conditions section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/generaltermsandconditions.xml"/>
+    <xi:include href="snippets/offerte/nl/generaltermsandconditions.xml"/>
     <generate_waivers/>
 </offerte>
