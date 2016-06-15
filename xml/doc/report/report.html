@@ -11,7 +11,9 @@
 </ul>
 <p>Additionally, the <code>&lt;pentest_report&gt;</code> element has two attributes:</p>
 <ul>
-<li><code>findingCode</code>, which is a three-letter prefix for the finding numbers, derivated from the client name (e.g. 'SID' for Sitting Duck BV, 'BIC' for Big International Company Ltd, etc.)</li>
+<li><code>findingCode</code>, which is a three-letter prefix for the finding numbers, derivated from the client name (e.g. 'SID' for Sitting Duck BV, 'BIC' for Big International Company Ltd, etc.).  When this is not 
+    filled in you will see three question marks '???' in the finding ID columns 
+    in the Table of Contents and detailed finding sections.</li>
 <li><code>findingNumberingBase</code>, which can be set to 'Report' or 'Section' - this configures whether the numbering of findings in the report is report-based (i.e. starting with XXX-001 and continuing upwards) or section-based (i.e. findings in section 3 are numbered XXX-301 and up, findings in section 5 are numbered XXX-501 and up). Use 'Report' for smaller pentest reports and 'Section' for large ones.</li>
 </ul>
 <h2 id="document-information-metadata">Document information / metadata</h2>

@@ -23,8 +23,10 @@ parts:
 Additionally, the `<pentest_report>` element has two attributes:
 
 -   `findingCode`, which is a three-letter prefix for the finding
-    numbers, derivated from the client name (e.g. 'SID' for Sitting Duck
-    BV, 'BIC' for Big International Company Ltd, etc.)
+    numbers, derived from the client name (e.g. 'SID' for Sitting Duck
+    BV, 'BIC' for Big International Company Ltd, etc.). When this is not 
+    filled in you will see three question marks '???' in the finding ID columns 
+    in the Table of Contents and detailed finding sections. 
 -   `findingNumberingBase`, which can be set to 'Report' or 'Section' -
     this configures whether the numbering of findings in the report is
     report-based (i.e. starting with XXX-001 and continuing upwards) or
