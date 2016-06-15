@@ -62,7 +62,8 @@
             <fo:block xsl:use-attribute-sets="footer">
                 <fo:page-number/>/<fo:page-number-citation ref-id="EndOfDoc"/>
                 <fo:leader leader-pattern="space"/>
-                <fo:inline xsl:use-attribute-sets="TinyFont">Chamber of Commerce
+                <fo:inline xsl:use-attribute-sets="TinyFont"><xsl:value-of
+                select="*/meta/company/full_name"/> - Chamber of Commerce
                     <xsl:value-of select="*/meta/company/coc"/></fo:inline>
             </fo:block>
         </fo:static-content>
