@@ -20,6 +20,7 @@
     <xsl:import href="numbering.xslt"/>
     <xsl:import href="waiver.xslt"/>
     
+    <xsl:include href="localisation.xslt"/>
     <xsl:include href="styles_off.xslt"/>
     
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
@@ -27,17 +28,27 @@
 
     <!-- ****** AUTO_NUMBERING_FORMAT:	value of the <xsl:number> element used for auto numbering -->
     <xsl:param name="AUTO_NUMBERING_FORMAT" select="'1.1.1'"/>
+    
 
     <xsl:key name="rosid" match="section|finding|appendix|non-finding" use="@id"/>
     
     
     <xsl:variable name="CLASSES" select="document('../xslt/styles_off.xslt')/*/xsl:attribute-set"/>
     
+    <xsl:variable name="lang" select="/offerte/@xml:lang"/>
+    <xsl:variable name="localDateFormat" select="$strdoc/date/format[lang($lang)]"/>
+    
     <xsl:variable name="latestVersionDate">
             <xsl:for-each select="/*/meta/version_history/version">
                 <xsl:sort select="xs:dateTime(@date)" order="descending"/>
                 <xsl:if test="position() = 1">
-                    <xsl:value-of select="format-dateTime(@date, '[MNn] [D1], [Y]', 'en', (), ())"/>
+                    <xsl:value-of select="format-dateTime(@date, '[MNn] [D1], [Y]', en, (), ())"/>
+                    <!-- Note: this should be: 
+                    <xsl:value-of select="format-dateTime(@date, $localDateFormat, $lang, (), ())"/> 
+                    to properly be localised, but we're using Saxon HE instead of PE/EE and having localised month names 
+                    would require creating a LocalizerFactory 
+                    See http://www.saxonica.com/html/documentation/extensibility/config-extend/localizing/ for more info
+                    sounds like I'd have to know Java for that so for now, the date isn't localised. :) -->
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
@@ -64,13 +75,17 @@
             <xsl:value-of select="upper-case(company/full_name)"/>
         </fo:block>
         <fo:block xsl:use-attribute-sets="for">
-            <xsl:text>OFFER</xsl:text>
+            <xsl:call-template name="getString">
+                    <xsl:with-param name="stringID" select="'coverpage_offer'"/>
+                </xsl:call-template>
         </fo:block>
         <fo:block xsl:use-attribute-sets="title-0">
             <xsl:value-of select="upper-case(offered_service_long)"/>
         </fo:block>
         <fo:block xsl:use-attribute-sets="for">
-            <xsl:text>FOR</xsl:text>
+            <xsl:call-template name="getString">
+                    <xsl:with-param name="stringID" select="'coverpage_for'"/>
+                </xsl:call-template>
         </fo:block>
         <fo:block xsl:use-attribute-sets="title-client">
             <xsl:value-of select="permission_parties/client/full_name"/>

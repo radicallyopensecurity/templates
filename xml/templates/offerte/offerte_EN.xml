@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <!-- variable placeholders that can be used by the report writer throughout the offerte -->
     <!-- NOTE: values are taken from <meta> section below! -->
         
@@ -46,98 +45,96 @@
     <!-- document meta information; to be filled in by the offerte writer  -->
 
     <meta>
-        <offered_service_long>basis-securityscandiensten</offered_service_long>
-        <offered_service_short>basis-securityscan</offered_service_short>
+        <offered_service_long>penetration testing services</offered_service_long>
+        <offered_service_short>penetration test</offered_service_short>
         <xi:include href="snippets/company_info.xml"/>
         <targets><!-- one target element per target -->
             <target>...</target>
         </targets>
         <permission_parties>
-            <xi:include href="client_info.xml"/>
-            <party><!-- optional; if no other party needs to give permission, please remove whole party element -->
-                <full_name></full_name>
-                <short_name></short_name><!-- short party name; if no short name: same as long name -->
-                <waiver_rep></waiver_rep>
-                <address></address>
-                <city></city>
-                <country></country>
-                <coc lang="Dutch"></coc>
+        <xi:include href="client_info.xml"/>
+            <!-- the party section is optional; if no other party needs to give permission, please remove whole party element -->
+            <party>
+                <full_name>...</full_name>
+                <short_name>...</short_name><!-- short party name; if no short name: same as long name -->
+                <waiver_rep>...</waiver_rep>
+                <address>...</address>
+                <city>...</city>
+                <country>...</country>
             </party>
+            
         </permission_parties>
         <pentestinfo>
-            <duration>NOTK</duration><!-- duration of pentest, in working DAYS -->
-            <test_planning>NOTK</test_planning><!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
-            <report_writing>NOTK</report_writing><!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
-            <report_due>NOTK</report_due><!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
-            <nature></nature>
-            <type></type><!-- please choose one of the following: black-box, grey-box, crystal-box -->
-            <fee denomination="euro"></fee><!-- euro|dollar -->
-            <!--target_application>...</target_application--><!-- name of application to be tested (if any; if none, delete target_application element) -->
-            <!--target_application_producer>...</target_application_producer--><!-- name of application to be tested (if any; if none, delete target_application_producer element) -->
+            <duration>...</duration><!-- duration of pentest, in working DAYS -->
+            <test_planning>...</test_planning><!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <report_writing>...</report_writing><!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <report_due>...</report_due><!-- date or date range in text, e.g. May 18th until May 25th, 2015 -->
+            <nature>...</nature>
+            <type>...</type><!-- please choose one of the following: black-box, grey-box, crystal-box -->
+            <fee denomination="euro">0</fee><!-- euro is added automatically in the document -->
+            <target_application>...</target_application><!-- name of application to be tested (if any; if none, delete target_application element) -->
+            <target_app_producer>...</target_app_producer><!-- name of application to be tested (if any; if none, delete target_application_producer element) -->
         </pentestinfo>
         <version_history><!-- needed for date on frontpage and in signature boxes; add a new <version> after each review and make sure to update the date/time -->
-            <version date="2016-03-11T10:45:00" number="auto"><!-- actual date-time here; you can leave the number attribute alone -->
-                <v_author>Pietje Puk</v_author><!-- name of the author here -->
-                <v_description>Initiële versie</v_description>
+            <version date="2015-06-08T10:00:00" number="auto"><!-- actual date-time here; you can leave the number attribute alone -->
+                <v_author>ROS Writer</v_author><!-- name of the author here -->
+                <v_description>Initial draft</v_description>
             </version>
         </version_history>
     </meta>
+    <xi:include href="snippets/offerte/introandscope.xml"/>
+    
+    <!-- section with some more info on the company -->
     <section>
-       <title>Introductie</title>
-        <p><client_long/> (hierna “<b><client_short/></b>”), met haar kantoren te <client_street/>, 
-        <client_city/>, <client_country/>, heeft <company_long/> (hierna “<b><company_short/></b>”) 
-        verzocht om <company_svc_long/> te leveren. 
-        De reden voor dit verzoek is dat ...
-        </p>
-        
-        <xi:include href="snippets/offerte_nl/setoutscope.xml"/>
+        <title>About <client_short/></title>
+        <p><client_long/> is a ...</p>
+        <p>...</p>
     </section>
     
+    <!-- section with some more info on the application (if any) -->
     <section>
-    <title>Over <client_short/></title>
-    <p>...
-      <!--img src="../graphics/screenshot.png"/-->
-    </p>
-    </section> 
+        <title>The <t_app/>; Application</title>
+        <p><t_app/> is a ...</p>
+        <p>...</p>
+    </section>
     
+    <!-- section with some more info on the target infrastructure-->
     <section>
-        <!-- section with some more info on the target infrastructure-->
-        <title>Infrastructuur</title>
+        <title>The <client_short/> Infrastructure</title>
         <p>...</p>
     </section>
 
     <!-- Project overview section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/projectoverview.xml"/>
+    <xi:include href="snippets/offerte/projectoverview.xml"/>
 
     <section>
-      <title>Reikwijdte <company_svc_short/></title>
-      <p>...
-      </p>
+        <title>Pentest Scope</title>
+        <p>...</p>
     </section>
 
     <!-- Prerequisites section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/prerequisites.xml"/>
+    <xi:include href="snippets/offerte/prerequisites.xml"/>
 
     <!-- Disclaimer section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/disclaimer.xml"/>
+    <xi:include href="snippets/offerte/disclaimer.xml"/>
 
     <!-- Pentest Methodology section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte/basic-scan/nl/methodology.xml"/>
-    <!--xi:include href="snippets/offerte_nl/codeauditmethodology.xml"/-->
+    <xi:include href="snippets/offerte/pentestmethodology.xml"/>
+    <xi:include href="snippets/offerte/codeauditmethodology.xml"/>
 
     <!-- Team and Reporting section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte/basic-scan/nl/teamandreporting.xml"/>
+    <xi:include href="snippets/offerte/teamandreporting.xml"/>
 
     <!-- Planning and payment section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/planningandpayment.xml"/>
+    <xi:include href="snippets/offerte/planningandpayment.xml"/>
 
-    <!-- About us section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/aboutus.xml"/>
+    <!-- About ROS section (complete section is in a snippet) -->
+    <xi:include href="snippets/offerte/aboutus.xml"/>
     
     <!-- Work condition section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/conditions.xml"/>
+    <xi:include href="snippets/offerte/conditions.xml"/>
     
     <!-- General terms and conditions section (complete section is in a snippet) -->
-    <xi:include href="snippets/offerte_nl/generaltermsandconditions.xml"/>
+    <xi:include href="snippets/offerte/generaltermsandconditions.xml"/>
     <generate_waivers/>
 </offerte>
