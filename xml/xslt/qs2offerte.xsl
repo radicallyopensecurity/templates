@@ -110,8 +110,6 @@
                         <xsl:value-of select="/*/pentest_info/planning"/>
                     </test_planning>
                     <xsl:comment>date or date range in text, e.g. May 18th until May 25th, 2015</xsl:comment>
-                    <report_writing>???</report_writing>
-                    <xsl:comment>date or date range in text, e.g. May 18th until May 25th, 2015</xsl:comment>
                     <report_due>
                         <xsl:value-of select="/*/pentest_info/delivery"/>
                     </report_due>
