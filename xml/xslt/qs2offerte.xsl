@@ -15,6 +15,7 @@
         <offerte xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="../dtd/offerte.xsd"
             xmlns:xi="http://www.w3.org/2001/XInclude">
+            <xsl:attribute name="xml:lang"><xsl:value-of select="$lang"/></xsl:attribute>
             <xsl:comment>document meta information; to be filled in by the offerte writer</xsl:comment>
             <meta>
                 <offered_service_long>
