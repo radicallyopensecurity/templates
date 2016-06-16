@@ -60,7 +60,7 @@
         <translation xml:lang="en">by</translation>
     </string>
     <string id="waiver_signed_for">
-        <translation xml:lang="nl">voor</translation>
+        <translation xml:lang="nl">namens</translation>
         <translation xml:lang="en">for</translation>
     </string>
 </localised_strings>
