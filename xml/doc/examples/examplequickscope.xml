@@ -1,81 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<quickscope>
+<quickscope xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace">
     <!-- Today's date -->
-    <version date="2015-01-01"/><!-- YYYY-MM-DD -->
+    <version date="2015-01-01"/>
+    <!-- YYYY-MM-DD -->
     <!-- COMPANY INFO -->
-    <customer>
-        <!-- Full company name (long) -->
-        <full_name>Sitting Duck B.V.</full_name>
-        <!-- Shorter company name (short) (if no short name, repeat long) -->
-        <short_name>Sitting Duck</short_name>
-
-        <!-- Address of registered offices -->
-        <!-- Street -->
-        <address>Reed Street 42</address>
-        <!-- Postal Code -->
-        <postal_code>0000 ZZ</postal_code>
-        <!-- City -->
-        <city>Pond City</city>
-        <!-- Country -->
-        <country>Amazonia</country>
-
-        <!-- Name of the person who will need to sign the OFFER -->
-        <legal_rep>I.M. Portant</legal_rep>
-        <!-- Name of the person who will need to sign the WAIVER -->
-        <waiver_rep>B.I.G. Wig</waiver_rep>
-        <!-- First point of contact for customer (during pentest) - most likely a technical person -->
-        <poc1>Sir Knowsalot</poc1>
-        
-        <!-- Chamber of Commerce number -->
-        <coc_no>99999999</coc_no>
-        <!-- Chamber of Commerce 'nationality' -->
-        <coc_nat>Dutch</coc_nat>
-    </customer>
+    <xi:include href="client_info.xml"/>
 
     <!-- SERVICE INFO -->
     <meta>
-    <!-- What service would you like to receive from Radically Open Security? -->
+        <!-- Language the offer should be in (en|nl) -->
+        <offer_language>en</offer_language>
+        <!-- Offer type (pentest|basic-scan|load-test|other) -->
+        <offer_type>pentest</offer_type>
+        <!-- Required service -->
+        <!-- Note: is only used when type is 'other', if offer_type is a specific type, service name will be taken from the localisation strings -->
     <requested_service>penetration testing services</requested_service>
     <!-- Which targets will need to be tested? 
-        (one <target> element for each piece of software/service/server address/location...) -->
-    <targets>
-        <target>fishinabarrel.sittingduck.nl</target>
-        <target>intothegreatwideopen.sittingduck.nl</target>
-        <target>iSoftware(tm)</target>
-    </targets>
+        (one <target> element for each piece of software/service/server address/location...), delete/add as necessary -->
+        <targets>
+            <target>target1.sittingduck.com</target>
+            <target>target2.sittingduck.com</target>
+            <target>FishInABarral App</target>
+        </targets>
     </meta>
     <!-- Some information about any third parties involved with the software/service to be tested, if applicable. 
         If not applicable, delete the whole <third_party> element. If more parties are needed, add <third_party> elements -->
     <third_party>
-        <full_name>Programmers 'R' Us Inc.</full_name>
-        <short_name>PRU Inc.</short_name>
+        <full_name>HotshotDevs Inc.</full_name>
+        <short_name>HotshotDevs</short_name>
         <!-- Name of the person who will need to sign the waiver for this vendor -->
-        <waiver_rep>P. Rogram</waiver_rep>
-        <address>Cave 99</address>
-        <city>Darkest Dungeon</city>
-        <country>Underworld</country>
+        <waiver_rep>Hotshot Dev Lawyer</waiver_rep>
+        <address>Silicon Valley St. 50</address>
+        <city>San Francisco</city>
+        <country>US</country>
     </third_party>
 
     <pentest_info>
         <!-- How long would you like the test to be? (in days) -->
-        <days>5</days>
+        <days>10</days>
         <!-- Service execution (Use one of the following values: time-boxed, subscription) -->
         <nature>time-boxed</nature>
         <!-- Testing type (Use one of the following values: crystal-box, black-box, grey-box) -->
-        <type>grey-box</type>
+        <type>crystal-box</type>
         <!-- Test planning (when would you like the test to be executed -->
         <!-- Ideally something specific like 'December 7th - December 12th, 2015', but another description 'Beginning of December' is fine as well -->
         <!-- do not start with a capital letter -->
-        <planning>beginning of January 2015</planning>
-        
+        <planning>TBD</planning>
         <!-- Pentest report delivery date (please allow at least 1 week between the end of the pentest and the report delivery date) -->
-        <delivery>January 20th, 2015</delivery>
-        <!-- Do you need/want a code audit? (possible values: yes/no) -->
+        <delivery>TBD</delivery>
+        <!-- Do you need/want a code audit? (possible values: yes/no), only for pentest -->
         <codeaudit perform="yes"/>
-
+        <!-- Is there an application that needs to be tested? Type its name below. If not, please DELETE <application_name> element -->
+        <application_name>FishInABarrel</application_name>
         <!-- rate (to be filled in by ROS ;) -->
-        <rate>200000</rate>
-        
+        <rate>1000000</rate>
+
     </pentest_info>
 </quickscope>
