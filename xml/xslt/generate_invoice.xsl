@@ -231,7 +231,7 @@
     <fo:block xsl:use-attribute-sets="big-space-below"><xsl:value-of
         select="/*/meta/company/full_name"/> donates > 90% of its entire profits to
         charity.</fo:block>
-    <fo:block xsl:use-attribute-sets="big-space-below">Please be so kind to pay within 30 days
+    <fo:block xsl:use-attribute-sets="big-space-below">Please be so kind to pay within 14 days
         by money transfer, to the following account:</fo:block>
     
     <fo:block xsl:use-attribute-sets="big-space-below" margin-left="1.3cm">
