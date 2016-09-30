@@ -15,7 +15,7 @@
         <!-- snippet --><p><company_short/> zal testen op de aanwezigheid van de 
         meest voorkomende kwetsbaarheden, gebruik makend van zowel publiek beschikbare
          scanning tools, als door handmatig testen. <company_short/> zal een 
-        <p_duration/>-daagse, <p_boxtype/>, grondige test uitvoeren, via internet.</p>
+        <p_duration/>-daagse (bij inzet van 1 persoon), <p_boxtype/>, grondige test uitvoeren, via internet.</p>
         
 		<!-- snippet --> <!--Not Needed if Disclaimer is Included; Duplicate Text-->
 		<!--p>It is possible that in the course of the penetration 
